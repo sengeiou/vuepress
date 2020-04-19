@@ -28,7 +28,7 @@ export default {
     },
     duration: {
       type: Number,
-      default: 2
+      default: 0
     },
     delay: {
       type: Number,
@@ -49,8 +49,8 @@ export default {
         this.$nextTick(() => {
           this.counter = new module.CountUp(this.$refs.countUp, this.endVal, {
             startVal: this.startVal,
-            duration: this.duration,
-            decimalPlaces: this.decimalPlaces
+            decimalPlaces: this.decimalPlaces,
+            duration: this.duration
           });
           setTimeout(() => {
             this.counter.start();
