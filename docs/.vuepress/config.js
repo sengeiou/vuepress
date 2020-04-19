@@ -16,11 +16,31 @@ module.exports = {
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
   plugins: [
-    '@vuepress/pwa', , {
-      serviceWorker: true,
-      updatePopup: true
-    },
-    '@vuepress/back-to-top'
+    [
+      '@vuepress/pwa', {
+        serviceWorker: true,
+        updatePopup: {
+          message: "New content is available.",
+          buttonText: "Refresh"
+        }
+      }
+    ],
+    [
+      '@vssue/vuepress-plugin-vssue', {
+        // 设置 `platform` 而不是 `api`
+        platform: 'github',
+  
+        // 其他的 Vssue 配置
+        owner: 'TienOUC',
+        repo: 'vuepress',
+        clientId: 'beee48e66891e82d6e90',
+        clientSecret: '3366c29255a2c9b1a2769a58d43594892720cc4c',
+        autoCreateIssue: true
+      }
+    ],
+    [
+      '@vuepress/back-to-top'
+    ]
   ],
   themeConfig: {
     smoothScroll: true,
