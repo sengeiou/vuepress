@@ -28,7 +28,7 @@ export default {
     },
     duration: {
       type: Number,
-      default: 0
+      default: 2
     },
     delay: {
       type: Number,
