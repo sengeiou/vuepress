@@ -20,7 +20,8 @@
   "homepage": "https://github.com/TienOUC/vuepress#readme",
   "dependencies": {
     "@vssue/api-github-v4": "^1.4.0",
-    "@vssue/vuepress-plugin-vssue": "^1.4.3"
+    "@vssue/vuepress-plugin-vssue": "^1.4.3",
+    "countup.js": "^2.0.4"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.4.1",
