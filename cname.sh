@@ -1,2 +1,2 @@
 set -e
-echo 'willtien.com/vuepress' > vuepress/.vuepress/dist/CNAME
+echo 'willtien.com/vuepress' > docs/.vuepress/dist/CNAME
