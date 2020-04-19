@@ -7,9 +7,6 @@
   </div>
 </template>
 
-<style>
-</style>
-
 <script>
 export default {
   name: "CountUp",
@@ -59,7 +56,7 @@ export default {
       });
     }
   },
-  beforeDestory() {
+  beforeDestroy() {
     this.counter.reset();
     this.counter = null;
   }
