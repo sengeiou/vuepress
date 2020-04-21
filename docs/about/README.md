@@ -1,8 +1,11 @@
 ---
-title: 劝学
-navbar: false
+title: 关于我
+# navbar: false
+# sidebar: false
 ---
 + Travis 自动化部署
+     
+![Travis CI](https://tva1.sinaimg.cn/large/007S8ZIlly1gdzerhokszj30u013610t.jpg)
 
 
 君子曰：学不可以已。

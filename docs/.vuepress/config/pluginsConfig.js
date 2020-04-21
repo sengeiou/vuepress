@@ -10,19 +10,16 @@ module.exports = [
       }
     }
   ],
-  [
-    '@vssue/vuepress-plugin-vssue', {
-      // 设置 `platform` 而不是 `api`
-      platform: 'github-v4',
-
-      // 其他的 Vssue 配置
-      owner: 'TienOUC',
-      repo: 'vuepress',
-      clientId: secret.clientId,
-      clientSecret: secret.clientSecret,
-      autoCreateIssue: true
-    }
-  ],
+  // [
+  //   '@vssue/vuepress-plugin-vssue', {
+  //     platform: 'github-v4',
+  //     owner: 'TienOUC',
+  //     repo: 'vuepress',
+  //     clientId: secret.clientId,
+  //     clientSecret: secret.clientSecret,
+  //     autoCreateIssue: true
+  //   }
+  // ],
   [
     '@vuepress/back-to-top'
   ],
@@ -30,6 +27,21 @@ module.exports = [
     '@vuepress/google-analytics',
     {
       'ga': secret.ga
+    }
+  ],
+  [
+    '@vuepress/medium-zoom', {
+      selector: 'img',
+      options: {
+        margin: 16
+      }
+    }
+  ],
+  [
+    'vuepress-plugin-auto-sidebar', {
+      nav: true,
+      titleMode: "titlecase",
+      collapsable: true
     }
   ]
 ]

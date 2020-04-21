@@ -5,4 +5,4 @@
 ## Hello VuePress
 
 ### Travis CI自动化功能验证需打开注释掉的私密信息 .gitignore > # secret.js
-![](https://tva1.sinaimg.cn/large/007S8ZIlly1gdzerhokszj30u013610t.jpg)
+![Travis CI](https://tva1.sinaimg.cn/large/007S8ZIlly1gdzerhokszj30u013610t.jpg)

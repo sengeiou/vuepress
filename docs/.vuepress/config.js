@@ -1,20 +1,22 @@
 const headConfig = require('./config/headConfig');
 const pluginsConfig = require('./config/pluginsConfig')
-const navConfig = require('./config/navConfig')
-const sidebarConfig = require('./config/sidebarConfig')
-
+// const navConfig = require('./config/navConfig')
+const nav = require('./nav')
+// const sidebarConfig = require('./config/sidebarConfig')
+const markdownConfig = require('./config/markdownConfig')
 
 module.exports = {
   base: '/vuepress/',
-  title: "Tien VuePress",
-  description: 'Keep hungry, Keep foolish',
+  title: "Tien",
+  description: '笔记 | 博客',
+  markdown: markdownConfig,
   head: headConfig,
   plugins: pluginsConfig,
   themeConfig: {
     smoothScroll: true,
     lastUpdated: 'Last Updated',
-    logo: '/assets/img/logo.png',
-    sidebar: sidebarConfig,
-    nav: navConfig
+    // logo: '/assets/img/tower.png',
+    // sidebar: sidebarConfig,  //replaced by  vuepress-plugin-auto-sidebar  
+    nav: nav     // nav: navConfig 
   }
 }
