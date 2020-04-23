@@ -3,11 +3,34 @@ module.exports = [
   {
     text: "Web",
     items: [
-      { text: "JavaScript", link: "/web/javascript/" },
-      { text: "Webpack", link: "/web/webpack/" },
-      { text: "Css", link: "/web/css/" }
+      {
+        text: "JavaScript",
+        items: [
+          { text: "item1", link: "/web/javascript/" },
+          { text: "item2", link: "/web/javascript/" },
+        ],
+      },
+      {
+        text: "Webpack",
+        items: [
+          { text: "item1", link: "/web/webpack/" },
+          { text: "item2", link: "/web/webpack/" },
+        ],
+      },
+      {
+        text: "Css",
+        items: [
+          { text: "item1", link: "/web/css/" },
+          { text: "item2", link: "/web/css/" },
+        ],
+      },
+    ]
+    // items: [
+    //   { text: "JavaScript", link: "/web/javascript/" },
+    //   { text: "Webpack", link: "/web/webpack/" },
+    //   { text: "Css", link: "/web/css/" }
      
-    ],
+    // ]
   },
   {
     text: "Components",
