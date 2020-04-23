@@ -26,10 +26,10 @@
       </template>
       <template #bottom>
         <slot name="page-bottom" />
-        <Vssue
+        <!-- <Vssue
           class="theme-default-content content__default"
           :options="{ locale: 'zh' }"
-        />
+        /> -->
       </template>
     </Page>
   </div>

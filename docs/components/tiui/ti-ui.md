@@ -1,19 +1,7 @@
 ---
-title: ti-ui（基于Vue-cli3.0）
+title: 封装过程
 sidebarDepth: 3
 ---
-
-## 主要内容
-
-封装常见的功能组件（Button，Form 相关），封装完成后打包成 UI 组件库发布到 NPM 上。
-
-## 目的
-
-1. 掌握组件封装的语法和技巧
-2. 学会造轮子，了解组件库实现原理
-3. 搭建和积累自己的组件库
-
-==============================================================
 
 ## 一、使用 vue 脚手架初始化一个项目
 
@@ -40,6 +28,7 @@ export default {
 
 <style lang="scss"></style>
 ```
+
 
 2. 在入口文件 main.js 引入并注册
 
@@ -71,24 +60,26 @@ new Vue({
 
 按钮效果：![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3unr3shuj302s0100si.jpg)
 
+
+
 ## 三、组件封装
 
 ### 3.1 Button 组件
 
 参数支持：
-|参数名 |参数描述| 参数类型| 默认值|
-| --- |:---- | :---- | :---- |
-|type |按钮类型（primary/success/warning/danger/info）| string| default|
-|plain |是否是朴素按钮| boolean| false|
-|round |是否是圆角按钮| boolean| false|
-|circle |是否是圆形按钮| boolean| false|
-|disabled |是否禁用按钮| boolean| false|
-|icon |图标类名| string| 无|
+| 参数名   | 参数描述                                        | 参数类型 | 默认值  |
+| -------- | :---------------------------------------------- | :------- | :------ |
+| type     | 按钮类型（primary/success/warning/danger/info） | string   | default |
+| plain    | 是否是朴素按钮                                  | boolean  | false   |
+| round    | 是否是圆角按钮                                  | boolean  | false   |
+| circle   | 是否是圆形按钮                                  | boolean  | false   |
+| disabled | 是否禁用按钮                                    | boolean  | false   |
+| icon     | 图标类名                                        | string   | 无      |
 
 事件支持：
-|事件名| 事件描述|
-|-----|-------|
-|click| 点击事件|
+| 事件名 | 事件描述 |
+| ------ | -------- |
+| click  | 点击事件 |
 
 使用 slot 来定义按钮上的文本内容：
 
@@ -113,6 +104,10 @@ new Vue({
 ```
 
 效果：![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3uycskjdj304z010mwy.jpg)
+
+
+
+
 
 button 组件基础样式：
 
@@ -153,6 +148,7 @@ button 组件基础样式：
 
 效果： ![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3yfww2hoj308801lt8i.jpg)
 
+
 ### 3.1.1 button 组件的 type 属性
 
 让按钮支持 type 属性，使得按钮支持不同样式：
@@ -189,6 +185,8 @@ console.log(this.type)//defalut primary success info danger warning } }
 failed for prop "type". Expected String with value "123", got Number with value 123.
 ```
 
+
+
 第三步:通过绑定类名的方法动态控制样式
 
 ```vue
@@ -198,6 +196,8 @@ failed for prop "type". Expected String with value "123", got Number with value 
   </button>
 </template>
 ```
+
+
 
 第四步：设置不同类型的样式
 
@@ -259,6 +259,7 @@ failed for prop "type". Expected String with value "123", got Number with value 
 }
 ```
 
+
 效果：![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3ymxape5j30rh01ndfr.jpg)
 
 ### 3.1.2 button 组件的 plain 属性
@@ -280,7 +281,6 @@ failed for prop "type". Expected String with value "123", got Number with value 
   </div>
 </template>
 ```
-
 第二步：子组件接收负组件传递的数据，同样进行 props 校验，并且设置默认值为 false
 
 ```vue
@@ -288,6 +288,7 @@ props: { plain: { type: Boolean, default: false } }
 ```
 
 第三步:通过绑定类名的方法动态控制样式，由于 plain 类型是布尔值，所以在类型中我们使用对象的形式来控制样式
+
 
 ```vue
 <template>
@@ -304,6 +305,8 @@ props: { plain: { type: Boolean, default: false } }
   </button>
 </template>
 ```
+
+
 
 第四步：设置不同类型的样式，由于 plain 类型是以对象的形式在类中定义的，所以使用获取属性的方法定义样式
 
@@ -370,7 +373,6 @@ props: { plain: { type: Boolean, default: false } }
 ```
 
 效果： ![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3yq04637j30s601oa9z.jpg)
-
 ### 3.1.3 button 组件的 round 属性
 
 设置 round 属性和之前的相似，只要在组件中定义好了样式，动态获取属性值即可。
@@ -402,6 +404,7 @@ circle 同上，样式为：
 }
 ```
 
+
 ### 3.1.5 button 组件中使用字体图标
 
 在项目中使用字体图标，首先需要有字体图标，我们可以去阿里巴巴矢量图标库下载。
@@ -424,10 +427,11 @@ circle 同上，样式为：
 }
 ```
 
+
 第三步：父组件传递图标名，子组件接收并且放到图标中
 父组件传值：
 
-```vue
+```html
 <div class="row">
       <ti-button icon="bluetoothon"></ti-button>
       <ti-button type="primary" icon="camera">照相机</ti-button>
@@ -444,7 +448,7 @@ circle 同上，样式为：
 icon: { type: String, default: '' }
 ```
 
-使用接收到的字体图标。在没有传入 icon 时隐藏<i>标签，在 slot 插槽没有传入值时，不显示<span>标签
+使用接收到的字体图标。在没有传入 icon 时隐藏`<i>`标签，在 slot 插槽没有传入值时，不显示`<span>`标签
 
 ```vue
 <template>
@@ -465,6 +469,10 @@ icon: { type: String, default: '' }
   </button>
 </template>
 ```
+
+
+
+
 
 第四步：设置 icon 配套样式，使图标和文字之间有一定间隔
 
@@ -504,6 +512,7 @@ icon: { type: String, default: '' }
 </template>
 ```
 
+
 定义一个点击事件，这个点击事件的作用是调用父组件中的点击事件，并且回调
 
 ```js
@@ -530,7 +539,9 @@ icon: { type: String, default: '' }
   }
 ```
 
-### 3.1.7button 组件中的 disabled 属性
+
+
+### 3.1.7 button 组件中的 disabled 属性
 
 和之前相似，只要父子组件传值并且动态获取这个值并且赋给 disabled 属性,并且设置一个 disabled 样式即可。
 

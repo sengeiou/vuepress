@@ -1,27 +1,26 @@
 module.exports = [
-  { text: "Home", link: "/" },
+  { text: "主页", link: "/" },
   {
-    text: "Web",
+    text: "前端",
     items: [
       {
         text: "JavaScript",
         items: [
-          { text: "item1", link: "/web/javascript/" },
-          { text: "item2", link: "/web/javascript/" },
+          { text: "ES6", link: "/web/javascript/" },
+          { text: "Notes", link: "/web/javascript1/" },
         ],
       },
       {
         text: "Webpack",
         items: [
-          { text: "item1", link: "/web/webpack/" },
-          { text: "item2", link: "/web/webpack/" },
+          { text: "4.0", link: "/web/webpack/" },
         ],
       },
       {
         text: "Css",
         items: [
-          { text: "item1", link: "/web/css/" },
-          { text: "item2", link: "/web/css/" },
+          { text: "Demo", link: "/web/css/" },
+          { text: "Notes", link: "/web/css1/" },
         ],
       },
     ]
@@ -33,9 +32,10 @@ module.exports = [
     // ]
   },
   {
-    text: "Components",
+    text: "组件",
     items: [
-      { text: "ti-ui", link: "/components/ti-ui/" }
+      { text: "Ti-ui", link: "/components/tiui/" },
+      { text: "Data", link: "/components/data/" }
     ]
 
     // items: [
@@ -56,13 +56,19 @@ module.exports = [
     // ]
   },
   {
-    text: "Tools",
+    text: "工具",
     items: [
       {
-        text: "Basic",
+        text: "IDE",
         items: [
-          { text: "item1", link: "/components/basic/item1/" },
-          { text: "item2", link: "/components/basic/item2/" },
+          { text: "WebStorm", link: "/components/basic/item1/" },
+          { text: "vsCode", link: "/components/basic/item2/" },
+        ],
+      },
+      {
+        text: "Others",
+        items: [
+          { text: "iTerm2", link: "/components/basic/item3/" }
         ],
       }
     ]
