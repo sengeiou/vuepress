@@ -29,27 +29,31 @@ module.exports = [
     //   { text: "JavaScript", link: "/web/javascript/" },
     //   { text: "Webpack", link: "/web/webpack/" },
     //   { text: "Css", link: "/web/css/" }
-     
+
     // ]
   },
   {
     text: "Components",
     items: [
-      {
-        text: "Basic",
-        items: [
-          { text: "item1", link: "/components/basic/item1/" },
-          { text: "item2", link: "/components/basic/item2/" },
-        ],
-      },
-      {
-        text: "Form",
-        items: [
-          { text: "item1", link: "/components/form/item1/" },
-          { text: "item2", link: "/components/form/item2/" },
-        ],
-      },
+      { text: "ti-ui", link: "/components/ti-ui" }
     ]
+
+    // items: [
+    //   {
+    //     text: "Basic",
+    //     items: [
+    //       { text: "item1", link: "/components/ti-ui" },
+    //       { text: "item2", link: "/components/basic/item2/" },
+    //     ],
+    //   },
+    //   {
+    //     text: "Form",
+    //     items: [
+    //       { text: "item1", link: "/components/form/item1/" },
+    //       { text: "item2", link: "/components/form/item2/" },
+    //     ],
+    //   },
+    // ]
   },
   {
     text: "Tools",
