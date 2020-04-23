@@ -35,7 +35,7 @@ module.exports = [
   {
     text: "Components",
     items: [
-      { text: "ti-ui", link: "/components/ti-ui" }
+      { text: "ti-ui", link: "/components/ti-ui/" }
     ]
 
     // items: [
