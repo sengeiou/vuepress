@@ -14,7 +14,7 @@ module.exports = {
   plugins: pluginsConfig,
   themeConfig: {
     smoothScroll: true,
-    lastUpdated: 'Last Updated',
+    lastUpdated: '最后更新',
     // logo: '/assets/img/tower.png',
     // sidebar: sidebarConfig,  //replaced by  vuepress-plugin-auto-sidebar  
     nav: nav     // nav: navConfig 

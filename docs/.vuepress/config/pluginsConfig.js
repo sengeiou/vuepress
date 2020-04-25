@@ -5,8 +5,8 @@ module.exports = [
     '@vuepress/pwa', {
       serviceWorker: true,
       updatePopup: {
-        message: "New content is available.",
-        buttonText: "Refresh"
+        message: "有新的内容更新",
+        buttonText: "点击刷新"
       }
     }
   ],

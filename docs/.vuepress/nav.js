@@ -3,32 +3,45 @@ module.exports = [
   {
     text: "前端",
     items: [
+      { text: "JavaScript", link: "/web/javascript/" },
+      { text: "Webpack", link: "/web/webpack/" },
+      { text: "CSS", link: "/web/css/" },
       {
-        text: "JavaScript",
+        text: "Framework",
         items: [
-          { text: "ES6", link: "/web/javascript/" },
-          { text: "Notes", link: "/web/javascript1/" },
-        ],
-      },
-      {
-        text: "Webpack",
-        items: [
-          { text: "4.0", link: "/web/webpack/" },
-        ],
-      },
-      {
-        text: "Css",
-        items: [
-          { text: "Demo", link: "/web/css/" },
-          { text: "Notes", link: "/web/css1/" },
-        ],
-      },
+          { text: "Vue", link: "/web/framework/vue/" },
+          // { text: "Angular", link: "/web/framework/angular/" }
+        ]
+      }
+      // { text: "Framework", link: "/web/framework/vue/" },
     ]
     // items: [
-    //   { text: "JavaScript", link: "/web/javascript/" },
-    //   { text: "Webpack", link: "/web/webpack/" },
-    //   { text: "Css", link: "/web/css/" }
-
+    //   {
+    //     text: "JavaScript",
+    //     items: [
+    //       { text: "ES6", link: "/web/javascript/es6/" },
+    //       { text: "Notes", link: "/web/javascript/" },
+    //     ],
+    //   },
+    //   {
+    //     text: "Webpack",
+    //     items: [
+    //       { text: "4.0", link: "/web/webpack/" },
+    //     ],
+    //   },
+    //   {
+    //     text: "Css",
+    //     items: [
+    //       { text: "Demo", link: "/web/css/css3/" },
+    //       { text: "Notes", link: "/web/css/notes/" },
+    //     ],
+    //   },
+    //   {
+    //     text: "Framework",
+    //     items: [
+    //       { text: "Vue", link: "/web/framework/vue/" },
+    //     ],
+    //   }
     // ]
   },
   {

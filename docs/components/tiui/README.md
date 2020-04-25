@@ -1,9 +1,11 @@
 ---
 title: ti-ui（基于Vue-cli3.0）
 ---
-:::warning
+<div class="custom-block tip">
+
 基于 Vue-cli3.0 学习 Vue 组件封装，并打包发布到 NPM
-:::
+
+</div>
 
 
 ## 主要内容
