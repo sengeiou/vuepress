@@ -74,14 +74,15 @@ module.exports = [
       {
         text: "IDE",
         items: [
-          { text: "WebStorm", link: "/components/basic/item1/" },
-          { text: "vsCode", link: "/components/basic/item2/" },
+          { text: "WebStorm", link: "/tools/ide/" },
+          { text: "vsCode", link: "/tools/ide/" },
         ],
       },
       {
         text: "Others",
         items: [
-          { text: "iTerm2", link: "/components/basic/item3/" }
+          { text: "iTerm2", link: "/tools/others/" },
+          { text: "Markdown", link: "/tools/others/" }
         ],
       }
     ]
