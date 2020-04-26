@@ -1,85 +1,25 @@
 ---
-title: 封装过程
-sidebarDepth: 3
+autoGroup-1: ti-ui组件
+title: Button
+sidebarDepth: 2
 ---
 
-## 一、使用 vue 脚手架初始化一个项目
-
-1. `yarn add global @vue/cli`
-2. `vue create 项目名` （或者使用 vue ui 命令打开 GUI 创建项目）
-3. 配置选项安装谁能略过
-
-## 二、创建组件示例
-
-1. 在 componet 下创建一个 button.vue 的文件，放置 button 组件代码，并且指定 name 为 TiButton。
-
-```vue
-<template>
-  <button class="ti-button">
-    按钮组件
-  </button>
-</template>
-
-<script>
-export default {
-  name: "TiButton",
-};
-</script>
-
-<style lang="scss"></style>
-```
-
-
-2. 在入口文件 main.js 引入并注册
-
-```js
-import Vue from "vue";
-import App from "./App.vue";
-// 第一步：导入button组件
-import TiButton from "./components/button.vue";
-
-Vue.config.productionTip = false;
-
-// 第二步：注册组件,设置(组件名，组件)
-Vue.component(TiButton.name, TiButton);
-
-new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
-```
-
-3. 引用
-
-```vue
-<template>
-  <div>
-    <ti-button></ti-button>
-  </div>
-</template>
-```
-
-按钮效果：![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3unr3shuj302s0100si.jpg)
-
-
-
-## 三、组件封装
-
-### 3.1 Button 组件
+## Button 组件参数
 
 参数支持：
-| 参数名   | 参数描述                                        | 参数类型 | 默认值  |
+| 参数名 | 参数描述 | 参数类型 | 默认值 |
 | -------- | :---------------------------------------------- | :------- | :------ |
-| type     | 按钮类型（primary/success/warning/danger/info） | string   | default |
-| plain    | 是否是朴素按钮                                  | boolean  | false   |
-| round    | 是否是圆角按钮                                  | boolean  | false   |
-| circle   | 是否是圆形按钮                                  | boolean  | false   |
-| disabled | 是否禁用按钮                                    | boolean  | false   |
-| icon     | 图标类名                                        | string   | 无      |
+| type | 按钮类型（primary/success/warning/danger/info） | string | default |
+| plain | 是否是朴素按钮 | boolean | false |
+| round | 是否是圆角按钮 | boolean | false |
+| circle | 是否是圆形按钮 | boolean | false |
+| disabled | 是否禁用按钮 | boolean | false |
+| icon | 图标类名 | string | 无 |
 
 事件支持：
 | 事件名 | 事件描述 |
 | ------ | -------- |
-| click  | 点击事件 |
+| click | 点击事件 |
 
 使用 slot 来定义按钮上的文本内容：
 
@@ -104,10 +44,6 @@ new Vue({
 ```
 
 效果：![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3uycskjdj304z010mwy.jpg)
-
-
-
-
 
 button 组件基础样式：
 
@@ -148,8 +84,7 @@ button 组件基础样式：
 
 效果： ![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3yfww2hoj308801lt8i.jpg)
 
-
-### 3.1.1 button 组件的 type 属性
+### 1.1 type 属性
 
 让按钮支持 type 属性，使得按钮支持不同样式：
 
@@ -185,8 +120,6 @@ console.log(this.type)//defalut primary success info danger warning } }
 failed for prop "type". Expected String with value "123", got Number with value 123.
 ```
 
-
-
 第三步:通过绑定类名的方法动态控制样式
 
 ```vue
@@ -196,8 +129,6 @@ failed for prop "type". Expected String with value "123", got Number with value 
   </button>
 </template>
 ```
-
-
 
 第四步：设置不同类型的样式
 
@@ -259,10 +190,9 @@ failed for prop "type". Expected String with value "123", got Number with value 
 }
 ```
 
-
 效果：![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3ymxape5j30rh01ndfr.jpg)
 
-### 3.1.2 button 组件的 plain 属性
+### 1.2 plain 属性
 
 和 type 类型相同，我们只要将样式先设置好，然后通过父组件传递过来的值进行判断，就可以设置 plain 属性了。
 
@@ -281,6 +211,7 @@ failed for prop "type". Expected String with value "123", got Number with value 
   </div>
 </template>
 ```
+
 第二步：子组件接收负组件传递的数据，同样进行 props 校验，并且设置默认值为 false
 
 ```vue
@@ -288,7 +219,6 @@ props: { plain: { type: Boolean, default: false } }
 ```
 
 第三步:通过绑定类名的方法动态控制样式，由于 plain 类型是布尔值，所以在类型中我们使用对象的形式来控制样式
-
 
 ```vue
 <template>
@@ -305,8 +235,6 @@ props: { plain: { type: Boolean, default: false } }
   </button>
 </template>
 ```
-
-
 
 第四步：设置不同类型的样式，由于 plain 类型是以对象的形式在类中定义的，所以使用获取属性的方法定义样式
 
@@ -373,7 +301,8 @@ props: { plain: { type: Boolean, default: false } }
 ```
 
 效果： ![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3yq04637j30s601oa9z.jpg)
-### 3.1.3 button 组件的 round 属性
+
+### 1.3 round 属性
 
 设置 round 属性和之前的相似，只要在组件中定义好了样式，动态获取属性值即可。
 获取属性值：
@@ -393,7 +322,7 @@ round 样式：
 
 效果图：![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3yrlx2iqj30rr01lmx4.jpg)
 
-### 3.1.4 button 组件的 circle 属性
+### 1.4 circle 属性
 
 circle 同上，样式为：
 
@@ -404,8 +333,7 @@ circle 同上，样式为：
 }
 ```
 
-
-### 3.1.5 button 组件中使用字体图标
+### 1.5 字体图标
 
 在项目中使用字体图标，首先需要有字体图标，我们可以去阿里巴巴矢量图标库下载。
 
@@ -427,19 +355,18 @@ circle 同上，样式为：
 }
 ```
 
-
 第三步：父组件传递图标名，子组件接收并且放到图标中
 父组件传值：
 
 ```html
 <div class="row">
-      <ti-button icon="bluetoothon"></ti-button>
-      <ti-button type="primary" icon="camera">照相机</ti-button>
-      <ti-button type="success" icon="course"></ti-button>
-      <ti-button type="info" icon="bluetooth_link"></ti-button>
-      <ti-button type="danger" icon="addto"></ti-button>
-      <ti-button type="warning" icon="audio"></ti-button>
-    </div>
+  <ti-button icon="bluetoothon"></ti-button>
+  <ti-button type="primary" icon="camera">照相机</ti-button>
+  <ti-button type="success" icon="course"></ti-button>
+  <ti-button type="info" icon="bluetooth_link"></ti-button>
+  <ti-button type="danger" icon="addto"></ti-button>
+  <ti-button type="warning" icon="audio"></ti-button>
+</div>
 ```
 
 子组件接收：
@@ -470,10 +397,6 @@ icon: { type: String, default: '' }
 </template>
 ```
 
-
-
-
-
 第四步：设置 icon 配套样式，使图标和文字之间有一定间隔
 
 ```css
@@ -485,7 +408,7 @@ icon: { type: String, default: '' }
 第五步：查看效果
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge3z17hxknj30jn01rmwz.jpg)
 
-### 3.1.6 button 组件中的点击事件
+### 1.6 点击事件
 
 我们在使用组件时，直接给组件定义事件是不会被触发的。需要在组件中定义一个点击事件，这个点击事件不进行其他操作，只触发父组件中的点击事件。
 
@@ -511,7 +434,6 @@ icon: { type: String, default: '' }
   </button>
 </template>
 ```
-
 
 定义一个点击事件，这个点击事件的作用是调用父组件中的点击事件，并且回调
 
@@ -539,9 +461,7 @@ icon: { type: String, default: '' }
   }
 ```
 
-
-
-### 3.1.7 button 组件中的 disabled 属性
+### 1.7 disabled 属性
 
 和之前相似，只要父子组件传值并且动态获取这个值并且赋给 disabled 属性,并且设置一个 disabled 样式即可。
 
@@ -572,244 +492,253 @@ icon: { type: String, default: '' }
   </button>
 </template>
 ```
+
 ```js
     disabled: {
       type: Boolean,
       default: false
     }
 ```
-disabled样式：
+
+disabled 样式：
+
 ```css
-.ti-button.is-disabled{
-   cursor: no-drop;
+.ti-button.is-disabled {
+  cursor: no-drop;
 }
 ```
+
 至此，按钮组件封装完成！
 附组件代码：
+
 ```vue
 <template>
-  <button class="ti-button" :class="[`ti-button-${type}`,{
-    'is-plain':plain,
-    'is-round':round,
-    'is-circle':circle,
-    'is-disabled':disabled
-  }]"
-  @click="handleClick"
-  :disabled="disabled"
+  <button
+    class="ti-button"
+    :class="[
+      `ti-button-${type}`,
+      {
+        'is-plain': plain,
+        'is-round': round,
+        'is-circle': circle,
+        'is-disabled': disabled,
+      },
+    ]"
+    @click="handleClick"
+    :disabled="disabled"
   >
-  <i v-if="icon" :class="`ti-icon-${icon}`"></i>
-  <!-- 如果没传入文本插槽，则不显示span内容 -->
-   <span v-if="$slots.default"><slot></slot></span>
+    <i v-if="icon" :class="`ti-icon-${icon}`"></i>
+    <!-- 如果没传入文本插槽，则不显示span内容 -->
+    <span v-if="$slots.default"><slot></slot></span>
   </button>
 </template>
- 
+
 <script>
- 
 export default {
-  name: 'oneButton',
+  name: "oneButton",
   // 此时对props进行校验，值接收string类型的type值
   props: {
     type: {
       type: String,
       // 设置默认值：如果不传值，那么使用default
-      default: 'defalut'
+      default: "defalut",
     },
     plain: {
       type: Boolean,
-      default: false
+      default: false,
     },
     round: {
       type: Boolean,
-      default: false
+      default: false,
     },
     circle: {
       type: Boolean,
-      default: false
+      default: false,
     },
     icon: {
       type: String,
-      default: ''
+      default: "",
     },
     disabled: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
-  created () {
+  created() {
     // 显示所有插槽
     // console.log(this.$slots)
   },
   methods: {
     // 定义一个点击事件，这个点击事件的作用是调用父组件中的点击事件，并且回调
-    handleClick (e) {
-      this.$emit('click', e)
-    }
+    handleClick(e) {
+      this.$emit("click", e);
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.ti-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  //禁止元素的文字被选中
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  &:hover,
+  &:focus {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
   }
 }
-</script>
- 
-<style lang="scss" scoped>
-  .ti-button{
-    display: inline-block;
-    line-height: 1;
-    white-space: nowrap;
-    cursor: pointer;
-    background: #ffffff;
-    border: 1px solid #dcdfe6;
-    color: #606266;
-    -webkit-appearance: none;
-    text-align: center;
-    box-sizing: border-box;
-    outline: none;
-    margin: 0;
-    transition: 0.1s;
-    font-weight: 500;
-    //禁止元素的文字被选中
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    padding: 12px 20px;
-    font-size: 14px;
-    border-radius: 4px;
-    &:hover,
-    &:focus{
-      color: #409eff;
-      border-color: #c6e2ff;
-      background-color: #ecf5ff;
-    }
-  }
-.ti-button-primary{
-  color:#fff;
+.ti-button-primary {
+  color: #fff;
   background-color: #409eff;
   border-color: #409eff;
   &:hover,
-  &:focus{
+  &:focus {
     background: #66b1ff;
     background-color: #66b1ff;
     color: #fff;
-    }
   }
-  .ti-button-success{
-  color:#fff;
+}
+.ti-button-success {
+  color: #fff;
   background-color: #67c23a;
   border-color: #67c23a;
   &:hover,
-  &:focus{
+  &:focus {
     background: #85ce61;
     background-color: #85ce61;
     color: #fff;
-    }
   }
-  .ti-button-info{
-  color:#fff;
+}
+.ti-button-info {
+  color: #fff;
   background-color: #909399;
   border-color: #909399;
   &:hover,
-  &:focus{
+  &:focus {
     background: #a6a9ad;
     background-color: #a6a9ad;
     color: #fff;
-    }
   }
-  .ti-button-warning{
-  color:#fff;
+}
+.ti-button-warning {
+  color: #fff;
   background-color: #e6a23c;
   border-color: #e6a23c;
   &:hover,
-  &:focus{
+  &:focus {
     background: #ebb563;
     background-color: #ebb563;
     color: #fff;
-    }
   }
-  .ti-button-danger{
-  color:#fff;
+}
+.ti-button-danger {
+  color: #fff;
   background-color: #f56c6c;
   border-color: #f56c6c;
   &:hover,
-  &:focus{
+  &:focus {
     background: #f78989;
     background-color: #f78989;
     color: #fff;
-    }
   }
+}
 // 朴素按钮样式
-.ti-button.is-plain{
+.ti-button.is-plain {
   &:hover,
-  &:focus{
+  &:focus {
     background: #fff;
     border-color: #489eff;
     color: #409eff;
   }
 }
-.ti-button-primary.is-plain{
+.ti-button-primary.is-plain {
   color: #409eff;
   background: #ecf5ff;
   &:hover,
-  &:focus{
+  &:focus {
     background: #409eff;
     border-color: #409eff;
     color: #fff;
   }
 }
-.ti-button-success.is-plain{
+.ti-button-success.is-plain {
   color: #67c23a;
   background: #c2e7b0;
   &:hover,
-  &:focus{
+  &:focus {
     background: #67c23a;
     border-color: #67c23a;
     color: #fff;
   }
 }
-.ti-button-info.is-plain{
+.ti-button-info.is-plain {
   color: #909399;
   background: #d3d4d6;
   &:hover,
-  &:focus{
+  &:focus {
     background: #909399;
     border-color: #909399;
     color: #fff;
   }
 }
-.ti-button-warning.is-plain{
+.ti-button-warning.is-plain {
   color: #e6a23c;
   background: #f5dab1;
   &:hover,
-  &:focus{
+  &:focus {
     background: #e6a23c;
     border-color: #e6a23c;
     color: #fff;
   }
 }
-.ti-button-danger.is-plain{
+.ti-button-danger.is-plain {
   color: #f56c6c;
   background: #fbc4c4;
   &:hover,
-  &:focus{
+  &:focus {
     background: #f56c6c;
     border-color: #f56c6c;
     color: #fff;
   }
 }
 // round属性
-.ti-button.is-round{
+.ti-button.is-round {
   border-radius: 20px;
   padding: 12px 23px;
 }
 // circle属性
-.ti-button.is-circle{
+.ti-button.is-circle {
   border-radius: 50%;
   padding: 12px;
 }
 // icon配套样式
-.ti-button [class*=ti-icon-]+span{
+.ti-button [class*="ti-icon-"] + span {
   margin-left: 5px;
 }
 // disabled属性
-.ti-button.is-disabled{
-   cursor: no-drop;
+.ti-button.is-disabled {
+  cursor: no-drop;
 }
 </style>
 ```
