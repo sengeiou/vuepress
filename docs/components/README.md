@@ -225,7 +225,9 @@ localhost:ti-ui willtien$
 - npm 官方搜索已发布的包
 
  :link: [ ti-ui-self ](https://www.npmjs.com/package/ti-ui-self)
-
+   
+   ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geaq60ku7uj31ev0s2dgn.jpg)   
+      
 - 更新 npm 说明
  
  > 针对patch： npm install finitxu-npm-test   
