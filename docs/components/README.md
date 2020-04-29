@@ -226,17 +226,15 @@ localhost:ti-ui willtien$
 
  :link: [ ti-ui-self ](https://www.npmjs.com/package/ti-ui-self)
    
-   ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geaq60ku7uj31ev0s2dgn.jpg)   
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb2iofobwj31er0sldhw.jpg)
       
 - 更新 npm 说明
- 
  > 针对patch： npm install finitxu-npm-test   
  > 针对minor： npm install finitxu-npm-test   
  > 针对major： npm install finitxu-npm-test@2.0.0   
 
 
 - npm version 后面参数说明：   
-
 > patch：小变动，比如修复bug等，版本号变动 v1.0.0->v1.0.1  
 > minor：增加新功能，不影响现有功能,版本号变动 v1.0.0->v1.1.0   
 > major：破坏模块对向后的兼容性，版本号变动 v1.0.0->v2.0.0   

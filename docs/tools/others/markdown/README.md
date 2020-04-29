@@ -144,10 +144,10 @@ title可加可不加
 语法：
 
 ```
-表头|表头|表头
----|:--:|---:
-内容|内容|内容
-内容|内容|内容
+| 表头 | 表头  | 表头 |
+| ---- | :---: | ---: |
+| 内容 | 内容  | 内容 |
+| 内容 | 内容  | 内容 |
 ```
 
 第二行分割表头和内容。
@@ -160,11 +160,11 @@ title可加可不加
 示例：
 
 ```
-姓名|技能|排行
---|:--:|--:
-刘备|哭|大哥
-关羽|打|二哥
-张飞|骂|三弟
+| 姓名 | 技能  | 排行 |
+| ---- | :---: | ---: |
+| 刘备 |  哭   | 大哥 |
+| 关羽 |  打   | 二哥 |
+| 张飞 |  骂   | 三弟 |
 ```
 
 注：各编辑器有差异
@@ -231,20 +231,49 @@ fun();
 
 ## 10. 流程图
 
-语法：
+VsCode 安装 Markdown Preview Enhanced 插件，然后右键预览。或者用 Typora (支持不同主题颜色)
 
-````
-(```)flow
-st=>start: 开始
-op=>operation: My Operation
+**语法：**
+
+- 流程图
+```
+```flow
+st=>start: begin
+en=>end: end
+op=>operation: process
 cond=>condition: Yes or No?
-e=>end
+
 st->op->cond
-cond(yes)->e
+cond(yes)->en
 cond(no)->op
-&(```)
-````
+```
+Typora 生成：
+<!-- ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb26nkgifj30s10jymx8.jpg) -->
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb2a39g3cj30r40jjt8s.jpg)
+- 甘特图
+```
+```mermaid
+gantt
+        dateFormat  YYYY-MM-DD
+        title Project Plan
+        section task
+        done : done, des1, 2019-01-01,2019-01-05
+        on-going : active, des2, 2019-01-06, 3d
+        planned : des3, after des2, 5d
+```
+Typora 生成：
+<!-- ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb26awqstj30z10cmmx8.jpg) -->
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb28ytiyej30zw0bwglo.jpg)
 
-![流程图](https://tva1.sinaimg.cn/large/006y8mN6ly1g71mingik8j30720blaa6.jpg)
 
-- 注：本博客使用的 markdown 编辑器不支持流程图，以图片代替演示结果。
+- 时序图
+```
+```sequence
+Title:connection
+client->server: request 
+server->client: response
+client->server: call
+```
+Typora 生成：
+<!-- ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb25trq68j30r00g0q2x.jpg) -->
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb29tzua0j30mu0g6aa2.jpg)
