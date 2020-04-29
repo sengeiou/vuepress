@@ -11,6 +11,6 @@ title: 首页
 ## 参考资料
 
 1. 《JavaScript 权威指南》
-2. [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
-3. [MDN](https://developer.mozilla.org/zh-CN/)
-4. [ECMA](https://www.ecma-international.org/)
+2. [ **You-Dont-Know-JS** ](https://github.com/getify/You-Dont-Know-JS)
+3. [ **MDN** ](https://developer.mozilla.org/zh-CN/)
+4. [ **ECMA** ](https://www.ecma-international.org/)

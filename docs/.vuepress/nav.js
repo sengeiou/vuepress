@@ -7,7 +7,7 @@ module.exports = [
       { text: "Webpack", link: "/web/webpack/" },
       { text: "CSS", link: "/web/css/" },
       {
-        text: "Framework",
+        text: "前端框架",
         items: [
           { text: "Vue", link: "/web/framework/vue/" },
           // { text: "Angular", link: "/web/framework/angular/" }
@@ -45,11 +45,14 @@ module.exports = [
     // ]
   },
   {
-    text: "组件",
-    items: [
-      { text: "Ti-ui", link: "/components/tiui/" },
-      { text: "Data", link: "/components/data/" }
-    ]
+    text: "组件文档", link: "/components/",
+
+
+    // items: [
+    //   { text: "Ti-ui", link: "/components/tiui/" },
+    //   { text: "Data", link: "/components/data/" }
+    // ]
+
 
     // items: [
     //   {
@@ -72,16 +75,16 @@ module.exports = [
     text: "工具",
     items: [
       {
-        text: "IDE",
+        text: "开发工具",
         items: [
-          { text: "WebStorm", link: "/tools/ide/" },
+          { text: "WebStorm", link: "/tools/ide/WebStorm/" },
           { text: "vsCode", link: "/tools/ide/" },
         ],
       },
       {
-        text: "Others",
+        text: "效率工具",
         items: [
-          { text: "iTerm2", link: "/tools/others/" },
+          { text: "iTerm2", link: "/tools/others/iTerm2/" },
           { text: "Markdown", link: "/tools/others/" }
         ],
       }
