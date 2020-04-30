@@ -11,13 +11,14 @@ module.exports = [
         items: [
           { text: "Vue", link: "/web/framework/vue/" },
           // { text: "Angular", link: "/web/framework/angular/" }
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
 
   {
-    text: "组件文档", link: "/components/",
+    text: "组件文档",
+    link: "/components/",
   },
 
   {
@@ -34,14 +35,14 @@ module.exports = [
         text: "效率工具",
         items: [
           { text: "iTerm2", link: "/tools/others/iterm2/" },
-          { text: "Markdown", link: "/tools/others/markdown/" }
-        ]
-      }
-    ]
+          { text: "Markdown", link: "/tools/others/markdown/" },
+        ],
+      },
+    ],
   },
 
   {
     text: "Github",
     link: "https://github.com/TienOUC",
-  }
+  },
 ]
