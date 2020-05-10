@@ -17,7 +17,7 @@ VuePress 搭建的组件库文档
 
 ## 发布
 
-**1. 新建一个 vue 项目，并且在根目录创建两个文件夹就 packages 和 examples**
+**1. 新建一个 vue 项目，并且在根目录创建两个文件夹 packages 和 examples**
 
 > packages：用于存放所有的组件   
 > examples：用于进行测试，把 src 改为 examples
@@ -216,7 +216,8 @@ localhost:ti-ui willtien$
  - 删除已发布的包
  `npx force-unpublish package-name '原因描述'` 
  
- - 更新自己的 npm 包（模块）及 README.md
+ - 更新自己的 npm 包（模块）及 README.md   
+   
  修改代码和 README.md 后，执行命令：
  ```
  npm version patch

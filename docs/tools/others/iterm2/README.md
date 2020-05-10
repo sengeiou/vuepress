@@ -11,7 +11,7 @@ Iterm2 是苹果系统增加的命令行工具，定制化很强，使用方便�
 
 
 ## 风格设定
- https://iterm2colorschemes.com/ 网站提供了丰富的风格包以供下载。
+:link: [ iterm2colorschemes ](https://iterm2colorschemes.com/) 网站提供了丰富的风格包以供下载。
 
 下载主题包解压后在 iterm 软件中导入风格包
 
