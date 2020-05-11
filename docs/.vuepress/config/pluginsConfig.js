@@ -21,7 +21,10 @@ module.exports = [
   //   }
   // ],
   [
-    '@vuepress/back-to-top'
+    '@vuepress/nprogress'  //网页加载进度条
+  ],
+  [
+    '@vuepress/back-to-top' //返回页面顶部按钮
   ],
   [
     '@vuepress/google-analytics',
@@ -43,5 +46,8 @@ module.exports = [
       titleMode: "titlecase",
       collapsable: true
     }
+  ],
+  [
+    'vuepress-plugin-flowchart'
   ]
 ]

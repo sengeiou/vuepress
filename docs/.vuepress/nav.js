@@ -1,48 +1,17 @@
 module.exports = [
-  { text: "主页", link: "/" },
   {
-    text: "前端",
+    text: 'pages',
     items: [
-      { text: "JavaScript", link: "/web/javascript/" },
-      { text: "Webpack", link: "/web/webpack/" },
-      { text: "CSS", link: "/web/css/" },
-      {
-        text: "前端框架",
-        items: [
-          { text: "Vue", link: "/web/framework/vue/" },
-          // { text: "Angular", link: "/web/framework/angular/" }
-        ],
-      },
+      { text: 'Markdown', link: '/pages/tools/others/markdown/' },
+      { text: 'Iterm2', link: '/pages/tools/others/iterm2/' },
+      { text: 'Webstorm', link: '/pages/tools/ide/webstorm/' },
+      { text: 'Vue', link: '/pages/web/framework/vue/' },
+      { text: 'Javascript', link: '/pages/web/javascript/' },
+      { text: 'Webpack', link: '/pages/web/webpack/' },
+      { text: 'Components', link: '/pages/components/' },
+      { text: 'Ide', link: '/pages/tools/ide/' },
+      { text: 'Css', link: '/pages/web/css/' },
+      { text: 'About', link: '/pages/about/' },
     ],
-  },
-
-  {
-    text: "组件文档",
-    link: "/components/",
-  },
-
-  {
-    text: "工具",
-    items: [
-      {
-        text: "开发工具",
-        items: [
-          { text: "VsCode", link: "/tools/ide/" },
-          // { text: "WebStorm", link: "/tools/ide/webstorm/" }
-        ],
-      },
-      {
-        text: "效率工具",
-        items: [
-          { text: "iTerm2", link: "/tools/others/iterm2/" },
-          { text: "Markdown", link: "/tools/others/markdown/" },
-        ],
-      },
-    ],
-  },
-
-  {
-    text: "Github",
-    link: "https://github.com/TienOUC",
   },
 ]

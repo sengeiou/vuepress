@@ -1,4 +1,5 @@
 module.exports = [
+  ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
   ['meta', { name: 'author', content: 'Tien' }],
   ['meta', { name: 'keywords', content: 'vuepress,Tien,vuepress ??' }],
   ['link', { rel: 'icon', href: '/favicon.ico' }],
