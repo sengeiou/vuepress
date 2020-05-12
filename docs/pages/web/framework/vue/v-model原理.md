@@ -1,17 +1,22 @@
 ---
-title: "v-model原理"
-date: 2019-12-28
+title: 'v-model原理'
+date: 2019-12-16
 categories:
-- Framework
+  - Framework
 tags:
-- Vue
+  - Vue
 ---
 
+:::tip
 v-model 其实是一个语法糖，本质上是如下两个操作：
->  a)  v-bind绑定一个value属性   
->  b)  v-on指令给当前元素绑定input事件
 
-**示例** 
+> a) v-bind 绑定一个 value 属性  
+>  b) v-on 指令给当前元素绑定 input 事件
+> :::
+
+<!-- more -->
+
+**示例**
 
 ```js
     <div id="app">
@@ -33,8 +38,6 @@ v-model 其实是一个语法糖，本质上是如下两个操作：
     </script>
 ```
 
-
-
 ```js
 上述methods方法可以省略，利用event事件将input监听简写
 
@@ -50,9 +53,8 @@ v-model 其实是一个语法糖，本质上是如下两个操作：
             }
         })
     </script>
-``` 
-   
-   
+```
+
 ```js
 v-model是上述v-bind和v-on的语法糖，所以
 

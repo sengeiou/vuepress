@@ -1,7 +1,7 @@
 ---
 autoGroup-4: 其他
 title: "Ajax封装"
-date: 2019-12-28
+date: 2020-03-02
 categories:
 - FrontEnd
 tags:

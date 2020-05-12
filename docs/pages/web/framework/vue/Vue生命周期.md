@@ -1,13 +1,16 @@
 ---
 title: "Vue生命周期"
-date: 2019-12-28
+date: 2020-02-05
 categories:
 - Framework
 tags:
 - Vue
 ---
 
+:::tip
 Vue 生命周期即 Vue 实例从创建->运行->销毁过程中暴露出来的一系列函数，也称 Vue 钩子（函数）
+:::
+<!-- more -->
 
 > 创建类:
 

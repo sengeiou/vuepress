@@ -1,12 +1,18 @@
 ---
 title: "Vuex学习笔记"
-date: 2019-12-28
+date: 2020-03-25
 categories:
 - Framework
 tags:
 - Vue
 - Vuex
 ---
+
+:::tip
+Vuex 是实现组件全局状态（数据）管理的机制，可以方便地实现组件之间传值。(适用于大数据共享或者数据频繁共享的场景)
+:::
+
+<!-- more -->
 
 ## **1. Vuex 概述**
 

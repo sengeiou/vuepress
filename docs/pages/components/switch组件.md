@@ -8,7 +8,10 @@ tags:
 - Vue
 - FrontEnd
 ---
-
+:::tip
+ :link: [ ti-ui-self ](https://www.npmjs.com/package/ti-ui-self)
+:::
+<!-- more -->
 ## 1. 参数
 
 | 参数名称       | 参数描述     | 参数类型 | 默认值  |

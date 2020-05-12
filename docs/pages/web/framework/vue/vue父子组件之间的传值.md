@@ -1,11 +1,16 @@
 ---
 title: "vue父子组件之间的传值"
-date: 2019-12-28
+date: 2019-11-01
 categories:
 - Framework
 tags:
 - Vue
 ---
+:::tip
+vue父子组件传值
+:::
+
+<!-- more -->
 
 ## 1. 父组件向子组件传值
 

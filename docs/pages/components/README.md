@@ -230,9 +230,9 @@ localhost:ti-ui willtien$
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb2iofobwj31er0sldhw.jpg)
       
 - 更新 npm 说明
- > 针对patch： npm install finitxu-npm-test   
- > 针对minor： npm install finitxu-npm-test   
- > 针对major： npm install finitxu-npm-test@2.0.0   
+ > 针对patch： npm install test-npm-test   
+ > 针对minor： npm install test-npm-test   
+ > 针对major： npm install test-npm-test@2.0.0   
 
 
 - npm version 后面参数说明：   

@@ -1,23 +1,28 @@
 ---
 title: Markdown语法
-date: 2020-03-22
+date: 2019-04-17
 isTimeLine: true
 categories:
- - Tools
+  - Tools
 tags:
- - IDE
+  - IDE
 ---
+
+:::tip
+Markdown 可以大幅提高码字效率...
+:::
+
+<!-- more -->
 
 ## 1. 标题
 
 在想要设置为标题的文字前面加#来表示
-一个#是一级标题，两个#是二级标题，以此类推，支持六级标题。
+一个`#`是一级标题，两个`#`是二级标题，以此类推，支持六级标题。
 
-注：标准语法在#后跟一个空格
+注：标准语法在`#`后跟一个空格
 
 示例：
 
-```
 # 这是一级标题
 
 ## 这是二级标题
@@ -29,9 +34,6 @@ tags:
 ##### 这是五级标题
 
 ###### 这是六级标题
-```
-
-<br>
 
 ## 2. 字体
 
@@ -237,26 +239,54 @@ fun();
 
 ## 10. 流程图
 
-VsCode 安装 Markdown Preview Enhanced 插件，然后右键预览。或者用 Typora (支持不同主题颜色)
+VsCode 安装 Markdown Preview Enhanced 插件，然后右键预览。或者用 Typora (支持不同主题颜色)   
+   
+本文使用的是 [ vuepress-plugin-flowchart ](https://flowchart.vuepress.ulivz.com) 插件语法，仅支持流程图，不支持甘特图和时序图。
 
 **语法：**
 
 - 流程图
-```
-```flow
-st=>start: begin
-en=>end: end
-op=>operation: process
-cond=>condition: Yes or No?
 
-st->op->cond
-cond(yes)->en
-cond(no)->op
-```
-Typora 生成：
-<!-- ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb26nkgifj30s10jymx8.jpg) -->
-![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb2a39g3cj30r40jjt8s.jpg)
-- 甘特图
+````
+@flowstart
+st=>start: Start|past:>http://www.google.com[blank]
+e=>end: End|future:>http://www.google.com
+op1=>operation: My Operation|past
+op2=>operation: Stuff|current
+sub1=>subroutine: My Subroutine|invalid
+cond=>condition: Yes
+or No?|approved:>http://www.google.com
+c2=>condition: Good idea|rejected
+io=>inputoutput: catch something...|future
+
+st->op1(right)->cond
+cond(yes, right)->c2
+cond(no)->sub1(left)->op1
+c2(yes)->io->e
+c2(no)->op2->e
+@flowend
+````
+
+@flowstart
+st=>start: Start|past:>http://www.google.com[blank]
+e=>end: End|future:>http://www.google.com
+op1=>operation: My Operation|past
+op2=>operation: Stuff|current
+sub1=>subroutine: My Subroutine|invalid
+cond=>condition: Yes
+or No?|approved:>http://www.google.com
+c2=>condition: Good idea|rejected
+io=>inputoutput: catch something...|future
+
+st->op1(right)->cond
+cond(yes, right)->c2
+cond(no)->sub1(left)->op1
+c2(yes)->io->e
+c2(no)->op2->e
+@flowend
+   
+
+- 甘特图  
 ```
 ```mermaid
 gantt
@@ -268,18 +298,16 @@ gantt
         planned : des3, after des2, 5d
 ```
 Typora 生成：
-<!-- ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb26awqstj30z10cmmx8.jpg) -->
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb28ytiyej30zw0bwglo.jpg)
-
 
 - 时序图
 ```
 ```sequence
 Title:connection
-client->server: request 
+client->server: request
 server->client: response
 client->server: call
+
 ```
 Typora 生成：
-<!-- ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb25trq68j30r00g0q2x.jpg) -->
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geb29tzua0j30mu0g6aa2.jpg)

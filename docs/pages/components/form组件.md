@@ -8,7 +8,10 @@ tags:
 - Vue
 - FrontEnd
 ---
-
+:::tip
+ :link: [ ti-ui-self ](https://www.npmjs.com/package/ti-ui-self)
+:::
+<!-- more -->
 ## 1. 参数
 
 将各组件整合成表单组件，所支持参数详见其他各组件
