@@ -28,6 +28,7 @@ export default {
   margin-bottom: 20px;
   .ti-button {
     margin-right: 10px;
+    margin-bottom: 5px;
   }
 }
 </style>
