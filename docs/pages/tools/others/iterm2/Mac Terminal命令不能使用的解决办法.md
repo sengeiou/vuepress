@@ -8,7 +8,7 @@ tags:
  - IDE
 ---
 
-一次在用终端敲命令的时候发现命令总是不执行(只有cd命令可以正常执行)，返回命令未识别的错误 `-bash: source: command not found`, zsh 和 bash 也不能切换。   
+在用终端敲命令的时候发现命令总是不执行(只有cd命令可以正常执行)，返回命令未识别的错误 `-bash: source: command not found`, zsh 和 bash 也不能切换。   
 
 
 解决步骤：   
