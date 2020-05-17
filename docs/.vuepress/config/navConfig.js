@@ -5,6 +5,11 @@ module.exports = [
         icon: 'reco-home'
     },
     {
+        text: "疫情",
+        link: "http://139.129.222.60/covid",
+        icon: 'reco-message'
+    },
+    {
         text: "分类",
         items: [
             {

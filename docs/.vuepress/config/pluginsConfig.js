@@ -24,7 +24,8 @@ module.exports = [
     '@vuepress/nprogress'  //网页加载进度条
   ],
   [
-    '@vuepress/back-to-top' //返回页面顶部按钮
+    // '@vuepress/back-to-top' //返回页面顶部按钮
+    'go-top'
   ],
   [
     '@vuepress/google-analytics',
