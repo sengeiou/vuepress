@@ -23,9 +23,24 @@ module.exports = [
   [
     '@vuepress/nprogress'  //网页加载进度条
   ],
+  // [
+  //   '@vuepress-reco/vuepress-plugin-kan-ban-niang',
+  //   {
+  //     theme: ['whiteCat'],
+  //     clean: true,
+  //     height: 150,
+  //     width: 90,
+  //     modelStyle: {
+  //       right: '50px',
+  //       bottom: '0px',
+  //     }
+  //   }
+
+  // ],
   [
     // '@vuepress/back-to-top' //返回页面顶部按钮
-    'go-top'
+    '@vuepress-reco/vuepress-plugin-back-to-top'
+    // 'go-top'
   ],
   [
     '@vuepress/google-analytics',

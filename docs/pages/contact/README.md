@@ -2,6 +2,7 @@
 navbar: false
 sidebar: false
 title: 微信
+isShowComments: false
 ---
 <div style="width:100%; text-align:center; margin:0 auto">
 

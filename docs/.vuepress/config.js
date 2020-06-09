@@ -12,7 +12,7 @@ module.exports = {
     plugins: pluginsConfig,
     themeConfig: {
         smoothScroll: true,
-        lastUpdated: '最后更新',
+        lastUpdated: '更新时间',
         nav: navConfig,
         //vuepress-theme-reco 第三方主题配置
         author: 'Tien',
@@ -42,9 +42,9 @@ module.exports = {
         ],
         noFoundPageByTencent: false,  // 404 腾讯公益
         // 备案
-        record: 'ICP 备案文案',
-        recordLink: 'ICP 备案指向链接',
-        // cyberSecurityRecord: '公安部备案文案',
+        record: '京ICP备20018281号-1',
+        recordLink: 'http://www.beian.miit.gov.cn',
+        // cyberSecurityRecord: '京公网安备',
         // cyberSecurityLink: '公安部备案指向链接',
         // // 项目开始时间，只填写年份
         startYear: '2019'

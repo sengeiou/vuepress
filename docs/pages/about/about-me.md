@@ -2,6 +2,7 @@
 # navbar: false
 # sidebar: false
 title: 关于我
+isShowComments: false
 ---
 
 ::: tip 契机：

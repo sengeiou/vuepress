@@ -2,6 +2,7 @@
 # navbar: false
 # sidebar: false
 title: 介绍
+isShowComments: false
 ---
 
 ## 前言

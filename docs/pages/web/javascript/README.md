@@ -1,5 +1,6 @@
 ---
 title: 首页
+isShowComments: false
 ---
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge5aemu5tdj30m808cglu.jpg)
 

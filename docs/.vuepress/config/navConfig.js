@@ -6,7 +6,7 @@ module.exports = [
     },
     {
         text: "疫情",
-        link: "http://139.129.222.60/covid",
+        link: "http://www.dodolo.top/covid",
         icon: 'reco-message'
     },
     {
@@ -22,6 +22,13 @@ module.exports = [
                 ]
             },
             {
+                text: "后端",
+                items: [
+                    { text: "CentOS", link: "/pages/server/centos/" },
+                    { text: "Nginx", link: "/pages/server/nginx/" }
+                ]
+            },
+            {
                 text: "工具",
                 items: [
                     { text: "VsCode", link: "/pages/tools/ide/" },
@@ -32,7 +39,13 @@ module.exports = [
             {
                 text: "组件",
                 items: [
-                    { text: "组件文档", link: "/pages/components/" }
+                    { text: "tiUI", link: "/pages/components/" }
+                ]
+            },
+            {
+                text: "小程序",
+                items: [
+                    { text: "云开发", link: "/pages/miniProgram/" }
                 ]
             }
         ], icon: 'reco-category'
