@@ -3,17 +3,10 @@ title: VsCode常用插件
 isTimeLine: true
 date: 2020-03-28
 categories:
- - Tools
-tags:
  - IDE
+tags:
+ - Tools
 ---
-:::tip
-能有效提高编码效率的 VsCode 插件
-:::
-
-<!-- more -->
-
-## 常用插件
 
 1. [Bootstrap 4, Font awesome 4, Font Awesome 5 Free & Pro snippets](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
 

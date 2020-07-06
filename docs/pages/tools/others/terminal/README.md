@@ -5,23 +5,14 @@ isTimeLine: true
 categories:
  - Tools
 tags:
- - IDE
+ - Tools
 ---
 
-:::tip
-Iterm2 是苹果系统增加的命令行工具...
-:::
-<!-- more -->
-
-## 简介
-Iterm2 是苹果系统增加的命令行工具，定制化很强，使用方便，并且外观也好看。
-
-
-## 安装
+### 1. 安装
 :link: [ 下载地址：](https://www.iterm2.com/)
 
 
-## 风格设定
+### 2. 风格设定
 :link: [ iterm2colorschemes ](https://iterm2colorschemes.com/) 网站提供了丰富的风格包以供下载。
 
 下载主题包解压后在 iterm 软件中导入风格包

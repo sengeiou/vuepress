@@ -11,16 +11,16 @@ tags:
 ### 1. 环境配置
 在 app.js 里设置 env: '你的环境ID'，环境ID在云开发的设置下可查看
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfm0gat19dj30ya05n74c.jpg)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfm291keaoj30m8046glp.jpg)
 
 ### 2. 云函数
 + 设置好当前环境后，在 cloudfunctions 路径下新建 Node.js 云函数
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlly1gflzhew88hj30cw0ejaan.jpg)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfm29gp7xxj30m80m878g.jpg)
 
 + 在新建的 sum 云函数文件夹下的 index.js 中写入如下js代码段
    
-![](https://tva1.sinaimg.cn/large/007S8ZIlly1gflzio94ppj307x06pwed.jpg)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfm29seg70j30m80got9q.jpg)
    
 ```js
 // 云函数入口文件
@@ -40,11 +40,11 @@ exports.main = async (event, context) => {
 ```
 + 上传并部署   
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlly1gflzqogpusj30gm0h7wfs.jpg)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfm2a874jrj30m80m843s.jpg)
 
 + 云端测试，调用成功，返回 3   
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlly1gflzqhkbr5j30m80not9t.jpg)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfm2amtls1j30m80not9t.jpg)
 
 + 在 miniprogram 路径下新建名为 test 的 Page，并在 test.js 中写入如下代码
 
@@ -67,7 +67,7 @@ exports.main = async (event, context) => {
 ```
 + 然后在当前page编译，即可看到云函数返回值为 3
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfm04kwk5bj30jy0l6mxw.jpg)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfm2awl7njj30jy0l6mxw.jpg)
 
 
 

@@ -3,10 +3,10 @@ title: Mac安装MongoDB-v4.2
 date: 2020-05-21
 isTimeLine: true
 categories:
-- Server
-- Tools
+- Database
 tags:
-- IDE
+- Database
+- Tools
 ---
 
 

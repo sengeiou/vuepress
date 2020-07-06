@@ -1,5 +1,6 @@
 ---
 title: 简介
+isShowComments: false
 ---
 <div class="custom-block tip">
  

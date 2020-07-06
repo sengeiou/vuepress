@@ -25,14 +25,16 @@ module.exports = [
                 text: "后端",
                 items: [
                     { text: "CentOS", link: "/pages/server/centos/" },
-                    { text: "Nginx", link: "/pages/server/nginx/" }
+                    { text: "Nginx", link: "/pages/server/nginx/" },
+                    { text: "Database", link: "/pages/server/database/" },
                 ]
             },
             {
                 text: "工具",
                 items: [
-                    { text: "VsCode", link: "/pages/tools/ide/" },
-                    { text: "iTerm2", link: "/pages/tools/others/iterm2/" },
+                    { text: "IDE", link: "/pages/tools/ide/" },
+                    { text: "Storybook", link: "/pages/tools/storybook/" },
+                    { text: "Terminal", link: "/pages/tools/others/terminal/" },
                     { text: "Markdown", link: "/pages/tools/others/markdown/" }
                 ]
             },
