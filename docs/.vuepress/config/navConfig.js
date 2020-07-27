@@ -4,11 +4,11 @@ module.exports = [
         link: "/",
         icon: 'reco-home'
     },
-    {
-        text: "疫情",
-        link: "http://www.dodolo.top/covid",
-        icon: 'reco-message'
-    },
+    // {
+    //     text: "疫情",
+    //     link: "http://www.dodolo.top/covid",
+    //     icon: 'reco-message'
+    // },
     {
         text: "分类",
         items: [
@@ -75,6 +75,11 @@ module.exports = [
                         text: "邮箱",
                         link: "/pages/contact/email/",
                         icon: "reco-mail"
+                    },
+                    {
+                        text: "Gitee",
+                        link: "https://gitee.com/tienouc",
+                        icon: "reco-mayun"
                     },
                     {
                         text: "Github",

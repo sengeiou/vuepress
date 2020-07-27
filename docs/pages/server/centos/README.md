@@ -1,12 +1,13 @@
 ---
-title: centOS-v7服务器运行Node.js脚本爬取数据
+title: 无界面服务器运行Node.js脚本爬取数据（centOS-v7）
 date: 2020-05-20
 isTimeLine: true
+sticky: 1
 categories:
- - Server
+  - Server
 tags:
- - Selenium
- - Node
+  - Selenium
+  - Node
 ---
 
 :::tip
@@ -15,12 +16,12 @@ Selenium + Node + Chrome
 
 <!-- more -->
 
-### 1. 安装 Selenium
+## 1. 安装 Selenium
 
 `pip install selenium`
 
-### 2. 安装 Chrome
-
+## 2. 安装 Chrome 和 chromedriver
+### 2.1 Chrome
 因国内无法访问 Google，所以需要自己配置 yum 源，在目录 `/etc/yum.repos.d/` 下新建 `google-chrome.repo` 文件，
 
 ```
@@ -48,7 +49,7 @@ gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 
 此时 chrome 安装成功！
 
-### 3. 安装 chromedriver
+### 2.2 chromedriver
 
 去[ chromedriver 官网 ](https://sites.google.com/a/chromium.org/chromedriver/downloads)下载与 `chrome版本号` 对应的 `chromedriver`压缩包 ，解压后放在脚本所在目录下
 
@@ -57,9 +58,9 @@ gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 app.js  chromedriver_linux64.zip chromedriver  crawler.js
 ```
 
-### 3. 运行脚本
+## 3. 运行脚本
 
-#### 3.1 服务器终端模式
+### 3.1 服务器终端模式
 
 需要修改 google-chrome 文件
 
@@ -70,7 +71,7 @@ vim /opt/google/chrome/google-chrome  // vim打开文件，最后一行做如下
 + exec -a "$0" "$HERE/chrome" "$@" --no-sandbox --headless $HOME
 ```
 
-#### 3.2 服务器 GUI 模式
+### 3.2 服务器 GUI 模式
 
 root 用户下，找到`/usr/share/applications/Google Chrome.desktop`，鼠标右键弹出菜单->属性->命令，
 
@@ -86,7 +87,7 @@ root 用户下，找到`/usr/share/applications/Google Chrome.desktop`，鼠标�
 
 ```js
 
-// 爬取万矿疫情数据  需注册账号并登陆才能爬取数据，官方Web API使用说明 :（ https://www.windquant.com/qntcloud/help/id-fdc2e335-7f50-4b63-b79c-07a2582cf15c 
+// 爬取万矿疫情数据  需注册账号并登陆才能爬取数据，官方Web API使用说明 :（ https://www.windquant.com/qntcloud/help/id-fdc2e335-7f50-4b63-b79c-07a2582cf15c
 
 ）
 
@@ -127,3 +128,143 @@ const nodeSchedule = require('node-schedule')
   }
 })();
 ```
+
+## 4. 项目展示（Covid-19）
+
+**Echarts 学习实践，赶在国内疫情末尾写了个疫情展示页面**
+
+:link: [ 展示页面连接 ](http://www.dodolo.top/covid/)
+
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1geqw7nzb2yj30xc0hfju5.jpg)
+
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1geqw7npy4ij30xc0hcq60.jpg)
+
+### 4.1 使用
+
+> a. 安装依赖包  
+> b. `server` 目录下先修改`crawler.js`中的万矿 ID 和万矿密码，然后 `node crawler.js app.js` 启动即可（首次启动需修改 `crawler.js` 中的抓取时间，不然要等好久才会有数据哒！）  
+> c. [Selenium+Node+无界面 Chrome 爬取数据](http://www.dodolo.top/pages/server/centos/)  
+> d. 图形界面下把与 Chrome 版本对应的 chromedriver 文件放在脚本目录即可
+
+### 4.2 注意事项
+
+- flexible.js
+
+修改了 `flexible.js` 默认的宽度分割
+
+```js
+ function setRemUnit () {
++    var rem = docEl.clientWidth / 32;
+     docEl.style.fontSize = rem + "px";
+  }
+```
+
+所以引入的是本地的 `flexible.js`，你可以根据自身需求来选择。  
+**`flexible.js` 安装**
+
+`npm i -S flexible.js` 安装 `npm` 包，然后用以下两种方式引入
+
+```js
+import flexible from 'flexible.js' // 1.引入页面适应模块 flexible
+flexible()
+```
+
+或者
+
+```js
+require('flexible.js')() // 2.或者require引入
+```
+
+- CleanWebpackPlugin 插件
+
+我使用的 `webpack` 是 `4.43.0` 版本，在引入 `CleanWebpackPlugin` 插件时发现老版本的引入写法已经弃用了，新版本的引入方法是
+
+```js
+const { CleanWebpackPlugin } = require('clean-webpack-plugin') // 这里必须这样引入，不然会报错，原写法改了
+...
+
+配置：
+new CleanWebpackPlugin(),
+```
+
+### 4.3 数据源及定时抓取
+
+#### 4.3.1 丁香园
+
+`https://ncov.dxy.cn/ncovh5/view/pneumonia`
+
+#### 4.3.2 万矿
+
+需注册万矿账号
+[官方 Web API 使用说明](https://www.windquant.com/qntcloud/help/id-fdc2e335-7f50-4b63-b79c-07a2582cf15c)
+
+#### 4.3.3 微博热搜词
+
+`https://s.weibo.com/top/summary?cate=realtimehot`
+
+> 以上数据均用 NodeJS nodeSchedule 定时抓取，数据的延迟取决于你的抓取时间设置，我们是练习使用，不要过度调用接口，让疫情数据及时更新到更有价值的地方去。
+
+### 4.4 Node nodeSchedule 的用法
+
+```js
+const schedule = require('node-schedule')
+
+const scheduleCronstyle = () => {
+  //每分钟的第30秒定时执行一次:
+  schedule.scheduleJob('30 * * * * *', () => {
+    console.log('scheduleCronstyle:' + new Date())
+  })
+}
+scheduleCronstyle()
+```
+
+`*` 代表通配符
+
+```js
+*  *  *  *  *  *
+┬ ┬ ┬ ┬ ┬ ┬
+│ │ │ │ │  |
+│ │ │ │ │ └ day of week (0 - 7) (0 or 7 is Sun)
+│ │ │ │ └───── month (1 - 12)
+│ │ │ └────────── day of month (1 - 31)
+│ │ └─────────────── hour (0 - 23)
+│ └──────────────────── minute (0 - 59)
+└───────────────────────── second (0 - 59, OPTIONAL)
+```
+
+6 个占位符从左到右分别代表：秒、分、时、日、月、周几
+
+`*` 表示通配符，匹配任意，当秒是 `*` 时，表示任意秒数都触发，其它类推
+
+示例：
+
+```js
+每分钟的第30秒触发： '30 * * * * *'
+
+每小时的1分30秒触发 ：'30 1 * * * *'
+
+每天的凌晨1点1分30秒触发 ：'30 1 1 * * *'
+
+每月的1日1点1分30秒触发 ：'30 1 1 1 * *'
+
+2016年的1月1日1点1分30秒触发 ：'30 1 1 1 2016 *'
+
+每周1的1点1分30秒触发 ：'30 1 1 * * 1'
+```
+
+每个参数还可以传入数值范围:
+
+```js
+const task1 = () => {
+  //每分钟的1-10秒都会触发，其它通配符依次类推
+  schedule.scheduleJob('1-10 * * * * *', () => {
+    console.log('scheduleCronstyle:' + new Date())
+  })
+}
+
+task1()
+```
+
+### 4.5 最后
+
+代码写的很乱，后续有空了会抽离优化，或者考虑重构，多端适配也需要优化，目前就先这样吧。
