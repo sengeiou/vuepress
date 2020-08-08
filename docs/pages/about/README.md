@@ -15,4 +15,4 @@ isShowComments: false
 
 ## 写文档的想法
 
-之前所用的 :link: [博客模板](https://willtien.com/) 是 Fork 的别人的代码，用 Jeykll + Github Pages 部署的，仅仅是用来记录笔记而已，没有深入的去了解 Jekyll，所以后期想做一些页面优化时感觉无从下手，而在学习了 Vue 之后，VuePress 就很容易上手了。
+之前所用的 :link: [博客模板](https://www.dodolo.top/) 是 Fork 的别人的代码，用 Jeykll + Github Pages 部署的，仅仅是用来记录笔记而已，没有深入的去了解 Jekyll，所以后期想做一些页面优化时感觉无从下手，而在学习了 Vue 之后，VuePress 就很容易上手了。

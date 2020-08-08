@@ -42,7 +42,7 @@ module.exports = {
         ],
         noFoundPageByTencent: false,  // 404 腾讯公益
         // 备案
-        record: '京ICP备20018281号-1',
+        record: '京ICP备20029652号',
         recordLink: 'http://www.beian.miit.gov.cn',
         // cyberSecurityRecord: '京公网安备',
         // cyberSecurityLink: '公安部备案指向链接',

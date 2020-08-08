@@ -4,11 +4,11 @@ module.exports = [
         link: "/",
         icon: 'reco-home'
     },
-    // {
-    //     text: "疫情",
-    //     link: "http://www.dodolo.top/covid",
-    //     icon: 'reco-message'
-    // },
+    {
+        text: "疫情",
+        link: "http://blog.dodolo.top/covid",
+        icon: 'reco-message'
+    },
     {
         text: "分类",
         items: [

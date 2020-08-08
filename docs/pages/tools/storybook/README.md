@@ -1,5 +1,5 @@
 ---
-title: Storybook
+title: Storybook独立开发、管理组件
 isTimeLine: true
 date: 2020-06-28
 categories:
@@ -269,3 +269,9 @@ export default Styled<%= name %>
 其中 `name` 是组件名
 
 然后使用 `hygen component new [组件名]` 即可生成组件初始文件，以上各个文件内容会自动写入
+
+## 4. 项目（React-IM）
+
+React + Styled-Components + React-Spring + Storybook
+
+:link: [ React-IM ](https://tienouc.gitee.io/react-im)
