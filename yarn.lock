@@ -964,7 +964,7 @@
     "@vssue/utils" "^1.4.0"
     axios "^0.18.1"
 
-"@vssue/api-gitee-v5@^1.1.1":
+"@vssue/api-gitee-v5@^1.4.4":
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/@vssue/api-gitee-v5/-/api-gitee-v5-1.4.4.tgz#c6901180123a8584ea7e4fffec34f392d7057ef5"
   integrity sha512-fQ4dt7H0lb770jZfga7ZkrdRv5wFXjcA+wyJekq2waS9pJvgHcJHmIHjqB4FiFsano0i9UBiP7qEXdTOyaR2Xg==
@@ -972,7 +972,7 @@
     "@vssue/utils" "^1.4.0"
     axios "^0.18.1"
 
-"@vssue/api-github-v3@^1.1.2":
+"@vssue/api-github-v3@^1.1.2", "@vssue/api-github-v3@^1.4.4":
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/@vssue/api-github-v3/-/api-github-v3-1.4.4.tgz#e32ed6d5910bb87c327de8576c107ee7e53bb6db"
   integrity sha512-/ZQwO+/XgHz7hnVX6zLIWA0L1fmI4LBzQoRp1J56tonH6gbDpvl/VZ8VHIcSldHnpEsjf8wYmbIEz8rJd7jG2Q==
@@ -1123,18 +1123,23 @@
   resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-back-to-top/-/vuepress-plugin-back-to-top-1.4.0.tgz#f2c3851352e627d426982e35b02f651615b5861f"
   integrity sha512-h2pMkHTH/yTqVAyLsZSrS5Oh4RJpqM0xxtDMKZth4EaxnGeiB5VqrG+M6Fht8nxjUHFZ8Zy9JIduIe4tgP1jOw==
 
-"@vuepress-reco/vuepress-plugin-comments@^1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-comments/-/vuepress-plugin-comments-1.4.3.tgz#0b4954b7962ecd50378e20ce949555cb734426d2"
-  integrity sha512-MdSe6a/OsjxiGdPdoJ4c3tTf8uKA0RF0QEQ8bsIY/cMCkHrymzFtwmBUrhygm9QSYBPSE2gNME1fXtQzwPcI+Q==
+"@vuepress-reco/vuepress-plugin-back-to-top@^1.5.5":
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-back-to-top/-/vuepress-plugin-back-to-top-1.5.5.tgz#779e1f3ca22babe3568123760f53b0dc93869602"
+  integrity sha512-NT1kHMGcHf9i8fGjbcb1dD58EDzA9oz0aNCw0pOCuZpIFJstGHIGG8eUEHA0OdJiL/VxtspMUuYu2V124q0ijw==
+
+"@vuepress-reco/vuepress-plugin-comments@^1.4.6":
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-comments/-/vuepress-plugin-comments-1.4.6.tgz#a89cbd372815e8995049f34f8038b22d6414195e"
+  integrity sha512-T9Ny4EHVtIURxk+/m+QCCHshoDIRc6pn2tBkjpuStdbLunVijvOBQBBIz4g/uE0dBFXZnd4jtGpy/mOE+bHeyg==
   dependencies:
     "@vssue/api-bitbucket-v2" "^1.1.1"
-    "@vssue/api-gitee-v5" "^1.1.1"
-    "@vssue/api-github-v3" "^1.1.2"
+    "@vssue/api-gitee-v5" "^1.4.4"
+    "@vssue/api-github-v3" "^1.4.4"
     "@vssue/api-github-v4" "^1.2.0"
     "@vssue/api-gitlab-v4" "^1.1.1"
-    valine "^1.4.4"
-    vssue "^1.2.2"
+    valine "^1.4.14"
+    vssue "^1.4.6"
 
 "@vuepress-reco/vuepress-plugin-kan-ban-niang@^1.0.5":
   version "1.0.5"
@@ -1146,10 +1151,10 @@
   resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-loading-page/-/vuepress-plugin-loading-page-1.4.0.tgz#317202c9ef78825b3016c580a12791fc6e282511"
   integrity sha512-wDXvtZLKPEiEISPJBVrZQ/Xva5zMyQtmuUuPQpkEj96M5lnVPpJiFWlgZ4T2T9ANe2A7at8t59SszzVnSY1whw==
 
-"@vuepress-reco/vuepress-plugin-pagation@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-pagation/-/vuepress-plugin-pagation-1.4.0.tgz#1c690dd3f48aed33f51733758f7c99e081a15860"
-  integrity sha512-yiLrk3dAKX4vaWYEjxnltZIXSJX0n1DDZBy6qDthVNLrXv3vjYcQxYFgCtDJkI4N4h27AzgpqgIzYHgCAeY5NQ==
+"@vuepress-reco/vuepress-plugin-pagation@^1.4.7":
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-pagation/-/vuepress-plugin-pagation-1.4.7.tgz#59677a0abaf62b7a1095bbc0cb7bd12a88f782e9"
+  integrity sha512-mLzQvxr3rnPl7A/HwZAoV+VsFpQdPekN00A6pDUv+gcunUoOZT82qzbMT7UbEXkmksliaMsDuXJZWuH5n+FJbg==
 
 "@vuepress/core@^1.0.0-rc.1":
   version "1.4.1"
@@ -1257,7 +1262,14 @@
   dependencies:
     cross-spawn "^6.0.5"
 
-"@vuepress/plugin-medium-zoom@1.4.1", "@vuepress/plugin-medium-zoom@^1.4.1":
+"@vuepress/plugin-medium-zoom@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-1.5.0.tgz#99a574f6c52570ae16be3de529bdc556d09f88fe"
+  integrity sha512-9Q1C11Ga/GL3fc+GiwaOZ+I0lWT2Ilrd1OKzJ6iJTZ5F4Ays+NzdIPBo5LeIT6/7eu08Z9XBhW0mQTa6Aq/DhQ==
+  dependencies:
+    medium-zoom "^1.0.4"
+
+"@vuepress/plugin-medium-zoom@^1.4.1":
   version "1.4.1"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-medium-zoom/download/@vuepress/plugin-medium-zoom-1.4.1.tgz#5665561be3382246ae883c0ad77d91c7913e01da"
   integrity sha1-VmVWG+M4IkauiDwK132Rx5E+Ado=
@@ -8752,7 +8764,7 @@ smart-buffer@^4.1.0:
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.1.0.tgz#91605c25d91652f4661ea69ccf45f1b331ca21ba"
   integrity sha512-iVICrxOzCynf/SNaBQCw34eM9jROU/s5rzIhpOvzhzuYHfJR/DhZfDkXiZSgKXfgv26HT3Yni3AV/DGw0cGnnw==
 
-smoothscroll-polyfill@^0.4.3:
+smoothscroll-polyfill@^0.4.3, smoothscroll-polyfill@^0.4.4:
   version "0.4.4"
   resolved "https://registry.npm.taobao.org/smoothscroll-polyfill/download/smoothscroll-polyfill-0.4.4.tgz#3a259131dc6930e6ca80003e1cb03b603b69abf8"
   integrity sha1-OiWRMdxpMObKgAA+HLA7YDtpq/g=
@@ -9866,19 +9878,7 @@ validate-npm-package-name@^3.0.0, validate-npm-package-name@~3.0.0:
   dependencies:
     builtins "^1.0.3"
 
-valine@1.4.4:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/valine/-/valine-1.4.4.tgz#b0d8d97b85c256f404ecda4be02711c0a238c25e"
-  integrity sha512-iy78hTnsFFsRmWtKRfTIZFe3LBU/d0MlRo81zY42Vbw6hIAhFr9eXQzZFK9LWfBhUvmhp+DjtT7a8413i/YpZg==
-  dependencies:
-    balajs "^1.0.7"
-    balalaika "^1.0.1"
-    element-closest "^3.0.2"
-    leancloud-storage "^3.0.4"
-    storejs "^1.0.25"
-    xss "^1.0.6"
-
-valine@^1.3.9, valine@^1.4.4:
+valine@^1.3.9, valine@^1.4.14:
   version "1.4.14"
   resolved "https://registry.yarnpkg.com/valine/-/valine-1.4.14.tgz#771d103c0b87cb7aa2f0b6a4ad65cae795c92f3b"
   integrity sha512-1gVRXZUDqzTt2I43xivOotXchGdYCCW+Av+laXImzcUVI3DrGR4AQbh3LbDsFpZq+N26u+p+qzB9mjliLYO3YQ==
@@ -9914,7 +9914,18 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
 
-vssue@^1.2.2, vssue@^1.4.4:
+vssue@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.npm.taobao.org/vssue/download/vssue-1.4.3.tgz#861203a95e6b60fe2af661a07d800c0d51965e13"
+  integrity sha1-hhIDqV5rYP4q9mGgfYAMDVGWXhM=
+  dependencies:
+    "@vssue/utils" "^1.4.0"
+    github-markdown-css "^3.0.1"
+    vue "^2.6.10"
+    vue-i18n "^8.11.2"
+    vue-property-decorator "^8.1.1"
+
+vssue@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/vssue/-/vssue-1.4.4.tgz#2a342698b430aaf24019ad6ceaa389cfc3df2f0d"
   integrity sha512-f+FwS4eFurR+YISeTRfFW2+b/48MYNgerq2pk1QbtYPYI7DIZH7wSIj/S/f+wfxolsyA+45Bx86vYEtwD8xT0Q==
@@ -9925,10 +9936,10 @@ vssue@^1.2.2, vssue@^1.4.4:
     vue-i18n "^8.11.2"
     vue-property-decorator "^8.1.1"
 
-vssue@^1.4.3:
-  version "1.4.3"
-  resolved "https://registry.npm.taobao.org/vssue/download/vssue-1.4.3.tgz#861203a95e6b60fe2af661a07d800c0d51965e13"
-  integrity sha1-hhIDqV5rYP4q9mGgfYAMDVGWXhM=
+vssue@^1.4.6:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/vssue/-/vssue-1.4.6.tgz#2ce16373907dc04bb92d6908224f0dd7239454f6"
+  integrity sha512-s92qMIaI/9LzBQCUUaX0fpNlA3kRRGtm0hQxDN/YBziOB4NXTWgPvoimLreyjP75hRItHvVhKzkXiZ8bIMjy7A==
   dependencies:
     "@vssue/utils" "^1.4.0"
     github-markdown-css "^3.0.1"
@@ -10134,21 +10145,28 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress-theme-reco@^1.4.5:
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-reco/-/vuepress-theme-reco-1.4.5.tgz#b23dd1749959f00f268b7e737a140fe9f7461c8d"
-  integrity sha512-6PUIzDIzfs8ZCdnUiPdYuCc1IHpRDuNXvD0RuBCbw8N6LsBsPSJy7aiffcDebjDyOpFFkEzTBDNH1EtVGkbExg==
+vuepress-plugin-smooth-scroll@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-smooth-scroll/-/vuepress-plugin-smooth-scroll-0.0.9.tgz#6c5d01db60def3d7b976b53404e56b97da9e8f39"
+  integrity sha512-UXX+HLZO1NKVwyiOJlj0smh8F9dKnwybjEi7w/Mj9EYLhKrNYr5uXs+N+OTt8VwKCn3f0vZ1XAwFIjsPlD7GJA==
   dependencies:
-    "@vuepress-reco/vuepress-plugin-back-to-top" "^1.4.0"
-    "@vuepress-reco/vuepress-plugin-comments" "^1.4.3"
+    smoothscroll-polyfill "^0.4.4"
+
+vuepress-theme-reco@^1.5.5:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-reco/-/vuepress-theme-reco-1.5.5.tgz#8ea5293991d0321e5f1e5e4dbbb6d94f4c8a7cc0"
+  integrity sha512-G/SfQIb9Z/ZoyQ9leeieZfbQ/qJE/uXlRTSo5KKdZ8MPVL2DM65LQy436BQyQRO0C4yr912MjYADLpFPK/mQ8g==
+  dependencies:
+    "@vuepress-reco/vuepress-plugin-back-to-top" "^1.5.5"
+    "@vuepress-reco/vuepress-plugin-comments" "^1.4.6"
     "@vuepress-reco/vuepress-plugin-loading-page" "^1.4.0"
-    "@vuepress-reco/vuepress-plugin-pagation" "^1.4.0"
+    "@vuepress-reco/vuepress-plugin-pagation" "^1.4.7"
     "@vuepress/plugin-blog" "1.9.2"
-    "@vuepress/plugin-medium-zoom" "1.4.1"
+    "@vuepress/plugin-medium-zoom" "1.5.0"
     docsearch.js "2.6.3"
     md5 "2.2.1"
-    valine "1.4.4"
     vue-click-outside "1.1.0"
+    vuepress-plugin-smooth-scroll "^0.0.9"
 
 vuepress@^1.0.0-rc.1:
   version "1.0.0-rc.1"
