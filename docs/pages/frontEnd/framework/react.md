@@ -1,4 +1,5 @@
 ---
+autoGroup-2: React
 layout: post
 title: "React项目部署到Github Pages"
 date: 2020-07-10
@@ -25,7 +26,7 @@ npm run eject //解压默认webpack包，操作不可逆
 ```   
 
    
-## 2. 将本地的文件 push 至远端仓库
+## 2. push本地文件至仓库
 
 ```
 git init         // 初始化一个文件夹为本地仓库

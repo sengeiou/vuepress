@@ -1,4 +1,5 @@
 ---
+autoGroup-1: Vue
 title: "Vue生命周期"
 date: 2020-02-05
 categories:

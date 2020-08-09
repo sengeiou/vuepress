@@ -13,42 +13,25 @@ module.exports = [
         text: "分类",
         items: [
             {
-                text: "前端",
+                text: "前端", 
                 items: [
-                    { text: "JavaScript", link: "/pages/web/javascript/" },
-                    { text: "Webpack", link: "/pages/web/webpack/" },
-                    { text: "CSS", link: "/pages/web/css/" },
-                    { text: "Vue", link: "/pages/web/framework/vue/" }
-                ]
-            },
-            {
-                text: "后端",
-                items: [
-                    { text: "CentOS", link: "/pages/server/centos/" },
-                    { text: "Nginx", link: "/pages/server/nginx/" },
-                    { text: "Database", link: "/pages/server/database/" },
+                    { text: "JavaScript", link: "/pages/frontEnd/javascript/" },
+                    { text: "CSS", link: "/pages/frontEnd/css/" },
+                    { text: "Framework", link: "/pages/frontEnd/framework/" }
                 ]
             },
             {
                 text: "工具",
-                items: [
-                    { text: "IDE", link: "/pages/tools/ide/" },
-                    { text: "Storybook", link: "/pages/tools/storybook/" },
-                    { text: "Terminal", link: "/pages/tools/others/terminal/" },
-                    { text: "Markdown", link: "/pages/tools/others/markdown/" }
-                ]
+                link: "/pages/tools/"
             },
             {
-                text: "组件",
-                items: [
-                    { text: "tiUI", link: "/pages/components/" }
-                ]
+                text: "组件", link: "/pages/components/"
             },
             {
-                text: "小程序",
-                items: [
-                    { text: "云开发", link: "/pages/miniProgram/" }
-                ]
+                text: "服务器", link: "/pages/server/"
+            },
+            {
+                text: "小程序", link: "/pages/miniProgram/"
             }
         ], icon: 'reco-category'
     },

@@ -30,6 +30,6 @@ tags:
 
 - **导入效果：**
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlly1geaynyk3wxj30oj0heaac.jpg)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1ghky76bj67j30ru0kjdg8.jpg)
 
 此外，draculatheme 也提供了对 item2 的风格设置。:link: [ 地址 ](https://draculatheme.com/)

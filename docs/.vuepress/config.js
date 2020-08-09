@@ -6,7 +6,7 @@ const secret = require('./config/secret')
 module.exports = {
     base: '/vuepress/',
     title: "Tien's Blog",
-    description: ' ',
+    description: 'The truth is what it is, not what you see.',
     markdown: markdownConfig,
     head: headConfig,
     plugins: pluginsConfig,

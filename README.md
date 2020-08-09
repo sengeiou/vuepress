@@ -4,4 +4,6 @@
 
 ## Hello VuePress
 
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1ghkzylgrtdj31740rh42f.jpg)
+
 ![Travis CI](https://tva1.sinaimg.cn/large/007S8ZIlly1gdzerhokszj30u013610t.jpg)

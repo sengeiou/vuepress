@@ -1,5 +1,5 @@
 ---
-title: Mac安装MongoDB-v4.2
+title: Mac安装MongoDB
 date: 2020-05-21
 isTimeLine: true
 categories:
@@ -9,6 +9,11 @@ tags:
 - Tools
 ---
 
+:::tip  
+
+MongoDB <Badge text="v4.2" type="warning"/>   
+
+:::
 
 ### 1. 使用brew安装 `brew install mongodb-community@4.2`
 

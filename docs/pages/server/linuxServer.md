@@ -1,5 +1,5 @@
 ---
-title: 无界面服务器运行Node.js脚本爬取数据（centOS-v7）
+title: 无界面服务器运行Node.js脚本爬取数据
 date: 2020-05-20
 isTimeLine: true
 sticky: 1
@@ -11,8 +11,11 @@ tags:
 ---
 
 :::tip
-Selenium + Node + Chrome
+Selenium + NodeJS + Chrome   
+
+CentOS <Badge text="v7.6" type="warning"/>
 :::
+
 
 <!-- more -->
 
@@ -21,7 +24,9 @@ Selenium + Node + Chrome
 `pip install selenium`
 
 ## 2. 安装 Chrome 和 chromedriver
+
 ### 2.1 Chrome
+
 因国内无法访问 Google，所以需要自己配置 yum 源，在目录 `/etc/yum.repos.d/` 下新建 `google-chrome.repo` 文件，
 
 ```
@@ -133,7 +138,7 @@ const nodeSchedule = require('node-schedule')
 
 **Echarts 学习实践，赶在国内疫情末尾写了个疫情展示页面**
 
-:link: [ 展示页面连接 ](http://blog.dodolo.top/covid/)   
+:link: [ 展示页面连接 ](http://blog.dodolo.top/covid/)
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geqw7nzb2yj30xc0hfju5.jpg)
 

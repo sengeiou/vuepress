@@ -16,7 +16,7 @@ Webpack4.0 用法
 
 > - [Webpack3.0 用法](https://study.163.com/courses-search?keyword=Webpack打包工具用法)
 
-## webpack 打包原理
+## 1. webpack 打包原理
 
 - webpack 是一个打包模块的机制，只是把依赖的模块转化成可以代表这些包的静态文件。
 
@@ -32,17 +32,17 @@ Webpack4.0 用法
 > 4. 编译模块，生成抽象语法树 AST
 > 5. 遍历循环 AST 树，拼接输出 JS
 
-## webpack 为什么能把任何形式的资源都视作模块呢？
+## 2. webpack 为什么能把任何形式的资源都视作模块呢？
 
 > 因为 loader 机制，不同的资源采用不同的 loader 进行转换，webpack 按照从右到左的顺序执行 loader。
 > loader 本质是一个函数，输入参数是一个字符串，输出参数也是一个字符串（即 JS 代码），从而被 esprima 解析成 AST，触发进一步的依赖解析。
 
-## 全局安装 webpack
+## 3. 全局安装 webpack
 
 `npm install webpack webpack-cli -g`
 全局安装 webpack 会有个问题，就是当你有两个项目依赖于不同版本的 webpack，就会有一个项目打包不了，所以还是不全局安装 webpack 比较好。
 
-## 在当前项目安装 webpack
+## 4. 在当前项目安装 webpack
 
 1. 新建 webpack-demo 目录，然后进行 npm 项目初始化  
    `npm init 或者 npm init -y`
@@ -59,14 +59,14 @@ Webpack4.0 用法
 5. 使用 npx 打印出当前的 webpack 版本  
    `npx webpack -v`
 
-## 安装指定版本的 webpack
+## 5. 安装指定版本的 webpack
 
 ```
 npm info webpack /*查看webpack所有版本信息*/
 npm install webpace@4.29.6 --save-dev
 ```
 
-## webpack 的配置文件
+## 6. webpack 的配置文件
 
 在项目根目录新建文件 webpack.config.js
 
@@ -82,11 +82,11 @@ module.exports = {
 };
 ```
 
-## webpack 手动打包命令
+## 7. webpack 手动打包命令
 
 `npx webpack /**默认会使用根目录下的webpack.config.js配置文件进行打包**/ npx webpack --config webpack.config.js /**指定配置文件打包**/`
 
-## 使用 npm scripts 简化 webpack 命令
+## 8. 使用 npm scripts 简化 webpack 命令
 
 1. 在 package.json 中的 scripts 字段下添加 bundle 字段
 
@@ -96,7 +96,7 @@ module.exports = {
 
 `npm run bundle`
 
-## 使用 file-loader 打包图片
+## 9. 使用 file-loader 打包图片
 
 1. 安装 file-loader
 
@@ -121,7 +121,7 @@ module: {
 }
 ```
 
-## 使用 url-loader 打包图片
+## 10. 使用 url-loader 打包图片
 
 1. 安装 url-loader
    `npm install url-loader --save-dev`
@@ -146,7 +146,7 @@ module: {
 }
 ```
 
-## 使用 style-loader 和 css-loader 打包 css 文件
+## 11. 使用 style-loader 和 css-loader 打包 css 文件
 
 1. 安装 style-loader 和 css-loader
    `npm install style-loader css-loader --save-dev`
@@ -164,7 +164,7 @@ module: {
 }
 ```
 
-## 使用 sass-loader 打包.sass 文件
+## 12. 使用 sass-loader 打包.sass 文件
 
 1. 安装 sass-loader 和 node-sass
    `npm install sass-loader node-sass --save-dev`
@@ -184,7 +184,7 @@ module: {
 
 > 数组形式的 loader 是从下到上，从右到左执行 sass-loader -> css-loader -> style-loader
 
-## 使用 postcss-loader 自动添加 css 厂商前缀
+## 13. 使用 postcss-loader 自动添加 css 厂商前缀
 
 1. 安装 postcss-loader
    `npm install postcss-loader --save-dev`
@@ -237,7 +237,7 @@ module: {
 }
 ```
 
-## 使用 file-loader 打包字体文件
+## 14. 使用 file-loader 打包字体文件
 
 1.  安装 file-loader
     `npm install file-loader --save-dev`
@@ -253,7 +253,7 @@ module: {
 }
 ```
 
-## 使用插件让 webpack 打包更便捷
+## 15. 使用插件让 webpack 打包更便捷
 
 - 安装自动生成 index.html 插件 html-webpack-plugin
 
@@ -286,7 +286,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 plugins: [new CleanWebpackPlugin({})]; /**默认清除的是dist目录**/
 ```
 
-## sourceMap 配置
+## 16. sourceMap 配置
 
 sourceMap 映射 src 目录的源文件，能定位到哪行报错
 
@@ -302,7 +302,7 @@ devtool: 'cheap-module-eval-source-map' /**开发环境中使用**/
 devtool: 'cheap-module-source-map' /**生产环境**/
 ```
 
-## 使用 WebpackDevServer 提高开发效率
+## 17. 使用 WebpackDevServer 提高开发效率
 
 1. 安装 webpack-dev-server
    `npm install webpack-dev-server --save-dev`
@@ -332,7 +332,7 @@ devServer: {
 使用：npm run watch 监听文件有变化自动打包
 使用：npm run start 可以自动监听,自动打包, 自动刷新浏览器
 
-## 自定义 server
+## 18. 自定义 server
 
 1. 需要安装 express 和 webpack-dev-middleward 这两个插件
    `npm install express webpack-dev-middleware --save-dev`
@@ -370,7 +370,7 @@ app.listen(3000, () => {
 npm run serve 使用的就是我们 server.js 配置的服务器
 不过 server.js 还需要写很多，这只是简单的 server
 
-## 模块热更新 HMR
+## 19. 模块热更新 HMR
 
 1. 开启模块热更新，在 webpack.config.js 中添加配置
 
@@ -386,7 +386,7 @@ plugins: {
 }
 ```
 
-## 模块热更新 HMR 作用
+## 20. 模块热更新 HMR 作用
 
 > css 编写. 修改无需重新刷新浏览器就可显示效果
 > js 模块发生改变可以指定更新当前 js 模块，不需要刷新浏览器
@@ -405,7 +405,7 @@ if (module.hot) {
 }
 ```
 
-## 使用 Babel 处理 ES6 语法
+## 21. 使用 Babel 处理 ES6 语法
 
 1. 安装 babel-loader 和 @babel/core
    `npm install --save-dev babel-loader @babel/core`
@@ -511,7 +511,7 @@ module: {
 13. 因为我们配置了 corejs: 2,所以要加装 corejs 的依赖  
     `npm install --save @babel/runtime-corejs2`
 
-## 配置 React 代码的打包
+## 22. 配置 React 代码的打包
 
 babel 也可以打包 react 代码
 
