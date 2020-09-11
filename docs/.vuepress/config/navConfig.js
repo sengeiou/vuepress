@@ -16,8 +16,8 @@ module.exports = [
                 text: "前端", 
                 items: [
                     { text: "JavaScript", link: "/pages/frontEnd/javascript/" },
-                    { text: "CSS", link: "/pages/frontEnd/css/" },
-                    { text: "Framework", link: "/pages/frontEnd/framework/" }
+                    { text: "Framework", link: "/pages/frontEnd/framework/" },
+                    { text: "CSS", link: "/pages/frontEnd/css/" }
                 ]
             },
             {
@@ -32,6 +32,9 @@ module.exports = [
             },
             {
                 text: "小程序", link: "/pages/miniProgram/"
+            },
+            {
+                text: "小总结", link: "/pages/summary/"
             }
         ], icon: 'reco-category'
     },

@@ -9,7 +9,7 @@ tags:
 ---
 
 ::: tip
-[Storybook](https://storybook.js.org) 是一款可以让开发者独立开发 React、Vue 等组件的开源工具
+[ Storybook ](https://storybook.js.org) 是一款可以让开发者独立开发 React、Vue 等组件的开源工具
 :::
 
 <!-- more -->
@@ -274,4 +274,6 @@ export default Styled<%= name %>
 
 React + Styled-Components + React-Spring + Storybook
 
-:link: [ React-IM ](https://tienouc.gitee.io/react-im)
+:link: [ React-IM ](https://tienouc.gitee.io/react-im)   
+:link: [ 视频 ](http://blog.dodolo.top/video/React-IM.mp4)   
+

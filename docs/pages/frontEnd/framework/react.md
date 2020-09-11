@@ -9,9 +9,6 @@ tags:
 - React 
 ---
 
-[账单薄项目预览](https://tienouc.gitee.io/account-app)   
-
-[ React-IM ](https://tienouc.gitee.io/react-im)
 ## 1. 创建项目
 
 使用 create-react-app 脚手架创建项目。   
@@ -104,3 +101,7 @@ npm install bootstrap --save // 安装Bootstrap4.x
 + 发布页面
 
 
+## 7. 项目展示
+
+:link: [ 账单薄项目预览 ](https://tienouc.gitee.io/account-app/)   
+:link: [ React-IM ](https://tienouc.gitee.io/react-im/)   

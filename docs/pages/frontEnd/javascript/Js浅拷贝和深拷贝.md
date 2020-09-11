@@ -150,5 +150,24 @@ exp_3.arr.push("b");
 console.log(exp_3); //{ name: 'exp_3', data: { m: 456, n: 'ABC' }, arr: [ 'a', 'b' ] }
 console.log(exp_1); //{ name: 'exp_1', data: { m: 123, n: 'ABC' }, arr: [ 'a' ] }
 ```
+   
+笨办法
+```js
+function copy (obj) {
+    if (typeof obj !== 'object' || typeof obj == 'null') {
+        return obj
+    }
+
+    let result = (obj instanceof Array) ? [] : {}
+
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            result[key] = copy(obj[key])
+        }
+    }
+    
+    return result
+}
+```
 
 > **总结：** 深拷贝不仅将原对象的各个属性逐个复制出去，而且将原对象各个属性所包含的对象也依次递归复制到新对象上，所以对新对象的修改并不会影响原对象。

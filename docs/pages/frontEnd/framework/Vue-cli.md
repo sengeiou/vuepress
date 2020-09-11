@@ -8,7 +8,7 @@ tags:
 - Vue
 ---
 
-## 局部安装并使用 vue-cli(或者其他 npm 包)
+### 局部安装并使用 vue-cli(或者其他 npm 包)
 
 1. 新建目录：`mkdir vue-cli2`
 

@@ -1,7 +1,7 @@
 module.exports = [
   ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
   ['meta', { name: 'author', content: 'Tien' }],
-  ['meta', { name: 'keywords', content: 'vuepress,Tien,vuepress ??' }],
+  ['meta', { name: 'keywords', content: "vuepress,Tien,Tien'Blog,vuepress blog" }],
   ['link', { rel: 'icon', href: '/favicon.ico' }],
   ['link', { rel: 'manifest', href: '/manifest.json' }],
   ['meta', { name: 'theme-color', content: '#3eaf7c' }],

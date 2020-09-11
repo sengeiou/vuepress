@@ -1,6 +1,6 @@
 ---
 autoGroup-1: Vue
-title: "vue父子组件之间的传值"
+title: Vue父子组件之间的传值
 date: 2019-11-01
 categories:
 - Framework

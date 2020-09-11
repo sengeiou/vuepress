@@ -6,7 +6,9 @@ categories:
 tags:
 - CSS
 ---
-
+:::tip
+原理：计算机图形学中的2D矩阵变换，参考 :link: [CSS3:transform与transition背后的数学原理](https://www.cnblogs.com/winter-cn/archi\0/12/29/1919266.html)
+:::
 
 ```html
 <!DOCTYPE html>

@@ -148,7 +148,7 @@ const nodeSchedule = require('node-schedule')
 
 > a. 安装依赖包  
 > b. `server` 目录下先修改`crawler.js`中的万矿 ID 和万矿密码，然后 `node crawler.js app.js` 启动即可（首次启动需修改 `crawler.js` 中的抓取时间，不然要等好久才会有数据哒！）  
-> c. [Selenium+Node+无界面 Chrome 爬取数据](http://www.dodolo.top/pages/server/centos/)  
+> c. [无界面服务器运行Node.js脚本爬取数据](https://tienouc.gitee.io/vuepress/pages/server/linuxServer.html)  
 > d. 图形界面下把与 Chrome 版本对应的 chromedriver 文件放在脚本目录即可
 
 ### 4.2 注意事项

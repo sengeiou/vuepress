@@ -5,7 +5,7 @@ const markdownConfig = require('./config/markdownConfig')
 const secret = require('./config/secret')
 module.exports = {
     base: '/vuepress/',
-    title: "Tien's Blog",
+    title: "風野の記",
     description: 'The truth is what it is, not what you see.',
     markdown: markdownConfig,
     head: headConfig,
@@ -15,12 +15,13 @@ module.exports = {
         lastUpdated: '更新时间',
         nav: navConfig,
         //vuepress-theme-reco 第三方主题配置
+        // logo: '/assets/img/avatar.jpg',
         author: 'Tien',
         type: 'blog',
         sidebar: 'auto',
         authorAvatar: '/assets/img/avatar.jpg',
         vssueConfig: {
-            platform: 'github',
+            platform: 'github-v4',
             owner: 'TienOUC',
             repo: 'vuepress',
             clientId: secret.clientId,
