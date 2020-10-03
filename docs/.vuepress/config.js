@@ -5,7 +5,7 @@ const markdownConfig = require('./config/markdownConfig')
 const secret = require('./config/secret')
 module.exports = {
     base: '/vuepress/',
-    title: "風野の記",
+    title: "Tien's Blog",
     description: 'The truth is what it is, not what you see.',
     markdown: markdownConfig,
     head: headConfig,
@@ -18,7 +18,8 @@ module.exports = {
         // logo: '/assets/img/avatar.jpg',
         author: 'Tien',
         type: 'blog',
-        sidebar: 'auto',
+        // sidebar: 'auto',
+        subSidebar: 'auto',
         authorAvatar: '/assets/img/avatar.jpg',
         vssueConfig: {
             platform: 'github-v4',
