@@ -1,11 +1,12 @@
 ---
+autoGroup-3: 图形绘制
 title: SVG
 isTimeLine: true
 date: 2020-08-12
 categories:
-  - Tools
+  - FrontEnd
 tags:
-  - Tools
+  - CSS
 ---
 
 ## 1. SVG 简介

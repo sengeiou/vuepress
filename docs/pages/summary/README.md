@@ -1,6 +1,6 @@
 ---
-title: 前端基础知识查漏补缺
-date: 2020-08-12
+title: 前端基础知识回顾
+date: 2020-10-15
 isTimeLine: true
 categories:
   - FrontEnd
@@ -9,6 +9,11 @@ tags:
 keys:
  - '2b8f30efa99aa9180399597cc4e9a88d'
 ---
+
+天天被锤，我这倔脾气还就杠上了，先捋基础知识大纲出来，再 LeetCode 刷个300题，哼！！！
+
+PS： 歇久了思维果然会变迟钝，好气。
+<!-- more -->
 
 ## 1. JavaScript
 
@@ -91,6 +96,63 @@ let arr = []
 + 4是通过object类型的副属性class去判断的，其中函数的class是Function，结果是[object Function]， 普通的对象是Object，结果是[object Object];   
 + 5是es6新增的方法;
 :::
+
+### 1.3  call、bind、apply
+
+***相同点***
++ 都能改变 this 指向
++ 第一个参数都是 this
+
+***不同点***
++ call 的第二个参数是直接传入的，用 `,` 分割
++ apply 的第二个参数是以数组形式传入的
++ bind 返回的是一个函数
+
+
+### 1.4 原生JS实现双向数据绑定
+   
+核心 `object.defineProperty()`   
+
+三个参数：
++ 要定义属性的对象   
++ 要定义或者修改的属性的名称   
++ 将被定义或者修改的属性的描述   
+   
+```html
+    <input type="text" id="inp"/>
+    <p id="showText"></p>
+```
+   
+```js
+<script>
+    var obj = {};
+    Object.defineProperty(obj, "newProp", {
+        get: function () {
+            return obj;
+        },
+        set: function (newVal) {
+            document.getElementById("inp").value = newVal;
+            document.getElementById("showText").innerHTML = newVal;
+        }
+    })
+    document.addEventListener("keyup", function (e) {
+        obj.newProp = e.target.value;
+    })
+</script>
+```
+
+### 1.5 EventLoop
+> 还是要看英文文档，一些中文文档会把人带偏的
+
++ 调用栈（Call stack） 
++ 消息队列（Message Queue） 
++ 微任务队列（Micrtask Queue）
+
+1. 从全局代码逐行开始，遇到函数调用，压入调用栈，被压入的函数叫做 `帧（frame）` ，函数返回后，从调用栈弹出      
+2. 异步操作中的 `Fetch、事件回调、setTimeout、setInterval` 压入消息队列      
+3. `Promise、async await` 创建的异步操作会压入微任务队列，在调用栈清空后立即执行，处理期间新加入的微任务也会一同执行     
+
+其调用顺序是 **调用栈清空后 ——> 立即执行微任务队列（处理期间新加入的微任务也会一同执行） ——> 执行消息队列**
 
 ## 2. CSS
 
@@ -343,7 +405,33 @@ padding: 0;
 #### 2.1.6 Normalize.css官网
 内容较多，查看Github Repo   👉👉👉 [ Normalize git地址 ](https://github.com/necolas/normalize.css)
 
+### 2.3 CSS 规范
+ ***Css书写顺序：***
++ 位置属性(position, top, right, z-index, display, float等)　   
++ 大小(width, height, padding, margin)   
++ 文字系列(font, line-height, letter-spacing, color- text-align等)　   
++ 背景(background, border等)   
++ 其他(animation, transition等)   
+
+***Css语法：***
++ 命名一般为小写英文字母。   
++ 为了代码的易读性，在每个声明块的左花括号前添加一个空格。   
++ 每条声明语句的 `:` 后应该插入一个空格。   
++ 所有声明语句都应当以分号结尾。最后一条声明语句后面的分号是可选的，但是，如果省略这个分号，你的代码可能更易出错。   
++ 对于属性值或颜色参数，省略小于 1 的小数前面的 0 （例如，.5 代替 0.5；-.5px 代替 -0.5px）。   
++ 十六进制值应该全部小写，例如，#fff。   
++ 尽量使用简写形式的十六进制值，例如，用 #fff 代替 #ffffff。   
++ 避免为 0 值指定单位，例如，用 margin: 0; 代替 margin: 0px;。   
+
+
 ## 3. 前端安全
+### 3.1 XSS 
+跨站请求攻击 ( Cross Site Scripting )  
+通过`script`标签嵌入一段 JS 代码
+
+### 3.2 CSRF
+跨站请求伪造 ( Cross-site request forgery )   
+常见手段是在用户保持登陆状态时，获取cookie，利用`img`的 `src` 属性嵌入`get`请求，或者用 `iframe` 嵌入框架，伪造表单
 
 ## 4. 性能 & SEO优化
 
@@ -371,17 +459,80 @@ padding: 0;
 
 ## 5. OSI模型 & TCP/IP模型
 
-### 5.1 模型概念
+<!-- ### 5.1 模型概念
 > 1、OSI（Open System Interconnect），即开放式系统互联。 一般都叫OSI参考模型，是ISO（国际标准化组织）组织在1985年研究的网络互联模型。   
 
 > 2、TCP/IP 协议栈是美国国防部高级研究计划局计算机网（ARPANET）和其后继因特网使用的参考模型。ARPANET是由美国国防部赞助的研究网络。最初，它只连接了美国境内的四所大学。随后的几年中，它通过租用的电话线连接了数百所大学和政府部门。最终ARPANET发展成为全球规模最大的互连网络-因特网。最初的ARPANET于1990年永久性地关闭。   
 
-> 3、ISO制定的OSI参考模型的过于庞大、复杂招致了许多批评。与此对照，由技术人员自己开发的TCP/IP协议栈获得了更为广泛的应用。   
+> 3、ISO制定的OSI参考模型的过于庞大、复杂招致了许多批评。与此对照，由技术人员自己开发的TCP/IP协议栈获得了更为广泛的应用。    -->
 
-### 5.2 TCP & IP 所属层
-+ TCP属于传输层，提供可靠的字节流服务。所谓的字节流，其实就类似于信息切割。比如你是一个卖自行车的，你要去送货。安装好的自行车，太过庞大，又不稳定，容易损伤。不如直接把自行车拆开来，每个零件上都贴上收货人的姓名。最后送到后按照把属于同一个人的自行车再组装起来，这个拆解、运输、拼装的过程其实就是TCP字节流的过程。   
+### 5.1 TCP & IP 所属层
++ TCP属于传输层，提供可靠的字节流服务。所谓的字节流，其实就类似于信息切割，分片传输。   
 
 + IP 属于网络层。设计IP的目的是提高网络的可扩展性：一是解决互联网问题，实现大规模、异构网络的互联互通；二是分割顶层网络应用和底层网络技术之间的耦合关系，以利于两者的独立发展。根据端到端的设计原则，IP只为主机提供一种无连接、不可靠的、尽力而为的数据报传输服务。
 
-### 5.3 两种模型各层对应协议
+### 5.2 两种模型各层对应协议
+OSI 七层模型记忆
+
++ `物理` 系有一个叫 `链路` 的学生在 `网络` 上 `传输` 了一个 `会话`，`表示` 这是一个 `应用`
+
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1ghxa8c06n8j30r5093glt.jpg)
+
+
+
+## 6. 协议
+
+### 6.1 post 和 get 
+
+***主要区别***    
+
+1. 参数可见性与传输
++ get 是将参数拼接进 url 向服务器发起请求 ，所以可见
++ post 参数是在请求体中传输，不可见（相对 get 来说）
+   
+2. 缓存性   
++ get 请求浏览器会主动cache
++ post 请求默认浏览器不主动缓存（ 但可设置 ）
+   
+3. 传输数据的大小   
++ get 一般在 2-4k 
++ post 取决于配置文件的限制，理论上没上限
+
+4. 编码方式
++ get 只能是 url 编码
++ post 支持多种编码方式（content-type： 文本、二进制、JSON串等）
+
+5. tcp数据包
++ get 请求会把header和data一次性发送给服务器，服务器返回200状态码，只有一个TCP数据包
++ post 请求先发送header，服务器返回100状态码，然后再发送data，服务器返回200 OK，有两个TCP数据包
+
+
+## 7. 浏览器兼容问题解决方案
+### 7.1 CSS hack
+举例：请用 CSS 定义 p 标签，要求实现如下效果： 字体颜色在 IE6 下为黑色 （#000000），IE7 下为红色 （#ff0000），其他浏览器下为绿色（#00ff00）
+```css
+    p {
+        color : #00ff00;
+        _color : #000000;
+     }
+    *+html p {
+        color : #ff0000;
+    }
+```
+### 7.2 JS hack
+### 7.3 条件注释
+
+转载 :link: [博客园-墨韵明空](https://www.cnblogs.com/wymbk/p/5504492.html)
+
+## 8. 工具类
+
+### 8.1 Echarts 的实现原理   
+Echarts 是纯 JavaScript 实现，在 Canvas 上封装的 MVC 架构、以数据驱动的轻量级图形库   
+
++ `Storage(M) 模型层`：实现图形数据的 CURD（增删改查）管理。 **一个类似数据的仓库，提供各种数据的读、写、改、删等操作。**   
++ `Painter(V) 视图层`：实现 canvas 元素的生命周期管理，即视图渲染、更新控制、绘图。 **Painter 持有 Storage 对象，即：Painter 读取 Storage 进行绘图。**      
++ `Handler(C) 控制层`：事件交互处理，实现完整的 dom 事件模拟封装。 **Handler持有了Storage 对象和 Painter 对象，控制层对模型层有CURD关系，即：Handler 通过访问 Storage 对象提供的数据增删改查操作，实现事件交互处理所需的数据部分；控制层与视图层存在 call 关系，即：Handler 通过访问 Painter 对象提供的视图操作，实现事件交互处理的视图部分。**
+
+
+<!-- ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gjqhetfkfrj315p0u0n1c.jpg)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gjqheto16dj30u03jc48t.jpg) -->

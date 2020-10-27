@@ -16,7 +16,7 @@ Vue 生命周期即 Vue 实例从创建->运行->销毁过程中暴露出来的�
 > 创建类:
 
 - beforeCreate
-- creat
+- created
 - beforeMount
 - mounted
 

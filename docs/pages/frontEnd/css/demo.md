@@ -1,17 +1,12 @@
 ---
-title: Demo
+autoGroup-10: Demo
+title: CSS动效、布局、项目Demo
 date: 2019-12-28
 categories:
 - FrontEnd
 tags:
 - CSS
 ---
-
-:::tip
-一些CSS小Demo
-:::
-
-<!-- more -->
 
 [ Demo ](https://tienouc.gitee.io/projects/)
 

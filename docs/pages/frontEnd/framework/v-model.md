@@ -1,6 +1,6 @@
 ---
 autoGroup-1: Vue
-title: 'v-model原理'
+title: 'V-model原理'
 date: 2019-12-16
 categories:
   - Framework

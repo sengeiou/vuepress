@@ -154,7 +154,7 @@ export default {
 </script>
 ```
 
-**2.3 `Actions` 用于处理异步任务（如果要异步操作变更数据，必须通过 Action，而不能使用 Mutation，但 Action 的本质还是通过触发 Mutation 的方式间接地变更数据）**
+**2.3 `Actions` 用于处理异步任务（如果要异步操作变更数据，必须通过 Action，而不能使用 Mutation， --⚠️重点： 但 Action 的本质还是通过触发 Mutation 的方式间接地变更数据，而不是直接变更状态--）**
 
 > 两种触发方式
 
@@ -306,3 +306,6 @@ export default {
 </script>
 
 ```
+
+**2.5 由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。
+为了解决以上问题，Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割**

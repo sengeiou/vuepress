@@ -9,6 +9,15 @@ module.exports = [
         link: "http://blog.dodolo.top/covid",
         icon: 'reco-message'
     },
+    // {
+    //     text: "前端",
+    //     items: [
+    //         { text: "JavaScript", link: "/pages/frontEnd/javascript/" },
+    //         { text: "Framework", link: "/pages/frontEnd/framework/" },
+    //         { text: "CSS", link: "/pages/frontEnd/css/" }
+    //     ],
+    //     icon: 'reco-tag'
+    // },
     {
         text: "分类",
         items: [
@@ -17,24 +26,18 @@ module.exports = [
                 items: [
                     { text: "JavaScript", link: "/pages/frontEnd/javascript/" },
                     { text: "Framework", link: "/pages/frontEnd/framework/" },
-                    { text: "CSS", link: "/pages/frontEnd/css/" }
+                    { text: "CSS", link: "/pages/frontEnd/css/" },
+                    { text: "工具类", link: "/pages/tools/" },
+                    { text: "组件库", link: "/pages/components/" }
                 ]
             },
             {
-                text: "工具",
-                link: "/pages/tools/"
-            },
-            {
-                text: "组件", link: "/pages/components/"
-            },
-            {
-                text: "服务器", link: "/pages/server/"
-            },
-            {
-                text: "小程序", link: "/pages/miniProgram/"
-            },
-            {
-                text: "小总结", link: "/pages/summary/"
+                text: "其他",
+                items: [
+                    { text: "服务器", link: "/pages/server/" },
+                    { text: "小程序", link: "/pages/miniProgram/" },
+                    { text: "小总结", link: "/pages/summary/" }
+                ]
             }
         ], icon: 'reco-category'
     },

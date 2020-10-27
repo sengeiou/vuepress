@@ -1,18 +1,19 @@
 ---
+autoGroup-3: Terminal
 title: iTerm2
 date: 2020-03-21
 isTimeLine: true
 categories:
  - Tools
 tags:
- - Tools
+ - Terminal
 ---
 
-### 1. 安装
+## 1. 安装
 :link: [ 下载地址：](https://www.iterm2.com/)
 
 
-### 2. 风格设定
+## 2. 风格设定
 :link: [ iterm2colorschemes ](https://iterm2colorschemes.com/) 网站提供了丰富的风格包以供下载。
 
 下载主题包解压后在 iterm 软件中导入风格包

@@ -1,5 +1,5 @@
 ---
-title: StoryBook独立开发、管理组件
+title: StoryBook
 isTimeLine: true
 date: 2020-06-28
 categories:

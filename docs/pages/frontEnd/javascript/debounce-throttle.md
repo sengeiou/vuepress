@@ -15,7 +15,10 @@ tags:
    </div>
 ```
 ### 1. 防抖（debounce）
-用定时器延时触发事件，以便减少网络请求，如下 input 输入 keyup 监听
+> 综述： 持续触发事件时，若在设定时间内再次触发，则清除原来的计时器，重新计时   
+> 目的： 降低性能消耗，例如减少 Ajax 请求次数，以节约带宽资源
+
+如下 input 输入 keyup 监听
 
 ```js
 const input1 = document.getElementById('input1')
@@ -63,7 +66,10 @@ function debounce(fn, delay){
 }
 ```
 ### 2. 节流（throttle）
-降低频繁触发操作的触发频率，如下获取拖拽元素的坐标
+> 综述：持续触发事件时，在设定的时间内只执行一次
+> 目的：降低触发频率，节约计算性能   
+
+如下获取拖拽元素的最终位置坐标（其拖拽过程中的坐标没必要触发获取，采用节流就可以降低性能消耗）
    
 ```js
 const main = document.getElementById('main')
