@@ -106,3 +106,5 @@ dist
 #隐藏私密信息
 #secret.js
 
+.vscode
+.idea

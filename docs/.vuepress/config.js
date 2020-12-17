@@ -21,13 +21,17 @@ module.exports = {
         // sidebar: 'auto',
         subSidebar: 'auto',
         authorAvatar: '/assets/img/avatar.jpg',
-        vssueConfig: {
-            platform: 'github-v4',
-            owner: 'TienOUC',
-            repo: 'vuepress',
-            clientId: secret.clientId,
-            clientSecret: secret.clientSecret,
+        valineConfig: {
+            appId: secret.appID,// your appId
+            appKey: secret.appKey, // your appKey
         },
+        // vssueConfig: {
+        //     platform: 'github-v4',
+        //     owner: 'TienOUC',
+        //     repo: 'vuepress',
+        //     clientId: secret.clientId,
+        //     clientSecret: secret.clientSecret,
+        // },
         friendLink: [
             // {
             //     title: 'Tien_风野',
