@@ -1,5 +1,5 @@
 ---
-title: 无界面服务器运行Node.js脚本爬取数据
+title: Linux服务器运行Node.js脚本爬取数据
 date: 2020-05-20
 isTimeLine: true
 sticky: 1
@@ -11,11 +11,9 @@ tags:
 ---
 
 :::tip
-Selenium + NodeJS + Chrome   
-
-CentOS <Badge text="v7.6" type="warning"/>
+Selenium & NodeJS & Chrome   
 :::
-
+<!-- CentOS <Badge text="v7.6" type="warning"/> -->
 
 <!-- more -->
 
@@ -91,11 +89,7 @@ root 用户下，找到`/usr/share/applications/Google Chrome.desktop`，鼠标�
 爬虫示例：
 
 ```js
-
-// 爬取万矿疫情数据  需注册账号并登陆才能爬取数据，官方Web API使用说明 :（ https://www.windquant.com/qntcloud/help/id-fdc2e335-7f50-4b63-b79c-07a2582cf15c
-
-）
-
+// 爬取万矿疫情数据  需注册账号并登陆才能爬取数据，官方Web API使用说明 :（ https://www.windquant.com/qntcloud/help/id-fdc2e335-7f50-4b63-b79c-07a2582cf15c）
 const dataUrl = 'https://www.windquant.com/qntcloud/data/edb?userid=43a1bf78-8e78-48b7-bdff-65e041ffe268&indicators=S6274770,S6274772,S6274771,S6274773,S6274775,S6274778,S6274777,S6274776,S6274780,S6274782,S6274784&startdate=2020-01-20&enddate=2020-05-05'
 
 function getHistorydata () {

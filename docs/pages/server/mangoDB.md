@@ -15,7 +15,8 @@ MongoDB <Badge text="v4.2" type="warning"/>
 
 :::
 
-### 1. 使用brew安装 `brew install mongodb-community@4.2`
+## 1. 使用brew安装   
+安装命令 `brew install mongodb-community@4.2`
 
 ```
 ➜  ~ brew install mongodb-community@4.2
@@ -46,7 +47,9 @@ Install GNU's GCC:
   brew install gcc
 ```
 
-### 2. 报错，提示安安装gcc`brew install gcc`
+## 2. gcc错误
+
+报错，提示安安装gcc，使用命令安装 `brew install gcc`
 
 ```
 ➜  ~ brew install gcc
@@ -87,7 +90,9 @@ Install GNU's GCC:
   brew install gcc
 ```
 
-### 3. 仍报错，安装 xcode-select `xcode-select --install`
+## 3. 安装 xcode-select 
+ 
+仍报错，安装 xcode-select `xcode-select --install`   
 
 ```
 ➜  ~ xcode-select --install
@@ -106,16 +111,19 @@ Or, if you don't want/need a background service you can just run:
 🍺  /usr/local/Cellar/mongodb-community/4.2.6: 21 files, 306.2MB, built in 5 seconds
 ```
 
-### 4. 后台启动`brew services start mongodb/brew/mongodb-community`
+## 4. 启动命令    
+后台启动 `brew services start mongodb/brew/mongodb-community`
 
 ```
 ➜  ~ brew services start mongodb/brew/mongodb-community
 ==> Successfully started `mongodb-community` (label: homebrew.mxcl.mongodb-community)
 ➜  ~
 ```
-### 5. 打开可视化工具 Robot 3T，连接成功
+## 5. 可视化工具   
+打开可视化工具 Robot 3T，连接成功
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gf198d3po9j30x00lkq4j.jpg)
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gf198cy6zoj30x40li3zl.jpg)
 
-### 6. 停止 `brew services stop mongodb/brew/mongodb-community`
+## 6. 停止进程
+命令 `brew services stop mongodb/brew/mongodb-community`

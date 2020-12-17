@@ -27,6 +27,7 @@ module.exports = [
                     { text: "JavaScript", link: "/pages/frontEnd/javascript/" },
                     { text: "Framework", link: "/pages/frontEnd/framework/" },
                     { text: "CSS", link: "/pages/frontEnd/css/" },
+                    { text: "协议类", link: "/pages/frontEnd/protocol/" },
                     { text: "工具类", link: "/pages/tools/" },
                     { text: "组件库", link: "/pages/components/" }
                 ]
@@ -55,16 +56,11 @@ module.exports = [
             {
                 text: "",
                 items: [
-                    {
-                        text: "微信",
-                        link: "/pages/contact/",
-                        icon: "reco-wechat"
-                    },
-                    {
-                        text: "邮箱",
-                        link: "/pages/contact/email/",
-                        icon: "reco-mail"
-                    },
+                    // {
+                    //     text: "邮箱",
+                    //     link: "/pages/contact/email/",
+                    //     icon: "reco-mail"
+                    // },
                     {
                         text: "Gitee",
                         link: "https://gitee.com/tienouc",
@@ -75,7 +71,13 @@ module.exports = [
                         link: "https://github.com/TienOUC",
                         icon: "reco-github"
                     },
-                    { text: '关于我', link: '/pages/about/', icon: 'reco-faq' }
+                    {
+                        text: "TextMe",
+                        link: "/pages/contact/",
+                        icon: "reco-suggestion"
+                        // icon: "reco-wechat"
+                    },
+                    // { text: '关于我', link: '/pages/about/', icon: 'reco-faq' }
                 ]
             }
         ], icon: 'reco-account'

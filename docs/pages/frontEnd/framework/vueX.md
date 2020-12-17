@@ -1,6 +1,6 @@
 ---
 autoGroup-1: Vue
-title: Vuex - 全局状态管理
+title: Vuex-全局状态管理
 date: 2020-03-25
 categories:
 - Framework

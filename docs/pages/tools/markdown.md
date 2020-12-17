@@ -632,3 +632,11 @@ Table of Contents
 | :large_blue_circle: `:large_blue_circle:` | :large_blue_diamond: `:large_blue_diamond:` | :large_orange_diamond: `:large_orange_diamond:` |
 | :small_blue_diamond: `:small_blue_diamond:` | :small_orange_diamond: `:small_orange_diamond:` | :small_red_triangle: `:small_red_triangle:` |
 | :small_red_triangle_down: `:small_red_triangle_down:` | :shipit: `:shipit:` |
+
+## 12. 缩进
+
++ 半方大的空白 `&ensp;` 或 `&#8194;`
++ 全方大的空白 `&emsp;` 或 `&#8195;`
++ 不断行的空白格 `&nbsp;` 或 `&#160;`
+
+

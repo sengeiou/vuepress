@@ -29,11 +29,17 @@ module.exports = {
             clientSecret: secret.clientSecret,
         },
         friendLink: [
+            // {
+            //     title: 'Tien_风野',
+            //     desc: 'Tien_风野的简书主页',
+            //     logo: 'https://tva1.sinaimg.cn/large/007S8ZIlly1gevz8rz6rvj302t02s3yb.jpg',
+            //     link: 'https://www.jianshu.com/u/b55e4540abdc'
+            // },
             {
-                title: 'Tien_风野',
-                desc: 'Tien_风野的简书主页',
+                title: '阮一峰',
+                desc: '阮一峰的网络日志',
                 logo: 'https://tva1.sinaimg.cn/large/007S8ZIlly1gevz8rz6rvj302t02s3yb.jpg',
-                link: 'https://www.jianshu.com/u/b55e4540abdc'
+                link: 'http://www.ruanyifeng.com/blog/'
             },
             {
                 title: 'vuepress-theme-reco',

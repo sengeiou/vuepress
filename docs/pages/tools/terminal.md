@@ -1,6 +1,6 @@
 ---
 autoGroup-3: Terminal
-title: Mac终端命令无法使用的解决办法
+title: Mac终端命令不可用的解决办法
 date: 2020-05-16
 isTimeLine: true
 categories:

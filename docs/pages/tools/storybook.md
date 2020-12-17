@@ -9,7 +9,7 @@ tags:
 ---
 
 ::: tip
-[ Storybook ](https://storybook.js.org) 是一款可以让开发者独立开发 React、Vue 等组件的开源工具
+[ Storybook ](https://storybook.js.org) 是一款可以让开发者独立开发 React、Vue 等组件的响应式开源工具
 :::
 
 <!-- more -->

@@ -1,4 +1,5 @@
 ---
+autoGroup-5: Bundle
 title: Webpack4.0
 sidebarDepth: 2
 date: 2019-08-18
@@ -8,13 +9,8 @@ tags:
 - Webpack
 ---
 
-:::tip
-Webpack4.0 用法
-:::
 
-<!-- more -->
-
-> - [Webpack3.0 用法](https://study.163.com/courses-search?keyword=Webpack打包工具用法)
+> - [ Webpack3.0 用法👉 ](https://study.163.com/courses-search?keyword=Webpack打包工具用法)
 
 ## 1. webpack 打包原理
 
@@ -28,7 +24,7 @@ Webpack4.0 用法
 >
 > 1. 读取文件，分析模块依赖
 > 2. 对模块进行解析执行（深度遍历）
-> 3. 针对不同的莫裤衩使用相应的 loader
+> 3. 针对不同的模块使用相应的 loader
 > 4. 编译模块，生成抽象语法树 AST
 > 5. 遍历循环 AST 树，拼接输出 JS
 

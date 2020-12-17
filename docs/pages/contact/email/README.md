@@ -16,6 +16,6 @@ isShowComments: false
     /* text-decoration: none; */
     display: inline-block;
     font-size: 16px;
-    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);"  onMouseOver="this.style.backgroundColor='#666'" onMouseOut="this.style.backgroundColor='#fff'"><a style="text-decoration:none;" href=mailto:dktianf@163.com>点击按钮给我发送邮件</a></button>
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);"  onMouseOver="this.style.backgroundColor='#666'" onMouseOut="this.style.backgroundColor='#fff'"><a  style="text-decoration:none;" href=mailto:dktianf@163.com>点击按钮给我发送邮件</a></button>
 </div>
 
