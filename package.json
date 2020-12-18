@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://TienOUC.github.io/TienOUC/vuepress",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
@@ -18,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/TienOUC/vuepress/issues"
   },
-  "homepage": "https://github.com/TienOUC/vuepress#readme",
   "dependencies": {
     "@vuepress-reco/vuepress-plugin-back-to-top": "^1.4.0",
     "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
