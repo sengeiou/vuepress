@@ -22,8 +22,10 @@ module.exports = {
         subSidebar: 'auto',
         authorAvatar: '/assets/img/avatar.jpg',
         valineConfig: {
-            appId: secret.appID,// your appId
-            appKey: secret.appKey, // your appKey
+            // appId: secret.appID,// your appId
+            // appKey: secret.appKey, // your appKey
+            appID: APPID
+            appKey: APPKEY
         },
         // vssueConfig: {
         //     platform: 'github-v4',
