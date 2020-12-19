@@ -20,6 +20,9 @@ jobs:
 
       # 生成静态文件
       - name: Build
+        env: 
+             VALINEID: ${{ secrets.VALINE_APPID }}
+             VALINEKEY: ${{ secrets.VALINE_APPKEY }}
         run: yarn install && yarn docs:build
 
       # 部署到 GitHub Pages
@@ -29,5 +32,3 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: docs/.vuepress/dist
-          APPID: ${{ secrets.APPID }}
-          APPKEY: ${{ secrets.APPKEY }}
