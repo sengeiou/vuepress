@@ -42,12 +42,12 @@ module.exports = [
     '@vuepress-reco/vuepress-plugin-back-to-top'
     // 'go-top'
   ],
-  [
-    '@vuepress/google-analytics',
-    {
-      'ga': secret.ga
-    }
-  ],
+  // [
+  //   '@vuepress/google-analytics',
+  //   {
+  //     'ga': secret.ga
+  //   }
+  // ],
   [
     '@vuepress/medium-zoom', {
       selector: 'img',
