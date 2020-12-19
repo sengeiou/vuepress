@@ -26,7 +26,6 @@ jobs:
           GA: ${{ secrets.GA }}
           run: echo 'try to show secret 😉' && echo $VALINE_APPID && echo $VALINE_APPKEY
 
-        # run: npm run deploy
       # 部署到 GitHub Pages
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
