@@ -2,7 +2,7 @@ const headConfig = require('./config/headConfig');
 const pluginsConfig = require('./config/pluginsConfig')
 const navConfig = require('./config/navConfig')
 const markdownConfig = require('./config/markdownConfig')
-const secret = require('./config/secret')
+// const secret = require('./config/secret')
 module.exports = {
     base: '/vuepress/',
     title: "Tien's Blog",
