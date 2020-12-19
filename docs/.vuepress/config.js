@@ -22,10 +22,8 @@ module.exports = {
         subSidebar: 'auto',
         authorAvatar: '/assets/img/avatar.jpg',
         valineConfig: {
-            // appId: secret.appID,// your appId
-            // appKey: secret.appKey, // your appKey
-            appId: process.env.VALINE_APPID,
-            appKey: process.env.VALINE_APPKEY
+            appId: `'${{ process.env.VALINE_APPID }}'`,
+            appKey: `'${{ process.env.VALINE_APPKEY }}'`
         },
         // vssueConfig: {
         //     platform: 'github-v4',
