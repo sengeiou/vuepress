@@ -24,7 +24,8 @@ jobs:
           VALINE_APPID: ${{ secrets.VALINE_APPID }}
           VALINE_APPKEY: ${{ secrets.VALINE_APPKEY }}
           GA: ${{ secrets.GA }}
-        run: npm run deploy
+          run: echo 'try to show secret 😉' && echo $VALINE_APPID && echo $VALINE_APPKEY
+        # run: npm run deploy
 
       # 部署到 GitHub Pages
       - name: Deploy
