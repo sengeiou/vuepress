@@ -24,8 +24,8 @@ module.exports = {
         valineConfig: {
             // appId: secret.appID,// your appId
             // appKey: secret.appKey, // your appKey
-            appId: process.env.VALINEID,
-            appKey: process.env.VALINEKEY
+            appId: process.env.VALINE_APPID,
+            appKey: process.env.VALINE_APPKEY
         },
         // vssueConfig: {
         //     platform: 'github-v4',
