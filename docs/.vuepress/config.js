@@ -2,7 +2,7 @@ const headConfig = require('./config/headConfig');
 const pluginsConfig = require('./config/pluginsConfig')
 const navConfig = require('./config/navConfig')
 const markdownConfig = require('./config/markdownConfig')
-// const secret = require('./config/secret')
+const secret = require('./config/secret')
 module.exports = {
     base: '/vuepress/',
     title: "Tien's Blog",
@@ -21,17 +21,20 @@ module.exports = {
         // sidebar: 'auto',
         subSidebar: 'auto',
         authorAvatar: '/assets/img/avatar.jpg',
-        valineConfig: {
-            appId: JSON.stringify(process.env.VALINE_APPID),
-            appKey: JSON.stringify(process.env.VALINE_APPKEY)
-        },
-        // vssueConfig: {
-        //     platform: 'github-v4',
-        //     owner: 'TienOUC',
-        //     repo: 'vuepress',
-        //     clientId: secret.clientId,
-        //     clientSecret: secret.clientSecret,
+        // valineConfig: {
+        //     appId: JSON.stringify(secret.appId),
+        //     appKey: JSON.stringify(secret.appKey)
+        //     // github actions
+        //     // appId: JSON.stringify(process.env.VALINE_APPID),
+        //     // appKey: JSON.stringify(process.env.VALINE_APPKEY)
         // },
+        vssueConfig: {
+            platform: 'github-v4',
+            owner: 'TienOUC',
+            repo: 'vuepress',
+            clientId: secret.clientId,
+            clientSecret: secret.clientSecret,
+        },
         friendLink: [
             // {
             //     title: 'Tien_风野',

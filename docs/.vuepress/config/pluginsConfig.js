@@ -1,4 +1,4 @@
-// const secret = require('./secret')
+const secret = require('./secret')
 
 module.exports = [
   [
@@ -45,7 +45,9 @@ module.exports = [
   [
     '@vuepress/google-analytics',
     {
-      'ga': process.env.GA
+      'ga': secret.ga
+      // github actions
+      // 'ga': process.env.GA
     }
   ],
   [
