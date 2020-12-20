@@ -103,12 +103,10 @@ dist
 # TernJS port file
 .tern-port
 
-#隐藏私密信息
-# secret.js
+# Hide private info
+ secret.js
 
-# github actions
-.github/
-
+# Hide vscode config
 .vscode
 .idea
 

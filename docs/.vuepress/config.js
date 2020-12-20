@@ -3,6 +3,7 @@ const pluginsConfig = require('./config/pluginsConfig')
 const navConfig = require('./config/navConfig')
 const markdownConfig = require('./config/markdownConfig')
 const secret = require('./config/secret')
+
 module.exports = {
     base: '/vuepress/',
     title: "Tien's Blog",
@@ -22,13 +23,14 @@ module.exports = {
         subSidebar: 'auto',
         authorAvatar: '/assets/img/avatar.jpg',
         // valineConfig: {
-        //     appId: JSON.stringify(secret.appId),
-        //     appKey: JSON.stringify(secret.appKey)
+        //     appId: secret.appId,
+        //     appKey: secret.appKey
         //     // github actions
         //     // appId: JSON.stringify(process.env.VALINE_APPID),
         //     // appKey: JSON.stringify(process.env.VALINE_APPKEY)
         // },
-        vssueConfig: {
+
+         vssueConfig:{
             platform: 'github-v4',
             owner: 'TienOUC',
             repo: 'vuepress',
