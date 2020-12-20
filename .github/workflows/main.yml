@@ -54,5 +54,6 @@ jobs: # 工作流
         env: # 设置环境变量
           VSSUE_CLIENTID: ${{secrets.VSSUE_CLIENTID}}
           VUSSE_CLIENTSECRET: ${{secrets.VUSSE_CLIENTSECRET}}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} 
         run: |
           yarn deploy

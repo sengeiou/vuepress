@@ -15,12 +15,12 @@ cd docs/.vuepress/dist
 # echo 'www.example.com' > CNAME
 
 # <--Deploy to GitHub
-if [ -z "$GITHUB_TOKEN" ]; then
+if [ -z "$ACCESS_TOKEN" ]; then
   msg='deploy'
   githubUrl=git@github.com:TienOUC/vuepress.git
 else
   msg='GitHub Action CI/CD'
-  # githubUrl=https://TienOUC:${GITHUB_TOKEN}@TienOUC.com/TienOUC/vuepress.git
+  # githubUrl=https://TienOUC:${ACCESS_TOKEN}@TienOUC.com/TienOUC/vuepress.git
 fi
 git init
 git add -A
