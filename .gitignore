@@ -109,4 +109,4 @@ secret.js
 # Hide vscode config
 .vscode
 .idea
-
+.github/
