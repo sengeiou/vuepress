@@ -29,7 +29,7 @@
 
 # 确保脚本抛出遇到的错误
 set -e
-
+yarn
 # 生成静态文件
 echo "module.exports={clientId: '${VSSUE_CLIENTID}',clientSecret: '${VSSUE_CLIENTSECRET}', appID: '${VALINE_APPID}', appKey: '${VALINE_APPKEY}', ga:'${GA}'}"> docs/.vuepress/config/secret.js
 yarn docs:build
