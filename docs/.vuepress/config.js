@@ -6,7 +6,7 @@ const secret = require('./config/secret')
 
 module.exports = {
     base: '/vuepress/',
-    title: "Tien's Blog",
+    title: "Tien's blog",
     description: 'The truth is what it is, not what you see.',
     markdown: markdownConfig,
     head: headConfig,
@@ -30,7 +30,7 @@ module.exports = {
         //     // appKey: JSON.stringify(process.env.VALINE_APPKEY)
         // },
 
-         vssueConfig:{
+        vssueConfig: {
             platform: 'github-v4',
             owner: 'TienOUC',
             repo: 'vuepress',
@@ -47,14 +47,20 @@ module.exports = {
             {
                 title: '阮一峰',
                 desc: '阮一峰的网络日志',
-                logo: 'https://tva1.sinaimg.cn/large/007S8ZIlly1gevz8rz6rvj302t02s3yb.jpg',
+                logo: 'http://www.ruanyifeng.com/favicon.ico',
                 link: 'http://www.ruanyifeng.com/blog/'
             },
             {
                 title: 'vuepress-theme-reco',
                 desc: '一款简约的VuePress博客&文档主题',
-                logo: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+                logo: "https://vuepress-theme-reco.recoluan.com/favicon.ico",
                 link: 'https://vuepress-theme-reco.recoluan.com'
+            },
+            {
+                title: '青春永不落幕',
+                desc: '一位网页设计和收集Windows平台软件的爱好者',
+                logo: 'https://qcyblm.github.io/favicon.ico',
+                link: 'https://qcyblm.github.io/'
             }
         ],
         noFoundPageByTencent: false,  // 404 腾讯公益

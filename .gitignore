@@ -104,10 +104,9 @@ dist
 .tern-port
 
 # Hide private info
-# secret.js
+ secret.js
 
 # Hide vscode config
 .vscode
 .idea
 
-main.yml
