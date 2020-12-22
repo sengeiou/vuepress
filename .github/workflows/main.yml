@@ -58,5 +58,5 @@ jobs: # 工作流
           VALINE_APPKEY: ${{ secrets.VALINE_APPKEY }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           ACCESS_EMAIL: ${{ secrets.ACCESS_EMAIL }}
-          GA: ${{ secrets.GA }}
+          # GA: ${{ secrets.GA }}
         run: yarn deploy
