@@ -59,5 +59,4 @@ jobs: # 工作流
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           ACCESS_EMAIL: ${{ secrets.ACCESS_EMAIL }}
           GA: ${{ secrets.GA }}
-        run: |
-          yarn deploy
+        run: yarn deploy
