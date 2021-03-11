@@ -1,18 +1,19 @@
 ---
 title: 联系方式
 isShowComments: false
+publish: false
 # subSidebar: false
 ---
-## 1. 微信   
+<!-- ## 1. 微信   
 
 <div>
 
 <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1geopok7gcbj30at0at3yx.jpg">
 
-</div>
+</div> -->
 
 
-## 2. 邮箱   
+<!-- ## 2. 邮箱    -->
 <div style="margin-left: 50px">
     <button style="
     background-color: #fff; 

@@ -45,22 +45,34 @@ module.exports = {
             //     link: 'https://www.jianshu.com/u/b55e4540abdc'
             // },
             {
+                title: '稚晖的个人小站',
+                desc: '十年饮冰，难凉热血',
+                logo: 'http://www.pengzhihui.xyz/favicon.png',
+                link: 'http://www.pengzhihui.xyz/archives/'
+            },
+            {
                 title: '阮一峰',
                 desc: '阮一峰的网络日志',
                 logo: 'http://www.ruanyifeng.com/favicon.ico',
                 link: 'http://www.ruanyifeng.com/blog/'
             },
             {
-                title: 'vuepress-theme-reco',
-                desc: '一款简约的VuePress博客&文档主题',
-                logo: "https://vuepress-theme-reco.recoluan.com/favicon.ico",
-                link: 'https://vuepress-theme-reco.recoluan.com'
+                title: '峰华前端工程师',
+                desc: 'Hello! 我是张旭乾',
+                logo: 'https://zxuqian.cn/img/favicon.ico',
+                link: 'https://zxuqian.cn/'
             },
             {
                 title: '青春永不落幕',
                 desc: '一位网页设计和收集Windows平台软件的爱好者',
                 logo: 'https://qcyblm.github.io/favicon.ico',
                 link: 'https://qcyblm.github.io/'
+            },
+            {
+                title: 'vuepress-theme-reco',
+                desc: '一款简约的VuePress博客&文档主题',
+                logo: "https://vuepress-theme-reco.recoluan.com/favicon.ico",
+                link: 'https://vuepress-theme-reco.recoluan.com'
             }
         ],
         noFoundPageByTencent: false,  // 404 腾讯公益

@@ -1,6 +1,7 @@
 ---
 title: 首页
-isShowComments: false
+# isShowComments: false
+publish: false
 
 ---
 

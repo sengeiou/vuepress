@@ -3,9 +3,9 @@ title: centOS-v7常用命令
 date: 2020-05-20
 isTimeLine: true
 categories:
- - Server
+  - Server
 tags:
- - CentOS
+  - CentOS
 ---
 
 ### 1. 常用命令
