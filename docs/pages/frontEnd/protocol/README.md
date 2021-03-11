@@ -2,7 +2,7 @@
 title: 首页
 isShowComments: false
 publish: false
-
+# sidebar: false
 ---
 
 ![](https://tva1.sinaimg.cn/large/0081Kckwly1gk9wba0alvj30m808c3yk.jpg)

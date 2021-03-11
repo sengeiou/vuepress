@@ -2,7 +2,7 @@
 title: 首页
 isShowComments: false
 publish: false
-
+# sidebar: false
 ---
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge5aemu5tdj30m808cglu.jpg)
@@ -14,7 +14,7 @@ publish: false
 
 ## 2. 参考资料
 
-1. 《JavaScript 权威指南》
-2. [ **You-Dont-Know-JS** ](https://github.com/getify/You-Dont-Know-JS)
-3. [ **MDN** ](https://developer.mozilla.org/zh-CN/)
-4. [ **ECMA** ](https://www.ecma-international.org/)
++ 《JavaScript 权威指南》
++ [ **You-Dont-Know-JS** ](https://github.com/getify/You-Dont-Know-JS)
++ [ **MDN** ](https://developer.mozilla.org/zh-CN/)
++ [ **ECMA** ](https://www.ecma-international.org/)
