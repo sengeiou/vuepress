@@ -22,21 +22,21 @@ module.exports = {
         // sidebar: 'auto',
         subSidebar: 'auto',
         authorAvatar: '/assets/img/avatar.jpg',
-        // valineConfig: {
-        //     appId: secret.appId,
-        //     appKey: secret.appKey
-        //     // github actions
-        //     // appId: JSON.stringify(process.env.VALINE_APPID),
-        //     // appKey: JSON.stringify(process.env.VALINE_APPKEY)
-        // },
-
-        vssueConfig: {
-            platform: 'github-v4',
-            owner: 'TienOUC',
-            repo: 'vuepress',
-            clientId: secret.clientId,
-            clientSecret: secret.clientSecret,
+        valineConfig: {
+            appId: secret.appId,
+            appKey: secret.appKey,
+            // github actions
+            // appId: JSON.stringify(process.env.VALINE_APPID),
+            // appKey: JSON.stringify(process.env.VALINE_APPKEY)
         },
+
+        // vssueConfig: {
+        //     platform: 'github-v4',
+        //     owner: 'TienOUC',
+        //     repo: 'vuepress',
+        //     clientId: secret.clientId,
+        //     clientSecret: secret.clientSecret,
+        // },
         friendLink: [
             // {
             //     title: 'Tien_风野',

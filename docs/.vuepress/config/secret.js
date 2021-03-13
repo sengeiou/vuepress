@@ -1,6 +1,6 @@
 module.exports = {
     // Valine
-    appID: 'jHW4Mxbn7BYYY5JJrMf2M40S-gzGzoHsz',
+    appId: 'jHW4Mxbn7BYYY5JJrMf2M40S-gzGzoHsz',
     appKey: 'OaBWbX4X4kxR3oTVN5thwoSV',
     // Vssue
     clientId: 'a1325b88388309352538',
