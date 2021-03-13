@@ -8,4 +8,3 @@ module.exports = {
     // Google Search
     ga: 'UA-163984437-1'
 }
-
