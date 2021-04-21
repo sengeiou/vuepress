@@ -5,10 +5,33 @@ module.exports = [
         icon: 'reco-home'
     },
     {
-        text: "疫情",
-        link: "http://blog.dodolo.top/covid",
-        icon: 'reco-message'
+        text: "新闻",
+        items: [
+            {
+                text: "",
+                items: [
+                    {
+                        text: "全球财经",
+                        link: "https://news.dodolo.top"
+                    },
+                    {
+                        text: "新冠疫情",
+                        link: "https://covid.dodolo.top"
+                    }
+                ]
+            }
+        ], icon: 'reco-blog'
     },
+    // {
+    //     text: "财经",
+    //     link: "https://news.dodolo.top",
+    //     icon: 'reco-blog'
+    // },
+    // {
+    //     text: "疫情",
+    //     link: "https://covid.dodolo.top",
+    //     icon: 'reco-message'
+    // },
     // {
     //     text: "前端",
     //     items: [
@@ -22,7 +45,7 @@ module.exports = [
         text: "分类",
         items: [
             {
-                text: "前端", 
+                text: "前端",
                 items: [
                     { text: "JavaScript", link: "/pages/frontEnd/javascript/" },
                     { text: "Framework", link: "/pages/frontEnd/framework/" },

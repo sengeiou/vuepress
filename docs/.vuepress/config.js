@@ -5,22 +5,21 @@ const markdownConfig = require('./config/markdownConfig')
 const secret = require('./config/secret')
 
 module.exports = {
-    base: '/vuepress/',
-    title: "Tien's blog",
+    base: '/vuepress/',  // deploy github-pages/
+    // base: '/',           // deploy aliyun
+    title: "Tien's Blog",
     description: 'The truth is what it is, not what you see.',
     markdown: markdownConfig,
     head: headConfig,
     plugins: pluginsConfig,
     themeConfig: {
         smoothScroll: true,
-        lastUpdated: '更新时间',
+        // lastUpdated: '更新时间',
         nav: navConfig,
         //vuepress-theme-reco 第三方主题配置
-        // logo: '/assets/img/avatar.jpg',
         author: 'Tien',
         type: 'blog',
-        // sidebar: 'auto',
-        subSidebar: 'auto',
+        logo: "/assets/img/logo.png",
         authorAvatar: '/assets/img/avatar.jpg',
         valineConfig: {
             appId: secret.appId,
@@ -38,22 +37,18 @@ module.exports = {
         //     clientSecret: secret.clientSecret,
         // },
         friendLink: [
-            // {
-            //     title: 'Tien_风野',
-            //     desc: 'Tien_风野的简书主页',
-            //     logo: 'https://tva1.sinaimg.cn/large/007S8ZIlly1gevz8rz6rvj302t02s3yb.jpg',
-            //     link: 'https://www.jianshu.com/u/b55e4540abdc'
-            // },
             {
                 title: '稚晖的个人小站',
                 desc: '十年饮冰，难凉热血',
-                logo: 'http://www.pengzhihui.xyz/favicon.png',
+                // logo: 'http://www.pengzhihui.xyz/favicon.png',
+                logo: 'https://tva1.sinaimg.cn/large/008eGmZEgy1gpfmx6j8khj303k03k3yn.jpg',
                 link: 'http://www.pengzhihui.xyz/archives/'
             },
             {
                 title: '阮一峰',
                 desc: '阮一峰的网络日志',
-                logo: 'http://www.ruanyifeng.com/favicon.ico',
+                // logo: 'http://www.ruanyifeng.com/favicon.ico',
+                logo: 'https://tva1.sinaimg.cn/large/008eGmZEgy1gpfmx8wr8hj300w00wa9t.jpg',
                 link: 'http://www.ruanyifeng.com/blog/'
             },
             {

@@ -1,17 +1,19 @@
 module.exports = [
-  {
-    text: 'pages',
-    items: [
-      { text: 'Markdown', link: '/pages/tools/others/markdown/' },
-      { text: 'Iterm2', link: '/pages/tools/others/iterm2/' },
-      { text: 'Webstorm', link: '/pages/tools/ide/webstorm/' },
-      { text: 'Vue', link: '/pages/web/framework/vue/' },
-      { text: 'Javascript', link: '/pages/web/javascript/' },
-      { text: 'Webpack', link: '/pages/web/webpack/' },
-      { text: 'Components', link: '/pages/components/' },
-      { text: 'Ide', link: '/pages/tools/ide/' },
-      { text: 'Css', link: '/pages/web/css/' },
-      { text: 'About', link: '/pages/about/' },
-    ],
-  },
-]
+    {
+        "text": "pages", "items":
+            [
+                { "text": "Javascript", "link": "/pages/frontEnd/javascript/" },
+                { "text": "Framework", "link": "/pages/frontEnd/framework/" },
+                { "text": "Protocol", "link": "/pages/frontEnd/protocol/" },
+                { "text": "Email", "link": "/pages/contact/email/" },
+                { "text": "Css", "link": "/pages/frontEnd/css/" },
+                { "text": "Mini Program", "link": "/pages/miniProgram/" },
+                { "text": "Components", "link": "/pages/components/" },
+                { "text": "Algorithm", "link": "/pages/algorithm/" },
+                { "text": "Contact", "link": "/pages/contact/" },
+                { "text": "Summary", "link": "/pages/summary/" },
+                { "text": "Server", "link": "/pages/server/" },
+                { "text": "About", "link": "/pages/about/" },
+                { "text": "Tools", "link": "/pages/tools/" }]
+    }
+];
