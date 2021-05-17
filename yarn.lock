@@ -1011,13 +1011,6 @@
   dependencies:
     vssue "^1.4.4"
 
-"@vssue/vuepress-plugin-vssue@^1.4.3":
-  version "1.4.3"
-  resolved "https://registry.npm.taobao.org/@vssue/vuepress-plugin-vssue/download/@vssue/vuepress-plugin-vssue-1.4.3.tgz#37bdb079b750e998591eb94b1e94374c0121c227"
-  integrity sha1-N72webdQ6ZhZHrlLHpQ3TAEhwic=
-  dependencies:
-    vssue "^1.4.3"
-
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/@vue/babel-helper-vue-jsx-merge-props/download/@vue/babel-helper-vue-jsx-merge-props-1.0.0.tgz#048fe579958da408fb7a8b2a3ec050b50a661040"
@@ -1157,11 +1150,6 @@
     valine "^1.4.14"
     vssue "^1.4.6"
 
-"@vuepress-reco/vuepress-plugin-kan-ban-niang@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-kan-ban-niang/-/vuepress-plugin-kan-ban-niang-1.0.5.tgz#73b47094f1a07af05923fe9ae6c25a4c33586168"
-  integrity sha512-ufqpOw0zhLxv3PvoYlHTsjmG4CFiCaQ8dnf950Ov7JmajKgpAMarZ3ObB+xi5ex0sgetxU82YSf+CptQceXQIw==
-
 "@vuepress-reco/vuepress-plugin-loading-page@^1.6.0":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-loading-page/-/vuepress-plugin-loading-page-1.6.0.tgz#34b72ed342dc9b15021d077ff8faeafe52146159"
@@ -1265,11 +1253,6 @@
     vuepress-plugin-feed "^0.1.8"
     vuepress-plugin-mailchimp "^1.4.1"
     vuepress-plugin-sitemap "^2.3.1"
-
-"@vuepress/plugin-google-analytics@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.npm.taobao.org/@vuepress/plugin-google-analytics/download/@vuepress/plugin-google-analytics-1.4.1.tgz#d537e7ed026e7808d1d9d186880e595b04fe0868"
-  integrity sha1-1Tfn7QJueAjR2dGGiA5ZWwT+CGg=
 
 "@vuepress/plugin-last-updated@1.4.1":
   version "1.4.1"
@@ -2625,7 +2608,7 @@ color@^3.0.0:
     color-convert "^1.9.1"
     color-string "^1.5.2"
 
-colors@^1.1.2:
+colors@^1.1.2, colors@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.4.0.tgz#c50491479d4c1bdaed2c9ced32cf7c7dc2360f78"
   integrity sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
@@ -9933,17 +9916,6 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
 
-vssue@^1.4.3:
-  version "1.4.3"
-  resolved "https://registry.npm.taobao.org/vssue/download/vssue-1.4.3.tgz#861203a95e6b60fe2af661a07d800c0d51965e13"
-  integrity sha1-hhIDqV5rYP4q9mGgfYAMDVGWXhM=
-  dependencies:
-    "@vssue/utils" "^1.4.0"
-    github-markdown-css "^3.0.1"
-    vue "^2.6.10"
-    vue-i18n "^8.11.2"
-    vue-property-decorator "^8.1.1"
-
 vssue@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/vssue/-/vssue-1.4.4.tgz#2a342698b430aaf24019ad6ceaa389cfc3df2f0d"
@@ -10097,9 +10069,11 @@ vuepress-html-webpack-plugin@^3.2.0:
     util.promisify "1.0.0"
 
 vuepress-plugin-auto-sidebar@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-auto-sidebar/download/vuepress-plugin-auto-sidebar-1.4.1.tgz#c8586447affb2faa4155a9828916bb9bd594f188"
-  integrity sha1-yFhkR6/7L6pBVamCiRa7m9WU8Yg=
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-auto-sidebar/-/vuepress-plugin-auto-sidebar-1.5.0.tgz#fc11b32f5e7976394bab01edd68cd602b1c0cefe"
+  integrity sha512-PsF+XRWBZw+xbh/4IzTw6VbM4PoMhEMemHgK+c1Lmf7+9Fq3FK/iB4/P6Bp3VmlY+GenJ95MtwKK0BRjuK4RCQ==
+  dependencies:
+    colors "^1.4.0"
 
 vuepress-plugin-comment@^0.7.3:
   version "0.7.3"

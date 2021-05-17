@@ -81,7 +81,7 @@ Foo.prototype.__proto__.constructor === Object; // true
 Object.prototype.__proto__ === null; // true
 ```
 
-<img :src="$withBase('/frontend/javascript/prototype-chains.jpg')" alt="prototype-chains">
+<!-- <img :src="$withBase('/frontend/javascript/prototype-chains.jpg')" alt="prototype-chains"> -->
 
 ### 1. 存在的问题
 
@@ -104,4 +104,4 @@ Object.__proto__ === Function.prototype; // true
 Foo.__proto__ === Function.prototype; // true
 ```
 
-<img :src="$withBase('/frontend/javascript/prototype-chains-function.jpg')" alt="prototype-chains-function">
+<!-- <img :src="$withBase('/frontend/javascript/prototype-chains-function.jpg')" alt="prototype-chains-function"> -->

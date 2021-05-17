@@ -66,7 +66,7 @@ module.exports = {
             {
                 title: 'vuepress-theme-reco',
                 desc: '一款简约的VuePress博客&文档主题',
-                logo: "https://vuepress-theme-reco.recoluan.com/favicon.ico",
+                logo: "https://tva1.sinaimg.cn/large/008i3skNgy1gqlm89wvpyj301s01sgld.jpg",
                 link: 'https://vuepress-theme-reco.recoluan.com'
             }
         ],

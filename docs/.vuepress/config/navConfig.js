@@ -58,6 +58,7 @@ module.exports = [
             {
                 text: "其他",
                 items: [
+                    { text: "DIY", link: "/pages/application/" },
                     { text: "服务器", link: "/pages/server/" },
                     { text: "小程序", link: "/pages/miniProgram/" },
                     { text: "小总结", link: "/pages/summary/" }

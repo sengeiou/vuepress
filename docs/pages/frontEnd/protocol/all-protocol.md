@@ -1,5 +1,4 @@
 ---
-autoGroup-2: Network Model
 title: All Protocol
 date: 2020-03-02
 categories:

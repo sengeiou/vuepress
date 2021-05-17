@@ -1,20 +1,18 @@
 ---
-title: Linux服务器运行Node.js脚本爬取数据
+title: Linux服务器运行Node脚本爬取数据
 date: '2020-05-20'
 isTimeLine: true
 sticky: 1
 categories:
   - Server
 tags:
-  - Selenium
   - Node
 ---
 
 :::tip
-Selenium & NodeJS & Chrome   
+Selenium & NodeJS & chromedriver   
 :::
 <!-- CentOS <Badge text="v7.6" type="warning"/> -->
-
 <!-- more -->
 
 ## 1. 安装 Selenium
@@ -132,7 +130,7 @@ const nodeSchedule = require('node-schedule')
 
 **Echarts 学习实践，赶在国内疫情末尾写了个疫情展示页面**
 
-:link: [ 展示页面连接 ](http://blog.dodolo.top/covid/)
+:link: [ 展示页面连接 ](https://covid.dodolo.top)
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geqw7nzb2yj30xc0hfju5.jpg)
 
@@ -142,7 +140,7 @@ const nodeSchedule = require('node-schedule')
 
 > a. 安装依赖包  
 > b. `server` 目录下先修改`crawler.js`中的万矿 ID 和万矿密码，然后 `node crawler.js app.js` 启动即可（首次启动需修改 `crawler.js` 中的抓取时间，不然要等好久才会有数据哒！）  
-> c. [无界面服务器运行Node.js脚本爬取数据](https://tienouc.gitee.io/vuepress/pages/server/linuxServer.html)  
+> c. [Linux服务器运行Node.js脚本爬取数据](https://www.dodolo.top/pages/server/linuxServer.html#_4-1-%E4%BD%BF%E7%94%A8)  
 > d. 图形界面下把与 Chrome 版本对应的 chromedriver 文件放在脚本目录即可
 
 ### 4.2 注意事项
@@ -199,9 +197,9 @@ new CleanWebpackPlugin(),
 
 #### 4.3.3 微博热搜词
 
-`https://s.weibo.com/top/summary?cate=realtimehot`
+API: `https://s.weibo.com/top/summary?cate=realtimehot`
 
-> 以上数据均用 NodeJS nodeSchedule 定时抓取，数据的延迟取决于你的抓取时间设置，我们是练习使用，不要过度调用接口，让疫情数据及时更新到更有价值的地方去。
+<!-- > 以上数据均用 NodeJS nodeSchedule 定时抓取，数据的延迟取决于你的抓取时间设置，我们是练习使用，不要过度调用接口，让疫情数据及时更新到更有价值的地方去。 -->
 
 ### 4.4 Node nodeSchedule 的用法
 

@@ -1,6 +1,6 @@
 ---
-autoGroup-3: 其他
-title: 浏览器存储
+autoGroup-1: HTTP
+title: 浏览器缓存
 date: 2020-03-02
 categories:
 - FrontEnd
@@ -95,3 +95,6 @@ localStorage在存储方面几乎没有特别的限制，理论上，一些 Cook
 ### 3.3 使用场景
 
 sessionStorage 更适合用来存储生命周期和它同步的会话级别的信息，这些信息只适用于当前的会话。当你开启新的会话时，它也需要相应的更新或释放。比如微博就使用 sessionStorage 存储单次会话的浏览足迹，它会存一个 lasturl 键去对应你上一次访问的 url 地址。当你切换 url 的时候，这个键值就会更新；当你关闭页面的时候，这个键就会被释放。另外，还可对表单信息进行缓存，比如刷新时表单信息不会丢失。  
+
+## 4. 总结图
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1gpkjxrm9lcj30xu0u0mzj.jpg)

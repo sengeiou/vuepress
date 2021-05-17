@@ -1,5 +1,4 @@
 ---
-autoGroup-2: Network Model
 title: OSI七层和TCP/IP模型
 date: 2020-03-02
 categories:

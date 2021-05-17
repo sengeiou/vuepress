@@ -1,22 +1,18 @@
 ---
 autoGroup-1: Vue
 title: 'V-model原理'
-date: 2019-12-16
+date: 2020-12-16
 categories:
   - Framework
 tags:
   - Vue
 ---
-
-:::tip
+ 
 v-model 其实是一个语法糖，本质上是如下两个操作：
 
-1. v-bind 绑定一个 value 属性  
-2. v-on 指令给当前元素绑定 input 事件
-:::
-
-<!-- more -->
-
+> 1. v-bind 绑定一个 value 属性  
+> 2. v-on 指令给当前元素绑定 input 事件
+   
 **示例**
 
 ```js

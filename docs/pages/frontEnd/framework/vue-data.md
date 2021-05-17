@@ -1,7 +1,7 @@
 ---
 autoGroup-1: Vue
 title: Vue组件之间的传值
-date: 2019-11-01
+date: 2020-11-01
 categories:
   - Framework
 tags:

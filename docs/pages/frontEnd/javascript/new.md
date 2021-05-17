@@ -1,6 +1,6 @@
 ---
 autoGroup-4: 其他
-title: new()
+title: new
 date: 2020-01-01
 categories:
   - FrontEnd

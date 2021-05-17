@@ -1,16 +1,18 @@
 ---
-autoGroup-5: Other
+autoGroup-7: Other
 title: yarn.lock与package-lock.json互转
 sidebarDepth: 2
 date: 2020-08-18
 categories:
 - Tools
 tags:
-- Other
+- Tools
 ---
 
+## 1. 安装 synp
 `npm install -g synp`
 
+## 2. 互转
 + 1. yarn.lock => package-lock.json
 ```
 yarn # be sure the node_modules folder dir and is updated

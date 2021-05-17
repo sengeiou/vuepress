@@ -1,6 +1,6 @@
 ---
 autoGroup-4: 其他
-title: 表单拦截校验
+title: Proxy实现表单拦截校验
 date: 2020-03-02
 publish: false
 categories:
