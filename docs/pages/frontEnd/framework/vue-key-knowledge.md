@@ -3,10 +3,11 @@ autoGroup-1: Vue
 title: Vue重要知识点
 date: 2020-08-03
 # sticky: 2
-categories:
-  - Framework
+categories: 
+- FrontEnd
 tags:
-  - Vue
+- Framework
+- Vue
 ---
 
 ## 1. v-for key 值的作用

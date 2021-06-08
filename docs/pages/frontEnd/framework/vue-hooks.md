@@ -2,9 +2,10 @@
 autoGroup-1: Vue
 title: "Vue生命周期"
 date: 2020-07-05
-categories:
-- Framework
+categories: 
+- FrontEnd
 tags:
+- Framework
 - Vue
 ---
 

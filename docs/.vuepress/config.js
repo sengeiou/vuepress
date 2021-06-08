@@ -5,8 +5,8 @@ const markdownConfig = require('./config/markdownConfig')
 const secret = require('./config/secret')
 
 module.exports = {
-    base: '/vuepress/',  // deploy github-pages/
-    // base: '/',           // deploy aliyun
+    // base: '/vuepress/',  // deploy github-pages/
+    base: '/',           // deploy aliyun
     title: "Tien's Blog",
     description: 'The truth is what it is, not what you see.',
     markdown: markdownConfig,

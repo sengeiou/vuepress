@@ -4,9 +4,9 @@ title: Mac终端命令不可用的解决办法
 date: 2020-05-16
 isTimeLine: true
 categories:
-  - Tools
+- Tools
 tags:
-  - Terminal
+- Terminal
 ---
 
 ## 1. 命令行输入

@@ -47,20 +47,26 @@ module.exports = [
             {
                 text: "前端",
                 items: [
-                    { text: "JavaScript", link: "/pages/frontEnd/javascript/" },
-                    { text: "Framework", link: "/pages/frontEnd/framework/" },
-                    { text: "CSS", link: "/pages/frontEnd/css/" },
-                    { text: "协议类", link: "/pages/frontEnd/protocol/" },
-                    { text: "工具类", link: "/pages/tools/" },
+                    { text: "JavaScript", link: "/pages/frontend/javascript/" },
+                    { text: "Framework", link: "/pages/frontend/framework/" },
+                    { text: "CSS", link: "/pages/frontend/css/" },
+                    { text: "协议类", link: "/pages/frontend/protocol/" },
                     { text: "组件库", link: "/pages/components/" }
+                ]
+            },
+            {
+                text: "后端",
+                items: [
+                    { text: "Python", link: "/pages/backend/python/" },
+                    { text: "Database", link: "/pages/backend/serve/" },
                 ]
             },
             {
                 text: "其他",
                 items: [
-                    { text: "DIY", link: "/pages/application/" },
-                    { text: "服务器", link: "/pages/server/" },
-                    { text: "小程序", link: "/pages/miniProgram/" },
+                    { text: "工具类", link: "/pages/gear/" },
+                    { text: "自动化", link: "/pages/automator/" },
+                    { text: "小程序", link: "/pages/miniprogram/" },
                     { text: "小总结", link: "/pages/summary/" }
                 ]
             }

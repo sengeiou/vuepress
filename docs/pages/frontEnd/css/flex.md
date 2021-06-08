@@ -2,10 +2,10 @@
 autoGroup-2: 主流布局方式
 title: Flex
 date: 2019-12-01
-categories:
-  - FrontEnd
+categories: 
+- FrontEnd
 tags:
-  - CSS
+- CSS
 ---
 
 ## 1. Flex 三大要素

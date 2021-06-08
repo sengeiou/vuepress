@@ -2,10 +2,10 @@
 autoGroup-2: 主流布局方式
 title: Grid
 date: 2020-02-21
-categories:
-  - FrontEnd
+categories: 
+- FrontEnd
 tags:
-  - CSS
+- CSS
 ---
 
 ## 1. 基本概念

@@ -2,10 +2,10 @@
 autoGroup-1: HTTP
 title: 浏览器缓存
 date: 2020-03-02
-categories:
+categories: 
 - FrontEnd
 tags:
-- Browser
+- Cookie
 ---
 
 ## 1. Cookie

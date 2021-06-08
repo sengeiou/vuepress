@@ -3,10 +3,11 @@ title: Linux服务器运行Node脚本爬取数据
 date: '2020-05-20'
 isTimeLine: true
 sticky: 1
-categories:
-  - Server
+categories: 
+- Server
 tags:
-  - Node
+- Linux
+- Node
 ---
 
 :::tip

@@ -1,11 +1,12 @@
 ---
+autoGroup-2: 趣味应用
 title: Scriptable
 date: 2021-05-14
 isTimeLine: true
 categories:
- - App
+- Application
 tags:
- - Application
+- Summary
 ---
 
 ### 1. iOS提醒事项同步到日历
@@ -18,10 +19,28 @@ tags:
 
 **参考上面视频 [ :link: 终极解决方案！一键同步ios【提醒事项】到【日历】 ](https://www.bilibili.com/video/BV1pK4y1Y7DX?share_source=copy_web) up主的脚本修改，up主repo地址：[ :link: zackertypical / ios_script](https://github.com/zackertypical/ios_script)**
 
-- 脚本一：
-> 1. 只在up主的原基础上修改掉备注里的identifier   
-> 2. 缺点：在提醒中创建两个完全相同（创建时间、提醒时间、标题、列表等完全一致）的提醒事项时，会一起同步到日历
-   
+- **脚本一（推荐）：**
+> 1. 修改了时间最小单位（当天精确到分钟，隔天精确到小时）   
+> 2. 完成信息挪到了标题中，顺带去掉了底部的地图定位  
+> 3. 尝试了几种替换掉identifier的方案，多多少少都会引入功能性的bug，只好牺牲美观性，在备注里保留identifier（更新的时候要用来校验过滤）了   
+> 4. 其他细节更改见如下示例图
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gqpcbinljgj30sw0k6n0b.jpg)   
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gqpc23domvj30sw0k675n.jpg)   
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gqpc3m3p9xj30sw0k675t.jpg)   
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gqpc44hm6xj30sw0k63zv.jpg)   
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gqpc4gsgo1j30sw0k6jsr.jpg)   
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gqpc4p3vcrj30sw0k6jsq.jpg)   
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gqpc50powfj30sw0k6abh.jpg)   
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gqpc56y38vj30sw0k6dh1.jpg)
+
 ```js
 //要同步的时间段，当前时间前后n个月，例如，当前为5月，设置为2时，同步时间段为3～7月
 var dur_month = 2
@@ -34,7 +53,6 @@ const endDate = new Date()
 endDate.setMonth(endDate.getMonth() + dur_month)
 console.log(`日历的结束时间 ${endDate.toLocaleDateString()}`)
 
-
 const reminders = await Reminder.allDueBetween(startDate, endDate)
 console.log(`获取 ${reminders.length} 条提醒事项`)
 
@@ -42,128 +60,129 @@ var calendar = await Calendar.forEvents()
 
 //获取日历名和对应的日历
 var m_dict = {}
-for(cal of calendar)
-{
-   m_dict[cal.title] = cal
-   //console.log(`日历:${cal.title}`)
+for (cal of calendar) {
+  m_dict[cal.title] = cal
+  //console.log(`日历:${cal.title}`)
 }
 
 const events = await CalendarEvent.between(startDate, endDate, calendar)
 console.log(`获取 ${events.length} 条日历`)
+console.log(events)
 
 for (const reminder of reminders) {
-  reminder.notes = (!reminder.notes || reminder.notes == null || reminder.notes == 'undefined') ? '无' : reminder.notes; 
+  reminder.notes =
+    !reminder.notes || reminder.notes == null || reminder.notes == 'undefined'
+      ? '无'
+      : reminder.notes
   //reminder的标识符
-  //const targetNote = `[Reminder] ${reminder.identifier}`
-  const targetNote = `同步自提醒事项👇\n列表：${reminder.calendar.title}\n标题：${reminder.title}\n时间：${reminder.creationDate.toLocaleString('zh-CN', {year: 'numeric', month: '2-digit', day: '2-digit'}).replace(/\//g, '.')}`        
-
-  const [targetEvent] = events.filter(e => e.notes != null && (e.notes.indexOf(targetNote) != -1))//过滤重复的reminder
-  if(!m_dict[reminder.calendar.title])
-  {
-        console.warn("找不到日历"+ reminder.calendar.title)
-        continue
+  const targetNote = `[Reminder ID] ${reminder.identifier}`
+  const [targetEvent] = events.filter((e) => e.notes != null && e.notes.indexOf(targetNote) != -1) //过滤重复的reminder
+  if (!m_dict[reminder.calendar.title]) {
+    console.warn('找不到日历' + reminder.calendar.title)
+    continue
   }
   if (targetEvent) {
     //console.log(`找到已经创建的事项 ${reminder.title}`)
     updateEvent(targetEvent, reminder)
-
   } else {
-    console.warn(`同步提醒事项【${reminder.title}】到日历【${reminder.calendar.title}】`)
+    console.warn(`创建事项 ${reminder.title} 到 ${reminder.calendar.title}`)
     const newEvent = new CalendarEvent()
-     //newEvent.notes = targetNote + "\n" + reminder.notes 
-    newEvent.notes = reminder.notes + '\n\n' + targetNote   //要加入备注
+    newEvent.notes = reminder.notes + '\n\n' + targetNote //要加入备注
     updateEvent(newEvent, reminder)
-
   }
 }
 
 Script.complete()
 
+//设置period
+function setPeriod(event, period, description) {
+  const supplement = description == '延期' || description == '提前' ? '完成' : ''
+  if (period < 3600) {
+    return (subHeading =
+      Math.floor((period / 60).toFixed(1)) == 0
+        ? `准时完成`
+        : `${description}${(period / 60).toFixed()}分钟${supplement}`)
+  } else if (period >= 3600 && period <= 3600 * 24) {
+    return (subHeading =
+      ((period % 3600) / 60).toFixed() == 0
+        ? `${description}${(period / 3600).toFixed()}小时${supplement}`
+        : `${description}${Math.floor((period / 3600).toFixed(2))}小时${((period % 3600) / 60).toFixed()}分钟${supplement}`)
+  } else {
+    return (subHeading =
+      ((period % (3600 * 24)) / 3600).toFixed() == 0
+        ? `${description}${(period / 3600 / 24).toFixed()}天${supplement}`
+        : `${description}${(period / 3600 / 24).toFixed()}天${((period % (3600 * 24)) / 3600).toFixed()}小时${supplement}`)
+  }
+}
+
 //日历中创建提醒
 function updateEvent(event, reminder) {
-  event.title = `${reminder.title}`
   cal_name = reminder.calendar.title
   cal = m_dict[cal_name]
   event.calendar = cal
-  //console.warn(event.calendar.title)
-  //已完成事项
-  if(reminder.isCompleted)
-  {
-    event.title = `✅${reminder.title}`
+  // console.warn(event.calendar.title)
+  // 已完成事项
+  if (reminder.isCompleted) {
     event.isAllDay = false
-    event.startDate = reminder.completionDate
-    var ending = new Date(reminder.completionDate)
-    ending.setHours(ending.getHours()+1)
-    event.endDate = ending
-    
-    var period = (reminder.dueDate-reminder.completionDate)/1000/3600/24
-    period = period.toFixed(1)
-    if(period < 0)
-    {
+    event.startDate = reminder.dueDate
+    event.endDate = reminder.completionDate
+    var period = (reminder.dueDate - reminder.completionDate) / 1000
+    period = period.toFixed()
+    if (period < 0) {
       period = -period
-      event.location = " 延期" + period + "天完成" 
-    }
-    else if (period == 0)
-    {
-      event.location = " 准时完成"
-    }
-    else
-    {
-       event.location = " 提前" + period + "天完成"
+      let titleTail = setPeriod(event, period, '延期')
+      event.title = `✅${reminder.title} (${titleTail})`
+    } else if (period == 0) {
+      event.title = `✅${reminder.title} (准时完成)`
+    } else {
+      let titleTail = setPeriod(event, period, '提前')
+      event.title = `✅${reminder.title} (${titleTail})`
+      event.endDate = reminder.dueDate
+      event.startDate = reminder.completionDate
     }
   }
-  //未完成事项
-  else{
-      const nowtime  = new Date()
-      var period = (reminder.dueDate-nowtime)/1000/3600/24
-      period = period.toFixed(1)
-      //console.log(reminder.title+(period))
-      if(period < 0)
-      {
-        //待办顺延
-
-         event.location = " 延期" + (-period) + "天" 
-         //如果不是在同一天,设置为全天事项
-        if(reminder.dueDate.getDate() != nowtime.getDate())
-        {
-           event.title = `❌${reminder.title}` 
-           event.startDate = nowtime
-           event.endDate = nowtime
-           event.isAllDay = true    
-        }
-        //在同一天的保持原来的时间
-        else
-        {
-          event.title = `⭕️${reminder.title}`
-          event.isAllDay = false  
-          event.startDate = reminder.dueDate
-          var ending = new Date(reminder.dueDate)
-          ending.setHours(ending.getHours() + 1)
-          event.endDate = ending
-        }
-         console.log(`【${reminder.title}】待办顺延${-period}天` )
+  // 未完成事项
+  else {
+    const nowtime = new Date()
+    var period = (reminder.dueDate - nowtime) / 1000
+    period = period.toFixed()
+    if (period < 0) {
+      // 待办顺延
+      period = -period
+      let titleTail = setPeriod(event, period, '已延期')
+      // 如果不是在同一天,设置为全天事项
+      if (reminder.dueDate.getDate() != nowtime.getDate()) {
+        event.title = `❌${reminder.title} (${titleTail})`
+        event.startDate = nowtime
+        event.endDate = nowtime
+        event.isAllDay = true
       }
-      else
-      {
-         event.title = `⭕️${reminder.title}`
-         event.isAllDay = false
-         event.location = "还剩" + period + "天" 
-         event.startDate = reminder.dueDate
-         var ending = new Date(reminder.dueDate)
-         ending.setHours(ending.getHours() + 1)
-         event.endDate = ending
+      // 在同一天的保持原来的时间
+      else {
+        event.title = `⭕️${reminder.title} (${titleTail})`
+        event.isAllDay = false
+        event.startDate = reminder.dueDate
+        event.endDate = nowtime
       }
+    } else {
+      event.isAllDay = false
+      let titleTail = setPeriod(event, period, '还剩')
+      event.title = `⭕️${reminder.title} (${titleTail})`
+      event.startDate = reminder.dueDate
+      event.endDate = reminder.dueDate
     }
+  }
   event.save()
 }
 ```
 
-- 脚本二：
-> 1. 修改时间最小单位，当天精确到分钟，隔天精确到小时   
-> 2. 为了去掉日历底部的地图定位，把完成信息挪到标题里   
-> 3. 替换掉备注里的identifier   
-> 4. 备注信息同步（提醒 ——> 日历）
-   
+- **脚本二：**
+> 1. 修改了时间最小单位（当天精确到分钟，隔天精确到小时）   
+> 2. 将项目完成信息挪到了标题里，顺带去掉了底部的地图定位   
+> 3. 去掉了结束时间多出来的1小时（该修改引入的新问题：项目起始和结束时间差小于30分钟时，日历中时间轴上的字体会缩小）   
+> 4. 替换掉了备注里的identifier，备注信息同步（提醒 ——> 日历）   
+> 5. 引入的bug：提醒事项设置定时重复时，已完成的提醒事项不会在日历中显示，只显示最新的未完成的提醒事项   
+
 <div class="smartideo">
  <div class="player">
   <iframe src="//player.bilibili.com/player.html?aid=930598306&bvid=BV1dK4y1d7xT&cid=338475224&page=1&amp;high_quality=1&amp;danmaku=0" width="100%"  height="100%" frameborder="no" scrolling="no" allowfullscreen="allowfullscreen"> </iframe>
@@ -173,137 +192,147 @@ function updateEvent(event, reminder) {
 [ :link: iOS【提醒事项】同步到【日历】—— Scriptable的灵活DIY ](https://www.bilibili.com/video/BV1dK4y1d7xT?share_source=copy_web)  
 
 ```js
-    //要同步的时间段，当前时间前后n个月
-    var dur_month = 2
+//要同步的时间段，当前时间前后n个月
+var dur_month = 2
 
-    const startDate = new Date()
-    startDate.setMonth(startDate.getMonth() - dur_month)
-    console.log(`日历的开始时间 ${startDate.toLocaleDateString()}`)
+const startDate = new Date()
+startDate.setMonth(startDate.getMonth() - dur_month)
+console.log(`日历的开始时间 ${startDate.toLocaleDateString()}`)
 
-    const endDate = new Date()
-    endDate.setMonth(endDate.getMonth() + dur_month)
-    console.log(`日历的结束时间 ${endDate.toLocaleDateString()}`)
+const endDate = new Date()
+endDate.setMonth(endDate.getMonth() + dur_month)
+console.log(`日历的结束时间 ${endDate.toLocaleDateString()}`)
 
-    const reminders = await Reminder.allDueBetween(startDate, endDate)
-    console.log(`获取 ${reminders.length} 条提醒事项`)
+const reminders = await Reminder.allDueBetween(startDate, endDate)
+console.log(`获取 ${reminders.length} 条提醒事项`)
 
-    var calendar = await Calendar.forEvents()
+var calendar = await Calendar.forEvents()
 
-    //获取日历名和对应的日历
-    var m_dict = {}
-    for(cal of calendar)
-    {
-    m_dict[cal.title] = cal
-    //console.log(`日历:${cal.title}`)
-    }
+//获取日历名和对应的日历
+var m_dict = {}
+for (cal of calendar) {
+  m_dict[cal.title] = cal
+  //console.log(`日历:${cal.title}`)
+}
 
-    const events = await CalendarEvent.between(startDate, endDate, calendar)
-    console.log(`获取 ${events.length} 条日历`)
-    // console.log(events)
+const events = await CalendarEvent.between(startDate, endDate, calendar)
+console.log(`获取 ${events.length} 条日历`)
 
-    for (const reminder of reminders) {
-    reminder.notes = (!reminder.notes || reminder.notes == null || reminder.notes == 'undefined') ? '无' : reminder.notes
-    //reminder的标识符
-    //const targetNote = `[Reminder] ${reminder.identifier}`
-    //这里用identifier来过滤重复事件最严谨，但日历备注里不好看，所以为了显示好看一些，做了不是很严谨的修改
-    const targetNote = `同步自提醒事项👇\n列表：${reminder.calendar.title}\n标题：${reminder.title}\n时间：${reminder.creationDate.toLocaleString('zh-CN', {year: 'numeric', month: '2-digit', day: '2-digit'}).replace(/\//g, '.')}`       
-    const [targetEvent] = events.filter(e => e.notes != null && (e.notes.indexOf(targetNote) != -1))  //过滤重复的reminder
-    
-    if(!m_dict[reminder.calendar.title])
-    {
-        console.warn("找不到日历" + reminder.calendar.title)
-        continue
-    }
-    
-    if (targetEvent) {
-        //console.log(`找到已经创建的事项 ${reminder.title}`)
-        updateEvent(targetEvent, reminder)
+for (const reminder of reminders) {
+  reminder.notes = (!reminder.notes || reminder.notes == null || reminder.notes == 'undefined') ? '无' : reminder.notes
+  //const targetNote = `[Reminder] ${reminder.identifier}`
+  const options = { year: 'numeric', month: '2-digit', day: '2-digit' }
+  // 备注中要添加的提醒事项创建时间
+  const _creationDate = reminder.creationDate.toLocaleTimeString('zh-CN', options).replace(/\//g, '.')
+  // 备注中要添加的提醒事项完成时间
+  // const _completionDate = (reminder.completionDate == null && reminder.isCompleted == false) ? ' ' : `完成：${reminder.completionDate.toLocaleTimeString('zh-CN', options).replace(/\//g, '.')}`
+  // 要同步到日历备注的提醒事项信息
+  // const targetNote = `同步自提醒事项👇\n列表：${reminder.calendar.title}\n标题：${reminder.title}\n创建：${_creationDate}\n${_completionDate}`
+  const targetNote = `同步自提醒事项👇\n列表：${reminder.calendar.title}\n标题：${reminder.title}\n创建：${_creationDate}`
+  // 过滤重复的reminder
+  const [targetEvent] = events.filter((e) => e.notes != null && e.notes.indexOf(targetNote) != -1) 
+
+  if (!m_dict[reminder.calendar.title]) {
+    console.warn('找不到日历' + reminder.calendar.title)
+    continue
+  }
+
+  if (targetEvent) {
+    //console.log(`找到已经创建的事项 ${reminder.title}`)
+    updateEvent(targetEvent, reminder)
+  } else {
+    console.warn(
+      `同步提醒事项【${reminder.title}】到日历【${reminder.calendar.title}】`
+    )
+    const newEvent = new CalendarEvent()
+    // 日历备注
+    newEvent.notes = reminder.notes + '\n\n' + targetNote //要加入备注
+    updateEvent(newEvent, reminder)
+  }
+}
+
+Script.complete()
+
+//设置period
+function setPeriod(event, period, description) {
+  const supplement = (description == '延期' || description == '提前') ? '完成' : ''
+  if (period < 3600) {
+    return (subHeading =
+      Math.floor((period / 60).toFixed(1)) == 0
+        ? `准时完成`
+        : `${description}${(period / 60).toFixed()}分钟${supplement}`)
+  } else if (period >= 3600 && period <= 3600 * 24) {
+    return (subHeading =
+      ((period % 3600) / 60).toFixed() == 0
+        ? `${description}${(period / 3600).toFixed()}小时${supplement}`
+        : `${description}${Math.floor((period / 3600).toFixed(2))}小时${((period % 3600) / 60).toFixed()}分钟${supplement}`)
+  } else {
+    return (subHeading =
+      ((period % (3600 * 24)) / 3600).toFixed() == 0
+        ? `${description}${(period / 3600 / 24).toFixed()}天${supplement}`
+        : `${description}${(period / 3600 / 24).toFixed()}天${((period % (3600 * 24)) / 3600).toFixed()}小时${supplement}`)
+  }
+}
+
+//日历中创建提醒
+function updateEvent(event, reminder) {
+  cal_name = reminder.calendar.title
+  cal = m_dict[cal_name]
+  event.calendar = cal
+  // console.warn(event.calendar.title)
+  // 已完成事项
+  if (reminder.isCompleted) {
+    event.isAllDay = false
+    event.startDate = reminder.dueDate
+    event.endDate = reminder.completionDate
+    var period = (reminder.dueDate - reminder.completionDate) / 1000
+    period = period.toFixed()
+    if (period < 0) {
+      period = -period
+      let titleTail = setPeriod(event, period, '延期')
+      event.title = `✅${reminder.title} (${titleTail})`
+    } else if (period == 0) {
+      event.title = `✅${reminder.title} (准时完成)`
     } else {
-        console.warn(`同步提醒事项【${reminder.title}】到日历【${reminder.calendar.title}】`)
-        const newEvent = new CalendarEvent()
-        newEvent.notes = reminder.notes + '\n\n' + targetNote   //要加入备注
-        updateEvent(newEvent, reminder)
-
+      let titleTail = setPeriod(event, period, '提前')
+      event.title = `✅${reminder.title} (${titleTail})`
+      event.endDate = reminder.dueDate
+      event.startDate = reminder.completionDate
     }
-    }
-
-    Script.complete()
-
-    //设置period
-    function setPeriod(event, period, option) {
-    const optionItem = (option == '延期' || option == '提前') ? '完成' : ''
-    if(period < 3600) {
-        return subHeading = (Math.floor((period / 60).toFixed(1)) == 0) ? `准时完成` : `${option}${(period / 60).toFixed()}分钟${optionItem}`
-      }else if(period >= 3600 && period <= 3600 * 24) {
-        return subHeading = (((period % 3600) / 60).toFixed() == 0) ? `${option}${(period / 3600).toFixed()}小时${optionItem}` : `${option}${Math.floor((period / 3600).toFixed(2))}小时${((period % 3600) / 60).toFixed()}分钟${optionItem}`
-      }else {
-        return subHeading = (((period % (3600 * 24)) / 3600).toFixed()) == 0 ? `${option}${(period / 3600 / 24).toFixed()}天${optionItem}` : `${option}${(period / 3600 / 24).toFixed()}天${((period % (3600 * 24)) / 3600).toFixed()}小时${optionItem}`
+  }
+  // 未完成事项
+  else {
+    const nowtime = new Date()
+    var period = (reminder.dueDate - nowtime) / 1000
+    period = period.toFixed()
+    if (period < 0) {
+      // 待办顺延
+      period = -period
+      let titleTail = setPeriod(event, period, '已延期')
+      // 如果不是在同一天,设置为全天事项
+      if (reminder.dueDate.getDate() != nowtime.getDate()) {
+        event.title = `❌${reminder.title} (${titleTail})`
+        event.startDate = nowtime
+        event.endDate = nowtime
+        event.isAllDay = true
       }
-    }
-
-    //日历中创建提醒
-    function updateEvent(event, reminder) {
-    cal_name = reminder.calendar.title
-    cal = m_dict[cal_name]
-    event.calendar = cal
-    //console.warn(event.calendar.title)
-    //已完成事项
-    if(reminder.isCompleted) {
+      // 在同一天的保持原来的时间
+      else {
+        event.title = `⭕️${reminder.title} (${titleTail})`
         event.isAllDay = false
         event.startDate = reminder.dueDate
-        event.endDate = reminder.completionDate
-        var period = (reminder.dueDate - reminder.completionDate) / 1000
-        period = period.toFixed()
-        if(period < 0) {
-        period = -period
-        let titleTail = setPeriod(event, period, '延期')
-        event.title = `✅${reminder.title} (${titleTail})`
-        }else if (period == 0){
-        event.title = `✅${reminder.title} (准时完成)`
-        }else{
-        let titleTail = setPeriod(event, period, '提前')
-        event.title = `✅${reminder.title} (${titleTail})`
-        event.endDate = reminder.dueDate
-        event.startDate = reminder.completionDate
-        }
+        event.endDate = nowtime
+      }
+    } else {
+      event.isAllDay = false
+      let titleTail = setPeriod(event, period, '还剩')
+      event.title = `⭕️${reminder.title} (${titleTail})`
+      event.startDate = reminder.dueDate
+      event.endDate = reminder.dueDate
     }
-    //未完成事项
-    else{
-        const nowtime  = new Date()
-        var period = (reminder.dueDate - nowtime) / 1000
-        period = period.toFixed()
-        if(period < 0) {
-            //待办顺延
-            period = -period
-            let titleTail = setPeriod(event, period, '已延期')
-            //如果不是在同一天,设置为全天事项
-            if(reminder.dueDate.getDate() != nowtime.getDate()){
-            event.title = `❌${reminder.title} (${titleTail})` 
-            event.startDate = nowtime
-            event.endDate = nowtime
-            event.isAllDay = true    
-            }
-            //在同一天的保持原来的时间
-            else{
-            // let titleTail = setPeriod(event, period, '已延期')
-            event.title = `⭕️${reminder.title} (${titleTail})`
-            event.isAllDay = false  
-            event.startDate = reminder.dueDate
-            event.endDate = nowtime
-            }
-          }else{
-            event.isAllDay = false
-            let titleTail = setPeriod(event, period, '还剩')
-            event.title = `⭕️${reminder.title} (${titleTail})`
-            event.startDate = reminder.dueDate
-//             var ending = new Date(reminder.dueDate)
-//             ending.setHours(ending.getHours() + 1)
-//             event.endDate = ending
-            event.endDate = reminder.dueDate
-          }
-        }
-    event.save()
   }
+  event.save()
+}
 ```
 
 **常见问题解决方案：**   

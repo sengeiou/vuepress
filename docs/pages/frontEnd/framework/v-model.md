@@ -2,10 +2,11 @@
 autoGroup-1: Vue
 title: 'V-model原理'
 date: 2020-12-16
-categories:
-  - Framework
+categories: 
+- FrontEnd
 tags:
-  - Vue
+- Framework
+- Vue
 ---
  
 v-model 其实是一个语法糖，本质上是如下两个操作：

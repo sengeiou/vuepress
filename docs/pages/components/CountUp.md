@@ -3,10 +3,10 @@ autoGroup-2: 数据类组件
 title: CountUp.js
 date: 2020-02-28
 categories:
-- Components
+- FrontEnd
 tags:
 - Vue
-- FrontEnd
+- Components
 ---
 
 一款有趣的第三方动效数字插件，这里仅做插件引入展示举例 :link: [CountUp.js](http://inorganik.github.io/countUp.js/)   

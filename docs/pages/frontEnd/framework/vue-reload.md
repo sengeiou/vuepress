@@ -3,10 +3,11 @@ autoGroup-1: Vue
 title: Vue刷新页面的三种方式
 date: 2021-02-01
 # sticky: 2
-categories:
-  - Framework
+categories: 
+- FrontEnd
 tags:
-  - Vue
+- Framework
+- Vue
 ---
 
 ### 1. 原始方法

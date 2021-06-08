@@ -3,10 +3,10 @@ autoGroup-1: 布局类组件
 title: Dialog
 date: 2020-02-28
 categories:
-- Components
+- FrontEnd
 tags:
 - Vue
-- FrontEnd
+- Components
 ---
 :::tip
  :link: [ ti-ui-self ](https://www.npmjs.com/package/ti-ui-self)

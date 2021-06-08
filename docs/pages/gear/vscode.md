@@ -4,10 +4,10 @@ title: VsCode常用插件
 isTimeLine: true
 date: 2020-03-28
 categories:
-  - IDE
+- Tools
 tags:
-  - Tools
-  - IDE
+- Tools
+- IDE
 ---
 
 1. [Bootstrap 4, Font awesome 4, Font Awesome 5 Free & Pro snippets](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)

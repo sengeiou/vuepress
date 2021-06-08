@@ -5,9 +5,9 @@ date: 2020-03-21
 sidebarDepth: 3
 isTimeLine: true
 categories:
- - Tools
+- Tools
 tags:
- - Terminal
+- Terminal
 ---
 
 ## 1. 简介

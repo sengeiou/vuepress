@@ -2,9 +2,10 @@
 autoGroup-1: Vue
 title: Vue-cli
 date: 2019-12-28
-categories:
-- Framework
+categories: 
+- FrontEnd
 tags:
+- Framework
 - Vue
 ---
 

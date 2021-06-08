@@ -2,8 +2,8 @@
 title: Mac安装MongoDB
 date: 2020-05-21
 isTimeLine: true
-categories:
-- Database
+categories: 
+- Server
 tags:
 - Database
 - Tools

@@ -2,9 +2,10 @@
 autoGroup-1: Vue
 title: Vue-Router
 date: 2020-08-03
-categories:
-- Framework
+categories: 
+- FrontEnd
 tags:
+- Framework
 - Vue
 ---
 ## 1. 静态路由

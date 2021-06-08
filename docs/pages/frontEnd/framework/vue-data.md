@@ -2,10 +2,11 @@
 autoGroup-1: Vue
 title: Vue组件之间的传值
 date: 2020-11-01
-categories:
-  - Framework
+categories: 
+- FrontEnd
 tags:
-  - Vue
+- Framework
+- Vue
 ---
 
 ## 1. 父组件向子组件传值

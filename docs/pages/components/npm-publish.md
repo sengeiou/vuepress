@@ -2,10 +2,10 @@
 title:  组件发布到 NPM
 date: 2020-02-28
 categories:
-- Components
+- FrontEnd
 tags:
 - Vue
-- FrontEnd
+- Components
 ---
 
 ## 1. 介绍

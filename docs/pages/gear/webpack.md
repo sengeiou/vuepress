@@ -4,8 +4,9 @@ title: Webpack4.0
 sidebarDepth: 2
 date: 2019-08-18
 categories:
-- Tools
+- FrontEnd
 tags:
+- Tools
 - Webpack
 ---
 

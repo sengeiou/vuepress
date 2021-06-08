@@ -3,9 +3,10 @@ autoGroup-2: React
 layout: post
 title: "React项目部署到Github Pages"
 date: 2020-07-10
-categories:
-- Framework
+categories: 
+- FrontEnd
 tags:
+- Framework
 - React 
 ---
 

@@ -1,17 +1,18 @@
 ---
-autoGroup-3: Testing
+autoGroup-0: Framework
 title: Jest
 sidebarDepth: 2
 date: 2021-04-21
 categories:
-- Tools
+- Automator
 tags:
 - Testing
+- Framework
 ---
 
 ## 1. 简介
 
-由 Facebook 开源的 JS 测试框架，集成了断言、覆盖率报告等工具，开箱即用。其用例并行执行，且只执行发生改变的文件对应的测试，所以性能较优。
+由 Facebook 开源的 JS 测试框架 ( 单元测试 ) ，集成了断言、覆盖率报告等工具，开箱即用。其用例并行执行，且只执行发生改变的文件对应的测试，所以性能较优。
 
 ## 2. 安装
 

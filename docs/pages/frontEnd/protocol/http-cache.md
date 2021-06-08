@@ -2,10 +2,10 @@
 autoGroup-1: HTTP
 title: Http缓存
 date: 2020-03-02
-categories:
-- FrontEnd
+categories: 
+- Protocol
 tags:
-- Http
+- Protocol
 ---
 
 ## 1. Http缓存

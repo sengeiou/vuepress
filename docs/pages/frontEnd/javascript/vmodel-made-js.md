@@ -4,10 +4,9 @@ title: 原生JS实现双向数据绑定
 date: 2020-05-15
 isTimeLine: true
 categories:
-  - FrontEnd
+- FrontEnd
 tags:
-  - JavaScript
-  - Summary
+- JavaScript
 ---
 
 两种方法实现双向数据绑定 

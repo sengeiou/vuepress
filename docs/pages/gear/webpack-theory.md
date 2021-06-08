@@ -4,9 +4,10 @@ title: Webpack原理浅析
 sidebarDepth: 2
 date: 2019-08-18
 categories:
-  - Tools
+- FrontEnd
 tags:
-  - Webpack
+- Tools
+- Webpack
 ---
 
 [深入浅出 Webpack](https://webpack.wuhaolin.cn/)

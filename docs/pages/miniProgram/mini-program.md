@@ -2,10 +2,10 @@
 title: 微信小程序云开发
 date: 2020-06-09
 isTimeLine: true
-categories:
-  - Miniprogram
+categories: 
+- Miniprogram
 tags:
-  - Miniprogram
+- Miniprogram
 ---
 
 :link: [ Demo 代码 ](https://github.com/TienOUC/MovieList)

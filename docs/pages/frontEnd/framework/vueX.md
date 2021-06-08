@@ -2,11 +2,11 @@
 autoGroup-1: Vue
 title: Vuex-全局状态管理
 date: 2020-07-25
-categories:
-- Framework
+categories:  
+- FrontEnd
 tags:
+- Framework
 - Vue
-- Vuex
 ---
 
 :::tip

@@ -1,11 +1,12 @@
 ---
+autoGroup-2: 趣味应用
 title: Virtual Private Network
 date: 2021-05-14
 isTimeLine: true
 categories:
- - App
+- Application
 tags:
- - Application
+- Summary
 ---
 
 [How to setup your own private, secure, free* VPN on the Amazon AWS Cloud in 10 minutes](https://www.webdigi.co.uk/blog/2015/how-to-setup-your-own-private-secure-free-vpn-on-the-amazon-aws-cloud-in-10-minutes/)

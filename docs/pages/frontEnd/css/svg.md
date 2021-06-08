@@ -4,9 +4,9 @@ title: SVG
 isTimeLine: true
 date: 2020-03-12
 categories:
-  - FrontEnd
+- FrontEnd
 tags:
-  - CSS
+- CSS
 ---
 
 ## 1. SVG 简介

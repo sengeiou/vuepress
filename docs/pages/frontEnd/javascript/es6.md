@@ -186,7 +186,9 @@ let a = [
 
 ### 4.1 Map
 
-Map 对象保存键值对，键和值可以是任意值
+> 与对象等不同点：Object 的键只能是字符串或者 Symbol
+
+Map 对象保存键值对，键和值可以是任意类型
 
 ```js
 var myMap = new Map()
@@ -197,12 +199,41 @@ myMap.set(keyString, "和键'This is keyString'关联的值")
 myMap.get(keyString) // "和键'This is keyString'关联的值"
 myMap.get('This is keyString') // "和键'This is keyString'关联的值", 因为 keyString === 'This is keyString'
 ```
+- 使用场景之一：**使用 Map 类型控制表单提交**
 
-> Object 的键只能是字符串或者 Symbol
+```html
+  <body>
+    <form action="https://www.baidu.com" onsubmit="return post()">
+      <label for="protocol">用户协议<input type="checkbox" id="protocol" error="请接受用户协议"/></label>
+      <label for="student">我是学生<input type="checkbox" id="student" error="网站只对学生开放"/></label>
+      <input type="submit" />
+    </form>
+    <script>
+      function post() {
+        let map = new Map()
+        let inputs = document.querySelectorAll('[error]')
+        inputs.forEach((item) => {
+          map.set(item, {
+            error: item.getAttribute('error'),
+            status: item.checked,
+          })
+        })
+
+        return [...map].every(([ele, config]) => {
+          config.status || alert(config.error)
+          return config.status
+        })
+      }
+    </script>
+  </body>
+```
+
+![](https://tva1.sinaimg.cn/large/008i3skNly1gqy9corjw2g30sx0hrn8d.gif)
+
 
 ### 4.2 WeakMap
 
-其键只能是引用类型( 主要用于对内存敏感的场景 ，一般开发很少用到，相关知识点暂时挂起，后续补齐示例)
+其键只能是对象类型( 不可迭代，没有`keys()` 、`values()` 方法，主要用于对内存敏感的场景 ，一般开发很少用到，相关知识点暂时挂起，后续补齐示例)
 
 ## 5. Symbol
 
