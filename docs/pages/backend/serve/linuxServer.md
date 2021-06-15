@@ -3,16 +3,17 @@ title: Linux服务器运行Node脚本爬取数据
 date: '2020-05-20'
 isTimeLine: true
 sticky: 1
-categories: 
-- Server
+categories:
+  - Server
 tags:
-- Linux
-- Node
+  - Linux
+  - Node
 ---
 
 :::tip
-Selenium & NodeJS & chromedriver   
+Selenium & NodeJS & chromedriver  
 :::
+
 <!-- CentOS <Badge text="v7.6" type="warning"/> -->
 <!-- more -->
 
@@ -131,7 +132,7 @@ const nodeSchedule = require('node-schedule')
 
 **Echarts 学习实践，赶在国内疫情末尾写了个疫情展示页面**
 
-:link: [ 展示页面连接 ](https://covid.dodolo.top)
+:link: [ 展示页面 ](https://covid.dodolo.top)
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geqw7nzb2yj30xc0hfju5.jpg)
 
@@ -141,7 +142,7 @@ const nodeSchedule = require('node-schedule')
 
 > a. 安装依赖包  
 > b. `server` 目录下先修改`crawler.js`中的万矿 ID 和万矿密码，然后 `node crawler.js app.js` 启动即可（首次启动需修改 `crawler.js` 中的抓取时间，不然要等好久才会有数据哒！）  
-> c. [Linux服务器运行Node.js脚本爬取数据](https://www.dodolo.top/pages/server/linuxServer.html#_4-1-%E4%BD%BF%E7%94%A8)  
+> c. [Linux 服务器运行 Node.js 脚本爬取数据](https://www.dodolo.top/pages/server/linuxServer.html#_4-1-%E4%BD%BF%E7%94%A8)  
 > d. 图形界面下把与 Chrome 版本对应的 chromedriver 文件放在脚本目录即可
 
 ### 4.2 注意事项
